@@ -16,7 +16,7 @@ int main(void)
 {
 	int i;
 	int j;
-
+	what
 	i = ft_printf("111Hello\n");
 	j = printf("222Hello\n");
 	printf("my %d\n", i);
