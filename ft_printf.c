@@ -12,41 +12,40 @@
 
 #include "ft_printf.h"
 
-char *ft_basic_work(va_list ap, char *fmt)
+char *ft_producer(va_list ap, char *fmt)
 {
-	char	*str;
-	size_t	i;
-	size_t 	start;
+	size_t 		i;
+	char		*print;
+	t_pieces	*pieces;
 
-	i = 0;
-	start = 0;
-	while (fmt[i])
+	i = -1;
+	while (fmt[++i])
 	{
-		if (fmt[i] == PERC)
+		if (*fmt == PERC)
 		{
+			if (i)
+				pieces = ft_nodes_filler(pieces, )
 
 		}
-		else
-			i++;
+		i++;
 	}
-	if (!fmt[i])
-		str = ft_strsub(fmt, 0, i);
-	return (str);
+	print = ft_concat_pieces(list);
+	return (print);
 }
 
 int	ft_printf(const char *format, ...)
 {
-	va_list arg;
+	va_list ap;
 	size_t	len;
-	char 	*str;
+	char 	*print;
 
-	str = NULL;
-	va_start(arg, format);
-	str = ft_basic_work(arg, (char*)format);
-	len = ft_strlen(str);
+	print = NULL;
+	va_start(ap, format);
+	print = ft_producer(ap, (char*)format);
+	len = ft_strlen(print);
 	if (len)
-		write(1, str, len);
-	free(str);
-	va_end(arg);
+		write(1, print, len);
+	free(print);
+	va_end(ap);
 	return (len);
 }

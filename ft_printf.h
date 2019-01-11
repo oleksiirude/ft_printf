@@ -13,8 +13,7 @@
 #ifndef FT_PRINTF_H
 #define FT_PRINTF_H
 
-#include <stdio.h> // MUST DELETE!!!
-
+#include <stdio.h>
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
@@ -26,34 +25,37 @@
 typedef struct		s_str
 {
 	char			*str;
-	int				n;
+	size_t			len;
 	struct s_str	*next;
 
-}					t_str;
+}					t_pieces;
 
 typedef struct		s_stuff
 {
 	int				minus;
 	int				plus;
 	int				space;
+	int 			hash;
 	int				value;
 	int				zero;
-	int				value_zero;
+	int				zero_value;
 	int				precision;
-	int				value_precision;
+	int				precision_value;
 	int 			mod;
 	int 			type;
 }					t_stuff;
 
-char				*c_type(va_list ap);
-char				*s_type(va_list ap);
-char				*p_type(va_list ap);
-char				*d_type(va_list ap, int t);
-char				*u_type(va_list ap, int t);
-char				*o_type(va_list ap, int t);
-char				*f_type(va_list ap, int t);
-char				*x_type(va_list ap, int t, int reg);
+char				*ft_type_c(va_list ap);
+char				*ft_type_s(va_list ap);
+char				*ft_type_p(va_list ap);
+char				*ft_type_d(va_list ap, int type);
+char				*ft_type_u(va_list ap, int type);
+char				*ft_type_o(va_list ap, int type);
+char				*ft_type_f(va_list ap, int type);
+char				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
-size_t				ft_easy_str(char *fmt);
+void				ft_zero_stuff(t_stuff *data);
+char 				*ft_concat_pieces(t_stuff *pieces);
+
 
 #endif

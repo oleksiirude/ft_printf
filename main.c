@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.c                                        :+:      :+:    :+:   */
+/*   main.c   	                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -21,6 +21,6 @@ int main(void)
 	j = printf("222Hello\n");
 	printf("my %d\n", i);
 	printf("or %d\n", j);
-	system("leaks ft_printf");
+	//system("leaks ft_printf");
 	return (i);
 }
