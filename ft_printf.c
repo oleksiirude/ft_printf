@@ -37,10 +37,7 @@ size_t	ft_check_len(char *fmt)
 	if (*fmt == PERC)
 		return (len);
 	while (*fmt++ != PERC)
-	{
-		fmt++;
 		len++;
-	}
 	return (len);
 }
 
