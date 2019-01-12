@@ -12,38 +12,67 @@
 
 #include "ft_printf.h"
 
-char *ft_producer(va_list ap, char *fmt)
+t_prts	*ft_rec_simple_str(t_prts *lst, char **fmt, size_t len)
 {
-	size_t 		i;
-	char		*print;
+	size_t i;
+
+	i = 0;
+	lst->str = (char*)malloc(len + 1);
+	lst->len = len;
+	lst->next = NULL;
+	lst->str[len + 1] = 0;
+	while(len--)
+	{
+		lst->str[i] = *fmt[i];
+		i++;
+	}
+	return (lst)
+}
+
+size_t	ft_check_len(char *fmt)
+{
+	size_t len;
+
+	len = 0;
+	if (*fmt == PERC)
+		return (len);
+	while (*fmt++ != PERC)
+	{
+		fmt++;
+		len++;
+	}
+	return (len);
+}
+
+char	*ft_mainfunct(va_list ap, char *fmt)
+{
+	size_t 		len;
 	t_prts		*lst;
 	t_prts		*start;
 
-	i = 0;
 	lst = (t_prts*)malloc(sizeof(t_prts));
 	lst->next = NULL;
 	start = lst;
-	while (fmt[i])
+	while (*fmt)
 	{
-		if (fmt[i] == PERC)
+		if ((len = ft_check_len(fmt)))
 		{
-			lst = ft_lst_filler(ap, lst, &fmt, (size_t)fmt + i);
+			lst = ft_rec_simple_str(lst, &fmt, len);
 			lst = lst->next;
 		}
-		i++;
 	}
-	print = ft_concat_pieces(start);
-	return (print);
+	free(lst);
+	return (ft_assembly(start));
 }
 
-int	ft_printf(const char *format, ...)
+int		ft_printf(const char *format, ...)
 {
 	va_list ap;
 	size_t	len;
 	char 	*print;
 
 	va_start(ap, format);
-	print = ft_producer(ap, (char*)format);
+	print = ft_mainfunct(ap, (char*)format);
 	len = ft_strlen(print);
 	if (len)
 		write(1, print, len);
@@ -51,5 +80,5 @@ int	ft_printf(const char *format, ...)
 		write(1, print, 1);
 	free(print);
 	va_end(ap);
-	return (len);
+	return ((int)len);
 }

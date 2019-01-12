@@ -53,9 +53,5 @@ char				*ft_type_o(va_list ap, int type);
 char				*ft_type_f(va_list ap, int type);
 char				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
-void				ft_zero_stuff(t_flgs *data);
-char 				*ft_concat_pieces(t_prts *start);
-t_prts				*ft_lst_filler(va_list ap, t_prts *lst, char **fmt, size_t i);
-
-
+char				*ft_assembly(t_prts *start);
 #endif

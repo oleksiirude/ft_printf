@@ -3,5 +3,5 @@ project(ft_printf C)
 
 set(CMAKE_C_STANDARD 99)
 AUX_SOURCE_DIRECTORY(libft LIB)
-add_executable(ft_printf ${LIB} main.c ft_printf.c ft_parsing.c ft_printf.h ft_c_type.c ft_t_stuff.c)
+add_executable(ft_printf ${LIB} main.c ft_printf.c ft_parsing.c ft_printf.h ft_assembly.c)
 link_libraries(libft/libft.a)
