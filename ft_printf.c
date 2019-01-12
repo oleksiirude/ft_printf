@@ -16,20 +16,23 @@ char *ft_producer(va_list ap, char *fmt)
 {
 	size_t 		i;
 	char		*print;
-	t_pieces	*pieces;
+	t_prts		*lst;
+	t_prts		*start;
 
-	i = -1;
-	while (fmt[++i])
+	i = 0;
+	lst = (t_prts*)malloc(sizeof(t_prts));
+	lst->next = NULL;
+	start = lst;
+	while (fmt[i])
 	{
-		if (*fmt == PERC)
+		if (fmt[i] == PERC)
 		{
-			if (i)
-				pieces = ft_nodes_filler(pieces, )
-
+			lst = ft_lst_filler(ap, lst, &fmt, (size_t)fmt + i);
+			lst = lst->next;
 		}
 		i++;
 	}
-	print = ft_concat_pieces(list);
+	print = ft_concat_pieces(start);
 	return (print);
 }
 
@@ -39,12 +42,13 @@ int	ft_printf(const char *format, ...)
 	size_t	len;
 	char 	*print;
 
-	print = NULL;
 	va_start(ap, format);
 	print = ft_producer(ap, (char*)format);
 	len = ft_strlen(print);
 	if (len)
 		write(1, print, len);
+	else
+		write(1, print, 1);
 	free(print);
 	va_end(ap);
 	return (len);

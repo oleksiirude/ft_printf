@@ -22,15 +22,14 @@
 
 #define PERC '%'
 
-typedef struct		s_str
+typedef struct		s_prts
 {
 	char			*str;
 	size_t			len;
-	struct s_str	*next;
+	struct s_prts	*next;
+}					t_prts;
 
-}					t_pieces;
-
-typedef struct		s_stuff
+typedef struct		s_flgs
 {
 	int				minus;
 	int				plus;
@@ -43,7 +42,7 @@ typedef struct		s_stuff
 	int				precision_value;
 	int 			mod;
 	int 			type;
-}					t_stuff;
+}					t_flgs;
 
 char				*ft_type_c(va_list ap);
 char				*ft_type_s(va_list ap);
@@ -54,8 +53,9 @@ char				*ft_type_o(va_list ap, int type);
 char				*ft_type_f(va_list ap, int type);
 char				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
-void				ft_zero_stuff(t_stuff *data);
-char 				*ft_concat_pieces(t_stuff *pieces);
+void				ft_zero_stuff(t_flgs *data);
+char 				*ft_concat_pieces(t_prts *start);
+t_prts				*ft_lst_filler(va_list ap, t_prts *lst, char **fmt, size_t i);
 
 
 #endif
