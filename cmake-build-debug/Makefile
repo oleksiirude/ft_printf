@@ -150,33 +150,6 @@ ft_assembly.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_assembly.c.s
 .PHONY : ft_assembly.c.s
 
-ft_c_type.o: ft_c_type.c.o
-
-.PHONY : ft_c_type.o
-
-# target to build an object file
-ft_c_type.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_c_type.c.o
-.PHONY : ft_c_type.c.o
-
-ft_c_type.i: ft_c_type.c.i
-
-.PHONY : ft_c_type.i
-
-# target to preprocess a source file
-ft_c_type.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_c_type.c.i
-.PHONY : ft_c_type.c.i
-
-ft_c_type.s: ft_c_type.c.s
-
-.PHONY : ft_c_type.s
-
-# target to generate assembly for a file
-ft_c_type.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_c_type.c.s
-.PHONY : ft_c_type.c.s
-
 ft_parsing.o: ft_parsing.c.o
 
 .PHONY : ft_parsing.o
@@ -2079,9 +2052,6 @@ help:
 	@echo "... ft_assembly.o"
 	@echo "... ft_assembly.i"
 	@echo "... ft_assembly.s"
-	@echo "... ft_c_type.o"
-	@echo "... ft_c_type.i"
-	@echo "... ft_c_type.s"
 	@echo "... ft_parsing.o"
 	@echo "... ft_parsing.i"
 	@echo "... ft_parsing.s"

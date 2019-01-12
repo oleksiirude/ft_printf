@@ -14,11 +14,7 @@ stdlib.h
 unistd.h
 -
 
-/Users/olrudenk/CLionProjects/ft_printf/ft_c_type.c
-ft_printf.h
-/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
-
-/Users/olrudenk/CLionProjects/ft_printf/ft_parsing.c
+/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c
 ft_printf.h
 /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 
@@ -39,12 +35,4 @@ string.h
 -
 ./libft/libft.h
 /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
-
-/Users/olrudenk/CLionProjects/ft_printf/ft_t_stuff.c
-ft_printf.h
-/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
-
-/Users/olrudenk/CLionProjects/ft_printf/main.c
-ft_printf.h
-/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 

@@ -35,7 +35,7 @@ char 	*ft_assembly(t_prts *start)
 	while (start->next)
 	{
 		while(start->str[i])
-			*final_str++ = start->str[i++];
+			*final_str++ = start->str[i];
 		start = start->next;
 		i = 0;
 	}

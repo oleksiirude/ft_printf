@@ -22,11 +22,8 @@ t_prts	*ft_rec_simple_str(t_prts *lst, char **fmt, size_t len)
 	lst->next = NULL;
 	lst->str[len + 1] = 0;
 	while(len--)
-	{
-		lst->str[i] = *fmt[i];
-		i++;
-	}
-	return (lst)
+		lst->str[i++] = **fmt++;
+	return (lst);
 }
 
 size_t	ft_check_len(char *fmt)
@@ -57,6 +54,7 @@ char	*ft_mainfunct(va_list ap, char *fmt)
 			lst = ft_rec_simple_str(lst, &fmt, len);
 			lst = lst->next;
 		}
+
 	}
 	free(lst);
 	return (ft_assembly(start));

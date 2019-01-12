@@ -5,7 +5,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_assembly.c.o"
-  "/Users/olrudenk/CLionProjects/ft_printf/ft_c_type.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_c_type.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/libft/ft_atoi.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o"

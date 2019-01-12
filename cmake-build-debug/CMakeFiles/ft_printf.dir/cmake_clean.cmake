@@ -69,7 +69,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/main.c.o"
   "CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "CMakeFiles/ft_printf.dir/ft_parsing.c.o"
-  "CMakeFiles/ft_printf.dir/ft_c_type.c.o"
   "CMakeFiles/ft_printf.dir/ft_assembly.c.o"
   "ft_printf.pdb"
   "ft_printf"
