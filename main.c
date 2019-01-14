@@ -17,10 +17,10 @@ int main(void)
 	int i;
 	int j;
 
-	i = ft_printf("111Hello\n");
-	j = printf("222Hello\n");
-	printf("my %d\n", i);
-	printf("or %d\n", j);
+	ft_printf("12345%67890%end");
+	//j = printf("Hello %d\n", 42);
+	//printf("my %d\n", i);
+	//printf("or %d\n", j);
 	//system("leaks ft_printf");
-	return (i);
+	return (0);
 }
