@@ -12,25 +12,27 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_processing(t_prts *lst, char **fmt)
+t_prts	*ft_rec_node(char **fmt, size_t len)
 {
-
-}
-
-t_prts	*ft_rec_simple_str(t_prts *lst, char **fmt, size_t len)
-{
-	size_t i;
+	size_t	i;
+	t_prts *lst;
 
 	i = 0;
-	if (!lst)
-		lst = (t_prts*)malloc(sizeof(t_prts));
+	lst = (t_prts*)malloc(sizeof(t_prts));
 	lst->str = (char*)malloc(len + 1);
 	lst->len = len;
 	lst->next = NULL;
 	lst->str[len + 1] = 0;
-	while(len--)
+	while (len--)
 		lst->str[i++] = *(*fmt)++;
 	return (lst);
+}
+
+void	ft_next(t_prts **start, t_prts **lst)
+{
+	*(lst) = *(start);
+	while ((*lst)->next)
+		*lst = (*lst)->next;
 }
 
 size_t	ft_check_len(char *fmt)
@@ -42,33 +44,36 @@ size_t	ft_check_len(char *fmt)
 		return (len);
 	while (*fmt != PERC && *fmt)
 	{
-		fmt++;
 		len++;
+		fmt++;
 	}
 	return (len);
 }
 
-char	*ft_mainfunct(va_list ap, char *fmt)
+char	*ft_main_funct(va_list ap, char *fmt)
 {
 	size_t 	len;
 	t_prts	*lst;
 	t_prts	*start;
 
-	if (!*fmt)
-		return (0);
-	lst = (t_prts*)malloc(sizeof(t_prts));
-	start = lst;
 	while (*fmt)
 	{
 		if ((len = ft_check_len(fmt)))
 		{
-			lst = ft_rec_simple_str(lst, &fmt, len);
-			lst = lst->next;
+			if (!start)
+				start = ft_rec_node(&fmt, len);
+			else
+			{
+				ft_next(&start, &lst);
+				lst->next = ft_rec_node(&fmt, len);
+			}
 		}
 		else
 		{
 			fmt++;
-			//lst = ft_processing(lst, (&fmt + 1));
+			write(1, "a\n", 2);
+			printf("test-> %s\n", start->str);
+			//lst->next = ft_processing(lst, (&fmt + 1));
 		}
 	}
 	return (ft_assembly(start));
@@ -81,13 +86,12 @@ int		ft_printf(const char *format, ...)
 	char 	*print;
 
 	va_start(ap, format);
-	print = ft_mainfunct(ap, (char*)format);
+	print = ft_main_funct(ap, (char*)format);
 	len = ft_strlen(print);
-	if (len)
-		write(1, print, len);
-	else
-		write(1, print, 1);
+	write(1, print, len);
 	free(print);
 	va_end(ap);
 	return ((int)len);
 }
+
+//rft_printf("123%456%789");

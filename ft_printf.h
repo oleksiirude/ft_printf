@@ -54,4 +54,5 @@ char				*ft_type_f(va_list ap, int type);
 char				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
 char				*ft_assembly(t_prts *start);
+t_prts				*ft_processing();
 #endif

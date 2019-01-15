@@ -17,16 +17,16 @@ size_t 	ft_len_sum(t_prts *start)
 	int i;
 	size_t sum;
 
-	sum = 0;
 	i = 0;
-	//printf("%s\n%s\n", start->str, start->next->str);
+	sum = 0;
 	while (start)
 	{
+		printf("%s\n", start->str);
 		sum += start->len;
 		start = start->next;
 		i++;
 	}
-	//printf("there is %i node(s) in list\n", i);
+	printf("there are %i nodes in the list\n", i);
 	return (sum);
 }
 
