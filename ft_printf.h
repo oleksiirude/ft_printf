@@ -21,6 +21,8 @@
 #include "./libft/libft.h"
 
 #define PERC '%'
+#define VLDFLGS "#+- .0123456789"
+#define TP "diouxXcspf"
 
 typedef struct		s_prts
 {
