@@ -17,7 +17,7 @@ int main(void)
 	int i;
 	int j;
 
-	ft_printf("123%456%789");
+	ft_printf("123%456%789%END");
 	//ft_printf("123456%7890%end");
 	//j = printf("Hello %d\n", 42);
 	//printf("my %d\n", i);

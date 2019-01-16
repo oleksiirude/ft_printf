@@ -14,19 +14,14 @@
 
 size_t 	ft_len_sum(t_prts *start)
 {
-	int i;
 	size_t sum;
 
-	i = 0;
 	sum = 0;
 	while (start)
 	{
-		printf("%s\n", start->str);
 		sum += start->len;
 		start = start->next;
-		i++;
 	}
-	printf("there are %i nodes in the list\n", i);
 	return (sum);
 }
 
