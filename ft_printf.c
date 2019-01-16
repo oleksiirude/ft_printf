@@ -30,7 +30,7 @@ size_t	ft_check_len(char *fmt)
 t_prts	*ft_rec_node(char ***fmt, size_t len)
 {
 	size_t	i;
-	t_prts *lst;
+	t_prts	*lst;
 
 	i = 0;
 	lst = (t_prts*)malloc(sizeof(t_prts));
@@ -43,7 +43,7 @@ t_prts	*ft_rec_node(char ***fmt, size_t len)
 	return (lst);
 }
 
-void	ft_auxiliary_funct(char **fmt, t_prts **start, t_prts **node, int sign)
+void	ft_rec_simple_str(char **fmt, t_prts **start, t_prts **node, int sign)
 {
 	if (sign)
 	{
@@ -66,9 +66,9 @@ char	*ft_main_funct(va_list ap, char *fmt)
 		if ((ft_check_len(fmt)))
 		{
 			if (!start)
-				ft_auxiliary_funct(&fmt, &start, &node, 0);
+				ft_rec_simple_str(&fmt, &start, &node, 0);
 			else
-				ft_auxiliary_funct(&fmt, &start, &node, 1);
+				ft_rec_simple_str(&fmt, &start, &node, 1);
 		}
 		else
 		{
@@ -77,9 +77,7 @@ char	*ft_main_funct(va_list ap, char *fmt)
 				start = ft_processing(ap, &fmt);
 			else
 			{
-				node = start;
-				while (node->next)
-					node = node->next;
+				ft_find_last_node(&start, &node);
 				node->next = ft_processing(ap, &fmt);
 			}
 		}
@@ -91,7 +89,7 @@ int		ft_printf(const char *format, ...)
 {
 	va_list ap;
 	size_t	len;
-	char 	*print;
+	char	*print;
 
 	va_start(ap, format);
 	print = ft_main_funct(ap, (char*)format);
@@ -101,5 +99,3 @@ int		ft_printf(const char *format, ...)
 	va_end(ap);
 	return ((int)len);
 }
-
-//ft_printf("123%456%789");

@@ -80,6 +80,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c">
 			<Option target="ft_printf"/>
 		</Unit>

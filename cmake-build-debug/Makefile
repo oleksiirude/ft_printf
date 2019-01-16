@@ -123,6 +123,33 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
+auxiliary.o: auxiliary.c.o
+
+.PHONY : auxiliary.o
+
+# target to build an object file
+auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.o
+.PHONY : auxiliary.c.o
+
+auxiliary.i: auxiliary.c.i
+
+.PHONY : auxiliary.i
+
+# target to preprocess a source file
+auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.i
+.PHONY : auxiliary.c.i
+
+auxiliary.s: auxiliary.c.s
+
+.PHONY : auxiliary.s
+
+# target to generate assembly for a file
+auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.s
+.PHONY : auxiliary.c.s
+
 ft_assembly.o: ft_assembly.c.o
 
 .PHONY : ft_assembly.o
@@ -2049,6 +2076,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
+	@echo "... auxiliary.o"
+	@echo "... auxiliary.i"
+	@echo "... auxiliary.s"
 	@echo "... ft_assembly.o"
 	@echo "... ft_assembly.i"
 	@echo "... ft_assembly.s"
