@@ -19,8 +19,11 @@ void	ft_find_last_node(t_prts **start, t_prts **node)
 		*node = (*node)->next;
 }
 
-void	ft_set_flgs_to_zero(t_flgs *flags)
+t_pmts	*ft_set_flags_to_zero(void)
 {
+	t_pmts	*flags;
+
+	flags = (t_pmts*)malloc(sizeof(t_pmts));
 	flags->minus = 0;
 	flags->plus = 0;
 	flags->space = 0;
@@ -28,8 +31,9 @@ void	ft_set_flgs_to_zero(t_flgs *flags)
 	flags->value = 0;
 	flags->zero = 0;
 	flags->zero_value = 0;
-	flags->precision = 0;
-	flags->precision_value = 0;
+	flags->prec = 0;
+	flags->prec_value = 0;
 	flags->mod = 0;
 	flags->type = 0;
+	return (flags);
 }

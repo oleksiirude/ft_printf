@@ -14,6 +14,6 @@
 
 int main(void)
 {
-	ft_printf("123%c", 'F');
+	ft_printf("123%cEND", 'F');
 	return (0);
 }

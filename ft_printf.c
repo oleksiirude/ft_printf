@@ -30,17 +30,17 @@ size_t	ft_check_len(char *fmt)
 t_prts	*ft_rec_node(char ***fmt, size_t len)
 {
 	size_t	i;
-	t_prts	*lst;
+	t_prts	*node;
 
 	i = 0;
-	lst = (t_prts*)malloc(sizeof(t_prts));
-	lst->str = (char*)malloc(len + 1);
-	lst->len = len;
-	lst->next = NULL;
-	lst->str[len + 1] = 0;
+	node = (t_prts*)malloc(sizeof(t_prts));
+	node->str = (char*)malloc(len + 1);
+	node->len = len;
+	node->next = NULL;
+	node->str[len + 1] = 0;
 	while (len--)
-		lst->str[i++] = *(**fmt)++;
-	return (lst);
+		node->str[i++] = *(**fmt)++;
+	return (node);
 }
 
 void	ft_rec_simple_str(char **fmt, t_prts **start, t_prts **node, int sign)

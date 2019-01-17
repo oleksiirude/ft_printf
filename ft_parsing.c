@@ -12,7 +12,10 @@
 
 #include "ft_printf.h"
 
+char *g_types = "diouxXcspf%";
+char *g_params = "#+- .0123456789hlL";
+
 t_prts	*ft_processing(va_list ap, char **fmt)
 {
-
+	if (ft_parse(ap, ))
 }

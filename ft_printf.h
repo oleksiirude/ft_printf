@@ -21,8 +21,6 @@
 #include "./libft/libft.h"
 
 #define PERC '%'
-#define VLDFLGS "#+- .0123456789"
-#define TP "diouxXcspf"
 
 typedef struct		s_prts
 {
@@ -31,7 +29,7 @@ typedef struct		s_prts
 	struct s_prts	*next;
 }					t_prts;
 
-typedef struct		s_flgs
+typedef struct		s_pmts
 {
 	int				minus;
 	int				plus;
@@ -40,11 +38,11 @@ typedef struct		s_flgs
 	int				value;
 	int				zero;
 	int				zero_value;
-	int				precision;
-	int				precision_value;
+	int				prec;
+	int				prec_value;
 	int 			mod;
 	int 			type;
-}					t_flgs;
+}					t_pmts;
 
 char				*ft_type_c(va_list ap);
 char				*ft_type_s(va_list ap);
@@ -58,5 +56,6 @@ int					ft_printf(const char *format, ...);
 char				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);
+t_pmts				*ft_set_flags_to_zero(void);
 
 #endif
