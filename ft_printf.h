@@ -11,16 +11,23 @@
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
-#define FT_PRINTF_H
+# define FT_PRINTF_H
 
-#include <stdio.h>
-#include <stdarg.h>
-#include <stdlib.h>
-#include <unistd.h>
-#include <string.h>
-#include "./libft/libft.h"
+# include <stdio.h>
+# include <stdarg.h>
+# include <stdlib.h>
+# include <unistd.h>
+# include <string.h>
+# include "./libft/libft.h"
 
-#define PERC '%'
+# define PERC '%'
+# define TYPES "diouxXcspf%"
+# define FLAGS "#+- .0123456789hlL"
+# define H 1
+# define HH 2
+# define L 3
+# define LL 4
+# define LBIG 5
 
 typedef struct		s_prts
 {
@@ -34,14 +41,14 @@ typedef struct		s_pmts
 	int				minus;
 	int				plus;
 	int				space;
-	int 			hash;
+	int				hash;
 	int				value;
 	int				zero;
 	int				zero_value;
 	int				prec;
 	int				prec_value;
-	int 			mod;
-	int 			type;
+	int				mod;
+	char			type;
 }					t_pmts;
 
 char				*ft_type_c(va_list ap);

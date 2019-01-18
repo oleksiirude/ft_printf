@@ -12,10 +12,44 @@
 
 #include "ft_printf.h"
 
-char *g_types = "diouxXcspf%";
-char *g_params = "#+- .0123456789hlL";
+void	ft_rec_type(char *fmt, t_pmts **params)
+{
+
+}
+
+void	ft_rec_params(char **fmt, t_pmts **params)
+{
+
+}
+
+t_pmts	*ft_main_parse(char **fmt)
+{
+	t_pmts	*params;
+
+	params = ft_set_flags_to_zero();
+	while (!ft_strchr("diouxXcspf%", **fmt) && **fmt)
+	{
+		if (ft_strchr("#+- .0123456789hlL", **fmt))
+			ft_rec_params(fmt, &params);
+		else
+			return (NULL);
+		(*fmt)++;
+	}
+	if (*fmt)
+	{
+		ft_rec_type(*fmt, &params);
+		return (params);
+	}
+	return (NULL);
+}
 
 t_prts	*ft_processing(va_list ap, char **fmt)
 {
-	if (ft_parse(ap, ))
+	t_prts *node;
+	t_pmts *params;
+
+	if ((params = ft_main_parse(fmt)))
+		return (ft_valid_str_formation(ap, params));
+	else
+		return (ft_invalid_str_formation(fmt));
 }

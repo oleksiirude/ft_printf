@@ -27,7 +27,7 @@ size_t	ft_check_len(char *fmt)
 	return (len);
 }
 
-t_prts	*ft_rec_node(char ***fmt, size_t len)
+t_prts	*ft_rec_node(char **fmt, size_t len)
 {
 	size_t	i;
 	t_prts	*node;
@@ -39,7 +39,7 @@ t_prts	*ft_rec_node(char ***fmt, size_t len)
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	while (len--)
-		node->str[i++] = *(**fmt)++;
+		node->str[i++] = **fmt++;
 	return (node);
 }
 
@@ -50,10 +50,10 @@ void	ft_rec_simple_str(char **fmt, t_prts **start, t_prts **node, int sign)
 		*(node) = *(start);
 		while ((*node)->next)
 			*node = (*node)->next;
-		(*node)->next = ft_rec_node(&fmt, (ft_check_len(*(fmt))));
+		(*node)->next = ft_rec_node(fmt, (ft_check_len(*fmt)));
 	}
 	else
-		*(start) = ft_rec_node(&fmt, (ft_check_len(*(fmt))));
+		*(start) = ft_rec_node(fmt, (ft_check_len(*fmt)));
 }
 
 char	*ft_main_funct(va_list ap, char *fmt)

@@ -12,34 +12,37 @@
 
 #include "ft_printf.h"
 
-size_t 	ft_len_sum(t_prts *start)
+size_t	ft_len_sum(t_prts *start)
 {
 	size_t sum;
+	int i;
 
 	sum = 0;
 	while (start)
 	{
 		sum += start->len;
 		start = start->next;
+		i++;
 	}
 	return (sum);
 }
 
-char 	*ft_assembly(t_prts *start)
+char	*ft_assembly(t_prts *start)
 {
 	size_t	j;
 	char	*final_str;
-	char 	*temp;
+	char	*temp;
 
 	j = 0;
 	temp = (char*)malloc((ft_len_sum(start) + 1));
 	final_str = temp;
 	while (start)
 	{
-		while(start->str[j])
+		while (start->str[j])
 			*temp++ = start->str[j++];
 		start = start->next;
 		j = 0;
 	}
+	*temp = 0;
 	return (final_str);
 }
