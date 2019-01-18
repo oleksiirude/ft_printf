@@ -12,13 +12,22 @@
 
 #include "ft_printf.h"
 
-void	ft_rec_type(char *fmt, t_pmts **params)
-{
-
-}
-
 void	ft_rec_params(char **fmt, t_pmts **params)
 {
+	if (**fmt == '.')
+		(*params)->prec = 1;
+
+
+
+	else if (**fmt == '#')
+		(*params)->hash = 1;
+	else if (**fmt == '+')
+		(*params)->plus = 1;
+	else if (**fmt == '-')
+		(*params)->minus = 1;
+	else if (**fmt == ' ')
+		(*params)->space = 1;
+
 
 }
 
@@ -35,21 +44,21 @@ t_pmts	*ft_main_parse(char **fmt)
 			return (NULL);
 		(*fmt)++;
 	}
-	if (*fmt)
+	if (**fmt)
 	{
-		ft_rec_type(*fmt, &params);
+		params->type = **fmt;
 		return (params);
 	}
+	free(params);
 	return (NULL);
 }
 
 t_prts	*ft_processing(va_list ap, char **fmt)
 {
-	t_prts *node;
 	t_pmts *params;
 
 	if ((params = ft_main_parse(fmt)))
 		return (ft_valid_str_formation(ap, params));
-	else
-		return (ft_invalid_str_formation(fmt));
+	free(params);
+	return (ft_invalid_str_formation(fmt));
 }

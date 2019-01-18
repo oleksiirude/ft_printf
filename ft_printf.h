@@ -64,5 +64,7 @@ char				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);
 t_pmts				*ft_set_flags_to_zero(void);
+t_prts				*ft_valid_str_formation(va_list ap, t_pmts *params);
+t_prts				*ft_invalid_str_formation(char **fmt);
 
 #endif
