@@ -71,7 +71,9 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o"
   "CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o"
   "CMakeFiles/ft_printf.dir/ft_assembly.c.o"
-  "CMakeFiles/ft_printf.dir/auxiliary.c.o"
+  "CMakeFiles/ft_printf.dir/ft_auxiliary.c.o"
+  "CMakeFiles/ft_printf.dir/ft_valid_case.c.o"
+  "CMakeFiles/ft_printf.dir/ft_invalid_case.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

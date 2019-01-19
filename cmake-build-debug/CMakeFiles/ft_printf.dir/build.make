@@ -993,18 +993,44 @@ CMakeFiles/ft_printf.dir/ft_assembly.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_assembly.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c -o CMakeFiles/ft_printf.dir/ft_assembly.c.s
 
-CMakeFiles/ft_printf.dir/auxiliary.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/auxiliary.c.o: ../auxiliary.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft_printf.dir/auxiliary.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/auxiliary.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/auxiliary.c
+CMakeFiles/ft_printf.dir/ft_auxiliary.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/ft_auxiliary.c.o: ../ft_auxiliary.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_73) "Building C object CMakeFiles/ft_printf.dir/ft_auxiliary.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_auxiliary.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c
 
-CMakeFiles/ft_printf.dir/auxiliary.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/auxiliary.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/auxiliary.c > CMakeFiles/ft_printf.dir/auxiliary.c.i
+CMakeFiles/ft_printf.dir/ft_auxiliary.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_auxiliary.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c > CMakeFiles/ft_printf.dir/ft_auxiliary.c.i
 
-CMakeFiles/ft_printf.dir/auxiliary.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/auxiliary.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/auxiliary.c -o CMakeFiles/ft_printf.dir/auxiliary.c.s
+CMakeFiles/ft_printf.dir/ft_auxiliary.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_auxiliary.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c -o CMakeFiles/ft_printf.dir/ft_auxiliary.c.s
+
+CMakeFiles/ft_printf.dir/ft_valid_case.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/ft_valid_case.c.o: ../ft_valid_case.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Building C object CMakeFiles/ft_printf.dir/ft_valid_case.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_valid_case.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c
+
+CMakeFiles/ft_printf.dir/ft_valid_case.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_valid_case.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c > CMakeFiles/ft_printf.dir/ft_valid_case.c.i
+
+CMakeFiles/ft_printf.dir/ft_valid_case.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_valid_case.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c -o CMakeFiles/ft_printf.dir/ft_valid_case.c.s
+
+CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_invalid_case.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_75) "Building C object CMakeFiles/ft_printf.dir/ft_invalid_case.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_invalid_case.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c
+
+CMakeFiles/ft_printf.dir/ft_invalid_case.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_invalid_case.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c > CMakeFiles/ft_printf.dir/ft_invalid_case.c.i
+
+CMakeFiles/ft_printf.dir/ft_invalid_case.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_invalid_case.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c -o CMakeFiles/ft_printf.dir/ft_invalid_case.c.s
 
 # Object files for target ft_printf
 ft_printf_OBJECTS = \
@@ -1080,7 +1106,9 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o" \
 "CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o" \
 "CMakeFiles/ft_printf.dir/ft_assembly.c.o" \
-"CMakeFiles/ft_printf.dir/auxiliary.c.o"
+"CMakeFiles/ft_printf.dir/ft_auxiliary.c.o" \
+"CMakeFiles/ft_printf.dir/ft_valid_case.c.o" \
+"CMakeFiles/ft_printf.dir/ft_invalid_case.c.o"
 
 # External object files for target ft_printf
 ft_printf_EXTERNAL_OBJECTS =
@@ -1157,10 +1185,12 @@ ft_printf: CMakeFiles/ft_printf.dir/ft_printf.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_assembly.c.o
-ft_printf: CMakeFiles/ft_printf.dir/auxiliary.c.o
+ft_printf: CMakeFiles/ft_printf.dir/ft_auxiliary.c.o
+ft_printf: CMakeFiles/ft_printf.dir/ft_valid_case.c.o
+ft_printf: CMakeFiles/ft_printf.dir/ft_invalid_case.c.o
 ft_printf: CMakeFiles/ft_printf.dir/build.make
 ft_printf: CMakeFiles/ft_printf.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_74) "Linking C executable ft_printf"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_76) "Linking C executable ft_printf"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/ft_printf.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

@@ -123,33 +123,6 @@ ft_printf/fast:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/build
 .PHONY : ft_printf/fast
 
-auxiliary.o: auxiliary.c.o
-
-.PHONY : auxiliary.o
-
-# target to build an object file
-auxiliary.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.o
-.PHONY : auxiliary.c.o
-
-auxiliary.i: auxiliary.c.i
-
-.PHONY : auxiliary.i
-
-# target to preprocess a source file
-auxiliary.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.i
-.PHONY : auxiliary.c.i
-
-auxiliary.s: auxiliary.c.s
-
-.PHONY : auxiliary.s
-
-# target to generate assembly for a file
-auxiliary.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/auxiliary.c.s
-.PHONY : auxiliary.c.s
-
 ft_assembly.o: ft_assembly.c.o
 
 .PHONY : ft_assembly.o
@@ -176,6 +149,60 @@ ft_assembly.s: ft_assembly.c.s
 ft_assembly.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_assembly.c.s
 .PHONY : ft_assembly.c.s
+
+ft_auxiliary.o: ft_auxiliary.c.o
+
+.PHONY : ft_auxiliary.o
+
+# target to build an object file
+ft_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary.c.o
+.PHONY : ft_auxiliary.c.o
+
+ft_auxiliary.i: ft_auxiliary.c.i
+
+.PHONY : ft_auxiliary.i
+
+# target to preprocess a source file
+ft_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary.c.i
+.PHONY : ft_auxiliary.c.i
+
+ft_auxiliary.s: ft_auxiliary.c.s
+
+.PHONY : ft_auxiliary.s
+
+# target to generate assembly for a file
+ft_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary.c.s
+.PHONY : ft_auxiliary.c.s
+
+ft_invalid_case.o: ft_invalid_case.c.o
+
+.PHONY : ft_invalid_case.o
+
+# target to build an object file
+ft_invalid_case.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_invalid_case.c.o
+.PHONY : ft_invalid_case.c.o
+
+ft_invalid_case.i: ft_invalid_case.c.i
+
+.PHONY : ft_invalid_case.i
+
+# target to preprocess a source file
+ft_invalid_case.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_invalid_case.c.i
+.PHONY : ft_invalid_case.c.i
+
+ft_invalid_case.s: ft_invalid_case.c.s
+
+.PHONY : ft_invalid_case.s
+
+# target to generate assembly for a file
+ft_invalid_case.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_invalid_case.c.s
+.PHONY : ft_invalid_case.c.s
 
 ft_parsing_1st_part.o: ft_parsing_1st_part.c.o
 
@@ -257,6 +284,33 @@ ft_printf.s: ft_printf.c.s
 ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
+
+ft_valid_case.o: ft_valid_case.c.o
+
+.PHONY : ft_valid_case.o
+
+# target to build an object file
+ft_valid_case.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_valid_case.c.o
+.PHONY : ft_valid_case.c.o
+
+ft_valid_case.i: ft_valid_case.c.i
+
+.PHONY : ft_valid_case.i
+
+# target to preprocess a source file
+ft_valid_case.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_valid_case.c.i
+.PHONY : ft_valid_case.c.i
+
+ft_valid_case.s: ft_valid_case.c.s
+
+.PHONY : ft_valid_case.s
+
+# target to generate assembly for a file
+ft_valid_case.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_valid_case.c.s
+.PHONY : ft_valid_case.c.s
 
 libft/ft_atoi.o: libft/ft_atoi.c.o
 
@@ -2103,12 +2157,15 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... ft_printf"
-	@echo "... auxiliary.o"
-	@echo "... auxiliary.i"
-	@echo "... auxiliary.s"
 	@echo "... ft_assembly.o"
 	@echo "... ft_assembly.i"
 	@echo "... ft_assembly.s"
+	@echo "... ft_auxiliary.o"
+	@echo "... ft_auxiliary.i"
+	@echo "... ft_auxiliary.s"
+	@echo "... ft_invalid_case.o"
+	@echo "... ft_invalid_case.i"
+	@echo "... ft_invalid_case.s"
 	@echo "... ft_parsing_1st_part.o"
 	@echo "... ft_parsing_1st_part.i"
 	@echo "... ft_parsing_1st_part.s"
@@ -2118,6 +2175,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_valid_case.o"
+	@echo "... ft_valid_case.i"
+	@echo "... ft_valid_case.s"
 	@echo "... libft/ft_atoi.o"
 	@echo "... libft/ft_atoi.i"
 	@echo "... libft/ft_atoi.s"

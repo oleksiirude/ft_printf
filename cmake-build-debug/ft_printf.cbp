@@ -80,10 +80,13 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/auxiliary.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c">
@@ -96,6 +99,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_atoi.c">
