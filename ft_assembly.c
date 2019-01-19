@@ -15,14 +15,12 @@
 size_t	ft_len_sum(t_prts *start)
 {
 	size_t sum;
-	int i;
 
 	sum = 0;
 	while (start)
 	{
 		sum += start->len;
 		start = start->next;
-		i++;
 	}
 	return (sum);
 }

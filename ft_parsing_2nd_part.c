@@ -14,7 +14,7 @@
 
 void	ft_h_or_hh_case(char **fmt, t_pmts **params)
 {
-	if ((*(*fmt) + 1) == 'h')
+	if (*(*fmt + 1) == 'h')
 	{
 		(*params)->mod = HH;
 		(*fmt)++;
@@ -25,7 +25,7 @@ void	ft_h_or_hh_case(char **fmt, t_pmts **params)
 
 void	ft_l_or_ll_case(char **fmt, t_pmts **params)
 {
-	if ((*(*fmt) + 1) == 'l')
+	if (*(*fmt + 1) == 'l')
 	{
 		(*params)->mod = LL;
 		(*fmt)++;
