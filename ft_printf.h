@@ -67,5 +67,5 @@ t_prts				*ft_invalid_str_formation(char **fmt);
 int					ft_atoi_light(char **str);
 void				ft_h_or_hh_case(char **fmt, t_pmts **params);
 void				ft_l_or_ll_case(char **fmt, t_pmts **params);
-
+t_prts				*ft_invalid_str_formation();
 #endif

@@ -39,7 +39,7 @@ t_prts	*ft_rec_node(char **fmt, size_t len)
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	while (len--)
-		node->str[i++] = **fmt++;
+		node->str[i++] = *(*fmt)++;
 	return (node);
 }
 
@@ -60,6 +60,7 @@ char	*ft_main_funct(va_list ap, char *fmt)
 {
 	t_prts	*start;
 	t_prts	*node;
+
 
 	while (*fmt)
 	{

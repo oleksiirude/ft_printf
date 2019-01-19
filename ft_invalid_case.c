@@ -12,3 +12,27 @@
 
 #include "ft_printf.h"
 
+t_prts	*ft_invalid_str_formation(char **fmt)
+{
+	size_t 	len;
+	char	*tmp;
+	t_prts	*node;
+
+	len = 0;
+	tmp = *fmt;
+	while (*(*fmt) && *(*fmt) != PERC)
+	{
+		(*fmt)++;
+		len++;
+	}
+	node = (t_prts*)malloc(sizeof(t_prts));
+	node->str = (char*)malloc(len + 1);
+	node->len = len;
+	node->next = NULL;
+	node->str[len + 1] = 0;
+	len = 0;
+	*fmt = tmp;
+	while (*(*fmt) && *(*fmt) != PERC)
+		node->str[len++] = *(*fmt)++;
+	return (node);
+}

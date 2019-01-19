@@ -14,6 +14,6 @@
 
 int main(void)
 {
-	ft_printf("%400d");
+	ft_printf("Hello%%World", 42);
 	return (0);
 }

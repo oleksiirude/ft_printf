@@ -85,7 +85,10 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 	t_pmts *params;
 
 	if ((params = ft_main_parse(fmt)))
-		return (ft_valid_str_formation(ap, params));
+	{
+		return (NULL);
+		//return (ft_valid_str_formation(ap, params));
+	}
 	free(params);
 	return (ft_invalid_str_formation(fmt));
 }
