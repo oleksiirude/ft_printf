@@ -177,32 +177,59 @@ ft_assembly.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_assembly.c.s
 .PHONY : ft_assembly.c.s
 
-ft_parsing.o: ft_parsing.c.o
+ft_parsing_1st_part.o: ft_parsing_1st_part.c.o
 
-.PHONY : ft_parsing.o
+.PHONY : ft_parsing_1st_part.o
 
 # target to build an object file
-ft_parsing.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing.c.o
-.PHONY : ft_parsing.c.o
+ft_parsing_1st_part.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o
+.PHONY : ft_parsing_1st_part.c.o
 
-ft_parsing.i: ft_parsing.c.i
+ft_parsing_1st_part.i: ft_parsing_1st_part.c.i
 
-.PHONY : ft_parsing.i
+.PHONY : ft_parsing_1st_part.i
 
 # target to preprocess a source file
-ft_parsing.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing.c.i
-.PHONY : ft_parsing.c.i
+ft_parsing_1st_part.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.i
+.PHONY : ft_parsing_1st_part.c.i
 
-ft_parsing.s: ft_parsing.c.s
+ft_parsing_1st_part.s: ft_parsing_1st_part.c.s
 
-.PHONY : ft_parsing.s
+.PHONY : ft_parsing_1st_part.s
 
 # target to generate assembly for a file
-ft_parsing.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing.c.s
-.PHONY : ft_parsing.c.s
+ft_parsing_1st_part.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.s
+.PHONY : ft_parsing_1st_part.c.s
+
+ft_parsing_2nd_part.o: ft_parsing_2nd_part.c.o
+
+.PHONY : ft_parsing_2nd_part.o
+
+# target to build an object file
+ft_parsing_2nd_part.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o
+.PHONY : ft_parsing_2nd_part.c.o
+
+ft_parsing_2nd_part.i: ft_parsing_2nd_part.c.i
+
+.PHONY : ft_parsing_2nd_part.i
+
+# target to preprocess a source file
+ft_parsing_2nd_part.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.i
+.PHONY : ft_parsing_2nd_part.c.i
+
+ft_parsing_2nd_part.s: ft_parsing_2nd_part.c.s
+
+.PHONY : ft_parsing_2nd_part.s
+
+# target to generate assembly for a file
+ft_parsing_2nd_part.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.s
+.PHONY : ft_parsing_2nd_part.c.s
 
 ft_printf.o: ft_printf.c.o
 
@@ -2082,9 +2109,12 @@ help:
 	@echo "... ft_assembly.o"
 	@echo "... ft_assembly.i"
 	@echo "... ft_assembly.s"
-	@echo "... ft_parsing.o"
-	@echo "... ft_parsing.i"
-	@echo "... ft_parsing.s"
+	@echo "... ft_parsing_1st_part.o"
+	@echo "... ft_parsing_1st_part.i"
+	@echo "... ft_parsing_1st_part.s"
+	@echo "... ft_parsing_2nd_part.o"
+	@echo "... ft_parsing_2nd_part.i"
+	@echo "... ft_parsing_2nd_part.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"

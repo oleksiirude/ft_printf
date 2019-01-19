@@ -6,7 +6,8 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_C
   "/Users/olrudenk/CLionProjects/ft_printf/auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/auxiliary.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_assembly.c.o"
-  "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/libft/ft_atoi.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/libft/ft_bzero.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o"

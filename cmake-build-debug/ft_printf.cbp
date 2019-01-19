@@ -86,7 +86,10 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c">

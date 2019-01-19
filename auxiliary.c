@@ -12,6 +12,23 @@
 
 #include "ft_printf.h"
 
+int	ft_atoi_light(char **fmt)
+{
+	int	res;
+
+	res = 0;
+	while (**fmt)
+	{
+		while (**fmt >= '0' && **fmt <= '9')
+		{
+			res = 10 * res + (**fmt - '0');
+			(*fmt)++;
+		}
+		return (res);
+	}
+	return (0);
+}
+
 void	ft_find_last_node(t_prts **start, t_prts **node)
 {
 	*(node) = *(start);

@@ -21,8 +21,6 @@
 # include "./libft/libft.h"
 
 # define PERC '%'
-# define TYPES "diouxXcspf%"
-# define FLAGS "#+- .0123456789hlL"
 # define H 1
 # define HH 2
 # define L 3
@@ -66,5 +64,8 @@ void				ft_find_last_node(t_prts **start, t_prts **node);
 t_pmts				*ft_set_flags_to_zero(void);
 t_prts				*ft_valid_str_formation(va_list ap, t_pmts *params);
 t_prts				*ft_invalid_str_formation(char **fmt);
+int					ft_atoi_light(char **str);
+void				ft_h_or_hh_case(char **fmt, t_pmts **params);
+void				ft_l_or_ll_case(char **fmt, t_pmts **params);
 
 #endif
