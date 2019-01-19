@@ -12,4 +12,24 @@
 
 #include "ft_printf.h"
 
+t_prts	*ft_simply_add_perc(void)
+{
+	t_prts	*node;
 
+	node = (t_prts*)malloc(sizeof(t_prts));
+	node->str = (char*)malloc(2);
+	node->len = 1;
+	node->next = NULL;
+	node->str[1] = 0;
+	node->str = "%";
+	return (node);
+}
+
+t_prts	*ft_valid_str_formation(va_list ap, t_pmts *params)
+{
+	if (params->type == PERC)
+	{
+		return (ft_simply_add_perc());
+	}
+	return (NULL);
+}

@@ -86,8 +86,9 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 
 	if ((params = ft_main_parse(fmt)))
 	{
-		return (NULL);
-		//return (ft_valid_str_formation(ap, params));
+		if (params->type == PERC)
+			(*fmt)++;
+		return (ft_valid_str_formation(ap, params));
 	}
 	free(params);
 	return (ft_invalid_str_formation(fmt));
