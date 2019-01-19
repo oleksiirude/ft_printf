@@ -57,4 +57,3 @@ t_pmts	*ft_set_flags_to_zero(void)
 	flags->type = 0;
 	return (flags);
 }
-вфывывыфв
