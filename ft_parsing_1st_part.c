@@ -53,43 +53,44 @@ void	ft_rec_params(char **fmt, t_pmts **params)
 		(*params)->mod = LBIG;
 }
 
-t_pmts	*ft_main_parse(char **fmt)
+size_t	ft_main_parse(char **fmt, t_pmts **params)
 {
-	t_pmts	*params;
-
-	params = ft_set_flags_to_zero();
 	while (!ft_strchr("diouxXcspf%", **fmt) && **fmt)
 	{
 		if (ft_strchr("#+- .0123456789hlL", **fmt))
-			ft_rec_params(fmt, &params);
+			ft_rec_params(fmt, params);
 		else
-			return (NULL);
+			return (0);
 		(*fmt)++;
 	}
 	if (**fmt == PERC)
 	{
-		params->type = PERC;
-		return (params);
+		(*fmt)++;
+		(*params)->type = PERC;
+		return (1);
 	}
 	if (**fmt)
-	{
-		params->type = **fmt;
-		return (params);
-	}
-	free(params);
-	return (NULL);
+		return (2);
+	return (0);
 }
 
 t_prts	*ft_processing(va_list ap, char **fmt)
 {
+	size_t result;
 	t_pmts *params;
 
-	if ((params = ft_main_parse(fmt)))
+	params = ft_set_flags_to_zero();
+	result = ft_main_parse(fmt, &params);
+	if (!result)
 	{
-		if (params->type == PERC)
-			(*fmt)++;
+		free(params);
+		return (ft_invalid_str_formation(fmt));
+	}
+	else if (result == 1)
+		return (ft_valid_str_formation(ap, params));
+	else
+	{
+		params->type = **fmt;
 		return (ft_valid_str_formation(ap, params));
 	}
-	free(params);
-	return (ft_invalid_str_formation(fmt));
 }

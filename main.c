@@ -14,6 +14,7 @@
 
 int main(void)
 {
-	ft_printf("%%\n");
+	ft_printf("Unit %% City\n");
+	system("leaks ft_printf");
 	return (0);
 }

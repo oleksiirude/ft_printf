@@ -27,20 +27,22 @@ size_t	ft_len_sum(t_prts *start)
 
 char	*ft_assembly(t_prts *start)
 {
-	size_t	j;
+	size_t	i;
 	char	*final_str;
-	char	*temp;
+	char	*zero_elem;
 
-	j = 0;
-	temp = (char*)malloc((ft_len_sum(start) + 1));
-	final_str = temp;
+	i = 0;
+	final_str = (char*)malloc((ft_len_sum(start) + 1));
+	zero_elem = final_str;
 	while (start)
 	{
-		while (start->str[j])
-			*temp++ = start->str[j++];
+		while (start->str[i])
+			*final_str++ = start->str[i++];
+		free(start->str);
+		free(start);
 		start = start->next;
-		j = 0;
+		i = 0;
 	}
-	*temp = 0;
-	return (final_str);
+	*final_str = 0;
+	return (zero_elem);
 }

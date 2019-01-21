@@ -14,7 +14,7 @@
 
 t_prts	*ft_invalid_str_formation(char **fmt)
 {
-	size_t 	len;
+	size_t	len;
 	char	*tmp;
 	t_prts	*node;
 

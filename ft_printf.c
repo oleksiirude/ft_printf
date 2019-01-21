@@ -47,20 +47,19 @@ void	ft_rec_simple_str(char **fmt, t_prts **start, t_prts **node, int sign)
 {
 	if (sign)
 	{
-		*(node) = *(start);
+		*node = *start;
 		while ((*node)->next)
 			*node = (*node)->next;
 		(*node)->next = ft_rec_node(fmt, (ft_check_len(*fmt)));
 	}
 	else
-		*(start) = ft_rec_node(fmt, (ft_check_len(*fmt)));
+		*start = ft_rec_node(fmt, (ft_check_len(*fmt)));
 }
 
 char	*ft_main_funct(va_list ap, char *fmt)
 {
 	t_prts	*start;
 	t_prts	*node;
-
 
 	while (*fmt)
 	{
