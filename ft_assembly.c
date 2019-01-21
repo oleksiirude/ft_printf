@@ -12,7 +12,14 @@
 
 #include "ft_printf.h"
 
-size_t	ft_len_sum(t_prts *start)
+void	ft_clean_node_and_go_next(t_prts **start)
+{
+	free((*start)->str);
+	free(*start);
+	*start = (*start)->next;
+}
+
+size_t	ft_len_sum(t_prts *start, size_t *len)
 {
 	size_t sum;
 
@@ -22,27 +29,32 @@ size_t	ft_len_sum(t_prts *start)
 		sum += start->len;
 		start = start->next;
 	}
+	*len = sum;
 	return (sum);
 }
 
-char	*ft_assembly(t_prts *start)
+t_final	*ft_assembly(t_prts *start)
 {
 	size_t	i;
-	char	*final_str;
+	t_final	*result;
 	char	*zero_elem;
 
 	i = 0;
-	final_str = (char*)malloc((ft_len_sum(start) + 1));
-	zero_elem = final_str;
+	result = (t_final*)malloc(sizeof(t_final));
+	result->str = (char*)malloc((ft_len_sum(start, &result->len) + 1));
+	zero_elem = result->str;
 	while (start)
 	{
+		if (start->sz == YES)
+		{
+			*result->str++ = start->str[0];
+			ft_clean_node_and_go_next(&start);
+		}
 		while (start->str[i])
-			*final_str++ = start->str[i++];
-		free(start->str);
-		free(start);
-		start = start->next;
+			*result->str++ = start->str[i++];
+		ft_clean_node_and_go_next(&start);
 		i = 0;
 	}
-	*final_str = 0;
-	return (zero_elem);
+	result->str = zero_elem;
+	return (result);
 }

@@ -285,6 +285,33 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+ft_type_c.o: ft_type_c.c.o
+
+.PHONY : ft_type_c.o
+
+# target to build an object file
+ft_type_c.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_c.c.o
+.PHONY : ft_type_c.c.o
+
+ft_type_c.i: ft_type_c.c.i
+
+.PHONY : ft_type_c.i
+
+# target to preprocess a source file
+ft_type_c.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_c.c.i
+.PHONY : ft_type_c.c.i
+
+ft_type_c.s: ft_type_c.c.s
+
+.PHONY : ft_type_c.s
+
+# target to generate assembly for a file
+ft_type_c.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_c.c.s
+.PHONY : ft_type_c.c.s
+
 ft_valid_case.o: ft_valid_case.c.o
 
 .PHONY : ft_valid_case.o
@@ -2175,6 +2202,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_type_c.o"
+	@echo "... ft_type_c.i"
+	@echo "... ft_type_c.s"
 	@echo "... ft_valid_case.o"
 	@echo "... ft_valid_case.i"
 	@echo "... ft_valid_case.s"

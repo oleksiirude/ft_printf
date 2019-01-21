@@ -14,7 +14,11 @@
 
 int main(void)
 {
-	ft_printf("Unit %% City\n");
+	int res;
+
+	res = ft_printf("I %cam Oleksii%%\n", '\0');
+	printf("res-> %d\n", res);
+	//printf("I am %cOleksii\n", '\0');
 	system("leaks ft_printf");
 	return (0);
 }

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_invalid_str_formation(char **fmt)
+t_prts	*ft_invalid_str_form(char **fmt, t_pmts **pmts)
 {
 	size_t	len;
 	char	*tmp;
@@ -20,6 +20,7 @@ t_prts	*ft_invalid_str_formation(char **fmt)
 
 	len = 0;
 	tmp = *fmt;
+	free(pmts);
 	while (*(*fmt) && *(*fmt) != PERC)
 	{
 		(*fmt)++;
@@ -28,6 +29,7 @@ t_prts	*ft_invalid_str_formation(char **fmt)
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->str = (char*)malloc(len + 1);
 	node->len = len;
+	node->sz = NO;
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	len = 0;

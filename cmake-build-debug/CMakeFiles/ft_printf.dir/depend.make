@@ -25,6 +25,10 @@ CMakeFiles/ft_printf.dir/ft_printf.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.c
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/ft_type_c.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_c.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_c.c.o: ../ft_type_c.c
+
 CMakeFiles/ft_printf.dir/ft_valid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_valid_case.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_valid_case.c.o: ../ft_valid_case.c

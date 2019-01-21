@@ -74,6 +74,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_auxiliary.c.o"
   "CMakeFiles/ft_printf.dir/ft_valid_case.c.o"
   "CMakeFiles/ft_printf.dir/ft_invalid_case.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_c.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

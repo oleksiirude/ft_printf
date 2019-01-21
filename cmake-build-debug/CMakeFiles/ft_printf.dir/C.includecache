@@ -14,7 +14,27 @@ stdlib.h
 unistd.h
 -
 
+/Users/olrudenk/CLionProjects/ft_printf/ft_assembly.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
 /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c
 ft_printf.h
 /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 
@@ -31,4 +51,16 @@ string.h
 -
 ./libft/libft.h
 /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/ft_printf/main.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 

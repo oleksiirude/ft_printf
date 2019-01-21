@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_valid_case.c                                    :+:      :+:    :+:   */
+/*   ft_type_c.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,28 +12,20 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_simply_add_perc(void)
+t_prts	*ft_type_c(va_list ap, t_pmts **pmts)
 {
+	int		result;
 	t_prts	*node;
 
+	free(pmts);
+	result = va_arg(ap, int);
 	node = (t_prts*)malloc(sizeof(t_prts));
-	node->str = (char*)malloc(2);
+	node->sz = NO;
+	if (!result)
+		node->sz = YES;
+	node->str = (char*)malloc(1);
 	node->len = 1;
 	node->next = NULL;
-	node->sz = NO;
-	node->str[0] = '%';
-	node->str[1] = 0;
+	node->str[0] = (unsigned char)result;
 	return (node);
-}
-
-t_prts	*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt)
-{
-	if (pmts->type == PERC)
-	{
-		free(pmts);
-		return (ft_simply_add_perc());
-	}
-	if (pmts->type == 'c')
-		return (ft_type_c(ap, pmts));
-	return (NULL);
 }

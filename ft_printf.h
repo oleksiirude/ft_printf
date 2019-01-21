@@ -27,8 +27,18 @@
 # define LL 4
 # define LBIG 5
 
+# define YES 1
+# define NO 0
+
+typedef struct		s_final
+{
+	char			*str;
+	size_t			len;
+}					t_final;
+
 typedef struct		s_prts
 {
+	int				sz;
 	char			*str;
 	size_t			len;
 	struct s_prts	*next;
@@ -49,23 +59,23 @@ typedef struct		s_pmts
 	char			type;
 }					t_pmts;
 
-char				*ft_type_c(va_list ap);
-char				*ft_type_s(va_list ap);
-char				*ft_type_p(va_list ap);
-char				*ft_type_d(va_list ap, int type);
-char				*ft_type_u(va_list ap, int type);
-char				*ft_type_o(va_list ap, int type);
-char				*ft_type_f(va_list ap, int type);
-char				*ft_type_x(va_list ap, int type, int reg);
+t_prts				*ft_type_c(va_list ap, t_pmts **pmts);
+t_prts				*ft_type_s(va_list ap);
+t_prts				*ft_type_p(va_list ap);
+t_prts				*ft_type_d(va_list ap, int type);
+t_prts				*ft_type_u(va_list ap, int type);
+t_prts				*ft_type_o(va_list ap, int type);
+t_prts				*ft_type_f(va_list ap, int type);
+t_prts				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
-char				*ft_assembly(t_prts *start);
+t_final				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);
 t_pmts				*ft_set_flags_to_zero(void);
-t_prts				*ft_valid_str_formation(va_list ap, t_pmts *params);
-t_prts				*ft_invalid_str_formation(char **fmt);
+t_prts				*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt);
+t_prts				*ft_invalid_str_form(char **fmt, t_pmts **pmts);
 int					ft_atoi_light(char **str);
-void				ft_h_or_hh_case(char **fmt, t_pmts **params);
-void				ft_l_or_ll_case(char **fmt, t_pmts **params);
+void				ft_h_or_hh_case(char **fmt, t_pmts **pmts);
+void				ft_l_or_ll_case(char **fmt, t_pmts **pmts);
 
 #endif

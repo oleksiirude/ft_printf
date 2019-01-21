@@ -35,9 +35,9 @@ void	ft_rec_params(char **fmt, t_pmts **params)
 		ft_prec_case(fmt, params);
 	else if (**fmt == '0')
 		ft_zero_case(fmt, params);
-	else if (**fmt == 'h')
+	else if (**fmt == H)
 		ft_h_or_hh_case(fmt, params);
-	else if (**fmt == 'l')
+	else if (**fmt == L)
 		ft_l_or_ll_case(fmt, params);
 	else if (**fmt >= '1' && **fmt <= '9')
 		(*params)->value = ft_atoi_light(fmt);
@@ -49,7 +49,7 @@ void	ft_rec_params(char **fmt, t_pmts **params)
 		(*params)->minus = 1;
 	else if (**fmt == ' ')
 		(*params)->space = 1;
-	else if (**fmt == 'L')
+	else if (**fmt == L)
 		(*params)->mod = LBIG;
 }
 
@@ -70,27 +70,25 @@ size_t	ft_main_parse(char **fmt, t_pmts **params)
 		return (1);
 	}
 	if (**fmt)
+	{
+		(*params)->type = **fmt;
+		(*fmt)++;
 		return (2);
+	}
 	return (0);
 }
 
 t_prts	*ft_processing(va_list ap, char **fmt)
 {
 	size_t result;
-	t_pmts *params;
+	t_pmts *pmts;
 
-	params = ft_set_flags_to_zero();
-	result = ft_main_parse(fmt, &params);
+	pmts = ft_set_flags_to_zero();
+	result = ft_main_parse(fmt, &pmts);
 	if (!result)
-	{
-		free(params);
-		return (ft_invalid_str_formation(fmt));
-	}
+		return (ft_invalid_str_form(fmt, &pmts));
 	else if (result == 1)
-		return (ft_valid_str_formation(ap, params));
+		return (ft_valid_str_form(ap, pmts, fmt));
 	else
-	{
-		params->type = **fmt;
-		return (ft_valid_str_formation(ap, params));
-	}
+		return (ft_valid_str_form(ap, pmts, fmt));
 }

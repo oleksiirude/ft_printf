@@ -36,6 +36,7 @@ t_prts	*ft_rec_node(char **fmt, size_t len)
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->str = (char*)malloc(len + 1);
 	node->len = len;
+	node->sz = NO;
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	while (len--)
@@ -56,7 +57,7 @@ void	ft_rec_simple_str(char **fmt, t_prts **start, t_prts **node, int sign)
 		*start = ft_rec_node(fmt, (ft_check_len(*fmt)));
 }
 
-char	*ft_main_funct(va_list ap, char *fmt)
+t_final	*ft_main_funct(va_list ap, char *fmt)
 {
 	t_prts	*start;
 	t_prts	*node;
@@ -87,15 +88,16 @@ char	*ft_main_funct(va_list ap, char *fmt)
 
 int		ft_printf(const char *format, ...)
 {
+	size_t	result;
 	va_list ap;
-	size_t	len;
-	char	*print;
+	t_final *final;
 
 	va_start(ap, format);
-	print = ft_main_funct(ap, (char*)format);
-	len = ft_strlen(print);
-	write(1, print, len);
-	free(print);
+	final = ft_main_funct(ap, (char*)format);
+	write(1, final->str, final->len);
+	result = final->len;
+	free(final->str);
+	free(final);
 	va_end(ap);
-	return ((int)len);
+	return ((int)result);
 }

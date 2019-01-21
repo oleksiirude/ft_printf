@@ -101,6 +101,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>

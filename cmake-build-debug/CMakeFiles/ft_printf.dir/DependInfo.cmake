@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_printf.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_c.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_valid_case.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/libft/ft_atoi.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_atoi.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/libft/ft_bzero.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/libft/ft_bzero.c.o"
