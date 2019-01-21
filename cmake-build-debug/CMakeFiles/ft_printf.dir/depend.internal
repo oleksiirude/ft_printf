@@ -13,13 +13,13 @@ CMakeFiles/ft_printf.dir/ft_invalid_case.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
- /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c
+ /Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
- /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c
+ /Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h

@@ -13,13 +13,13 @@ CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_invalid_case.c
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_printf.h
 
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o: .././libft/libft.h
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o: ../ft_parsing_1st_part.c
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o: ../ft_major_parsing.c
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o: ../ft_printf.h
 
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o: .././libft/libft.h
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o: ../ft_parsing_2nd_part.c
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o: ../ft_minor_parsing.c
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o: ../ft_printf.h
 
 CMakeFiles/ft_printf.dir/ft_printf.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_printf.c.o: ../ft_printf.c
