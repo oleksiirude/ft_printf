@@ -954,31 +954,31 @@ CMakeFiles/ft_printf.dir/ft_printf.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_printf.c.s"
 	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_printf.c -o CMakeFiles/ft_printf.dir/ft_printf.c.s
 
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o: ../ft_parsing_1st_part.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.o: ../ft_major_parsing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_70) "Building C object CMakeFiles/ft_printf.dir/ft_major_parsing.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_major_parsing.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c
 
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c > CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.i
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_major_parsing.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c > CMakeFiles/ft_printf.dir/ft_major_parsing.c.i
 
-CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c -o CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.s
+CMakeFiles/ft_printf.dir/ft_major_parsing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_major_parsing.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c -o CMakeFiles/ft_printf.dir/ft_major_parsing.c.s
 
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o: CMakeFiles/ft_printf.dir/flags.make
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o: ../ft_parsing_2nd_part.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o: CMakeFiles/ft_printf.dir/flags.make
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o: ../ft_minor_parsing.c
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_71) "Building C object CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o   -c /Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c
 
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c > CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.i
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/ft_printf.dir/ft_minor_parsing.c.i"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c > CMakeFiles/ft_printf.dir/ft_minor_parsing.c.i
 
-CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c -o CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.s
+CMakeFiles/ft_printf.dir/ft_minor_parsing.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/ft_printf.dir/ft_minor_parsing.c.s"
+	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c -o CMakeFiles/ft_printf.dir/ft_minor_parsing.c.s
 
 CMakeFiles/ft_printf.dir/ft_assembly.c.o: CMakeFiles/ft_printf.dir/flags.make
 CMakeFiles/ft_printf.dir/ft_assembly.c.o: ../ft_assembly.c
@@ -1116,8 +1116,8 @@ ft_printf_OBJECTS = \
 "CMakeFiles/ft_printf.dir/libft/get_next_line.c.o" \
 "CMakeFiles/ft_printf.dir/main.c.o" \
 "CMakeFiles/ft_printf.dir/ft_printf.c.o" \
-"CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o" \
-"CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o" \
+"CMakeFiles/ft_printf.dir/ft_major_parsing.c.o" \
+"CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o" \
 "CMakeFiles/ft_printf.dir/ft_assembly.c.o" \
 "CMakeFiles/ft_printf.dir/ft_auxiliary.c.o" \
 "CMakeFiles/ft_printf.dir/ft_valid_case.c.o" \
@@ -1196,8 +1196,8 @@ ft_printf: CMakeFiles/ft_printf.dir/libft/ft_toupper.c.o
 ft_printf: CMakeFiles/ft_printf.dir/libft/get_next_line.c.o
 ft_printf: CMakeFiles/ft_printf.dir/main.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_printf.c.o
-ft_printf: CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o
-ft_printf: CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o
+ft_printf: CMakeFiles/ft_printf.dir/ft_major_parsing.c.o
+ft_printf: CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_assembly.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_auxiliary.c.o
 ft_printf: CMakeFiles/ft_printf.dir/ft_valid_case.c.o

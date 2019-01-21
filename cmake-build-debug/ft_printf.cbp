@@ -89,10 +89,10 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_1st_part.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_parsing_2nd_part.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_printf.c">

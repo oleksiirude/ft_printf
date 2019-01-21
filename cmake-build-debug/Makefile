@@ -204,59 +204,59 @@ ft_invalid_case.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_invalid_case.c.s
 .PHONY : ft_invalid_case.c.s
 
-ft_parsing_1st_part.o: ft_parsing_1st_part.c.o
+ft_major_parsing.o: ft_major_parsing.c.o
 
-.PHONY : ft_parsing_1st_part.o
-
-# target to build an object file
-ft_parsing_1st_part.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.o
-.PHONY : ft_parsing_1st_part.c.o
-
-ft_parsing_1st_part.i: ft_parsing_1st_part.c.i
-
-.PHONY : ft_parsing_1st_part.i
-
-# target to preprocess a source file
-ft_parsing_1st_part.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.i
-.PHONY : ft_parsing_1st_part.c.i
-
-ft_parsing_1st_part.s: ft_parsing_1st_part.c.s
-
-.PHONY : ft_parsing_1st_part.s
-
-# target to generate assembly for a file
-ft_parsing_1st_part.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_1st_part.c.s
-.PHONY : ft_parsing_1st_part.c.s
-
-ft_parsing_2nd_part.o: ft_parsing_2nd_part.c.o
-
-.PHONY : ft_parsing_2nd_part.o
+.PHONY : ft_major_parsing.o
 
 # target to build an object file
-ft_parsing_2nd_part.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.o
-.PHONY : ft_parsing_2nd_part.c.o
+ft_major_parsing.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_major_parsing.c.o
+.PHONY : ft_major_parsing.c.o
 
-ft_parsing_2nd_part.i: ft_parsing_2nd_part.c.i
+ft_major_parsing.i: ft_major_parsing.c.i
 
-.PHONY : ft_parsing_2nd_part.i
+.PHONY : ft_major_parsing.i
 
 # target to preprocess a source file
-ft_parsing_2nd_part.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.i
-.PHONY : ft_parsing_2nd_part.c.i
+ft_major_parsing.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_major_parsing.c.i
+.PHONY : ft_major_parsing.c.i
 
-ft_parsing_2nd_part.s: ft_parsing_2nd_part.c.s
+ft_major_parsing.s: ft_major_parsing.c.s
 
-.PHONY : ft_parsing_2nd_part.s
+.PHONY : ft_major_parsing.s
 
 # target to generate assembly for a file
-ft_parsing_2nd_part.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_parsing_2nd_part.c.s
-.PHONY : ft_parsing_2nd_part.c.s
+ft_major_parsing.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_major_parsing.c.s
+.PHONY : ft_major_parsing.c.s
+
+ft_minor_parsing.o: ft_minor_parsing.c.o
+
+.PHONY : ft_minor_parsing.o
+
+# target to build an object file
+ft_minor_parsing.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o
+.PHONY : ft_minor_parsing.c.o
+
+ft_minor_parsing.i: ft_minor_parsing.c.i
+
+.PHONY : ft_minor_parsing.i
+
+# target to preprocess a source file
+ft_minor_parsing.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_minor_parsing.c.i
+.PHONY : ft_minor_parsing.c.i
+
+ft_minor_parsing.s: ft_minor_parsing.c.s
+
+.PHONY : ft_minor_parsing.s
+
+# target to generate assembly for a file
+ft_minor_parsing.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_minor_parsing.c.s
+.PHONY : ft_minor_parsing.c.s
 
 ft_printf.o: ft_printf.c.o
 
@@ -2193,12 +2193,12 @@ help:
 	@echo "... ft_invalid_case.o"
 	@echo "... ft_invalid_case.i"
 	@echo "... ft_invalid_case.s"
-	@echo "... ft_parsing_1st_part.o"
-	@echo "... ft_parsing_1st_part.i"
-	@echo "... ft_parsing_1st_part.s"
-	@echo "... ft_parsing_2nd_part.o"
-	@echo "... ft_parsing_2nd_part.i"
-	@echo "... ft_parsing_2nd_part.s"
+	@echo "... ft_major_parsing.o"
+	@echo "... ft_major_parsing.i"
+	@echo "... ft_major_parsing.s"
+	@echo "... ft_minor_parsing.o"
+	@echo "... ft_minor_parsing.i"
+	@echo "... ft_minor_parsing.s"
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"

@@ -75,7 +75,6 @@ t_pmts				*ft_set_flags_to_zero(void);
 t_prts				*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt);
 t_prts				*ft_invalid_str_form(char **fmt, t_pmts **pmts);
 int					ft_atoi_light(char **str);
-void				ft_h_or_hh_case(char **fmt, t_pmts **pmts);
-void				ft_l_or_ll_case(char **fmt, t_pmts **pmts);
+void				ft_rec_params(char **fmt, t_pmts **params);
 
 #endif
