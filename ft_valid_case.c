@@ -20,7 +20,7 @@ t_prts	*ft_simply_add_perc(void)
 	node->str = (char*)malloc(2);
 	node->len = 1;
 	node->next = NULL;
-	node->sz = NO;
+	node->type_c_zero = NO;
 	node->str[0] = '%';
 	node->str[1] = 0;
 	return (node);

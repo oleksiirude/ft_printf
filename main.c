@@ -14,11 +14,9 @@
 
 int main(void)
 {
-	int res;
-
-	res = ft_printf("I %cam Oleksii%%\n", '\0');
-	printf("res-> %d\n", res);
-	//printf("I am %cOleksii\n", '\0');
-	system("leaks ft_printf");
+	printf("\nmy-> %d", ft_printf("\nHello %+10corld\n", 'W'));
+	printf("\nor-> %d", printf("\nHello %+10corld\n", 'W'));
+	//printf("Hello%999corld\n", 'W');
+	//system("leaks ft_printf");
 	return (0);
 }

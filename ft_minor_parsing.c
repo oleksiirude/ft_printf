@@ -24,9 +24,17 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 
 void	ft_zero_case(char **fmt, t_pmts **params)
 {
-	(*params)->zero = 1;
-	if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
-		(*params)->zero_value = ft_atoi_light(fmt);
+		if ((*params)->minus)
+		{
+			if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
+				(*params)->value = ft_atoi_light(fmt);
+		}
+		else
+		{
+			(*params)->zero = 1;
+			if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
+				(*params)->zero_value = ft_atoi_light(fmt);
+		}
 }
 
 void	ft_h_or_hh_case(char **fmt, t_pmts **params)

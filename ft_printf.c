@@ -36,7 +36,7 @@ t_prts	*ft_rec_node(char **fmt, size_t len)
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->str = (char*)malloc(len + 1);
 	node->len = len;
-	node->sz = NO;
+	node->type_c_zero = NO;
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	while (len--)

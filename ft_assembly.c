@@ -36,25 +36,20 @@ size_t	ft_len_sum(t_prts *start, size_t *len)
 t_final	*ft_assembly(t_prts *start)
 {
 	size_t	i;
-	t_final	*result;
+	t_final	*res;
 	char	*zero_elem;
 
 	i = 0;
-	result = (t_final*)malloc(sizeof(t_final));
-	result->str = (char*)malloc((ft_len_sum(start, &result->len) + 1));
-	zero_elem = result->str;
+	res = (t_final*)malloc(sizeof(t_final));
+	res->str = (char*)malloc((ft_len_sum(start, &res->len) + 1));
+	zero_elem = res->str;
 	while (start)
 	{
-		if (start->sz == YES)
-		{
-			*result->str++ = start->str[0];
-			ft_clean_node_and_go_next(&start);
-		}
-		while (start->str[i])
-			*result->str++ = start->str[i++];
+		while (start->len > i)
+			*res->str++ = start->str[i++];
 		ft_clean_node_and_go_next(&start);
 		i = 0;
 	}
-	result->str = zero_elem;
-	return (result);
+	res->str = zero_elem;
+	return (res);
 }

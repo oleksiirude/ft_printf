@@ -38,7 +38,7 @@ typedef struct		s_final
 
 typedef struct		s_prts
 {
-	int				sz;
+	int				type_c_zero;
 	char			*str;
 	size_t			len;
 	struct s_prts	*next;
@@ -59,7 +59,7 @@ typedef struct		s_pmts
 	char			type;
 }					t_pmts;
 
-t_prts				*ft_type_c(va_list ap, t_pmts **pmts);
+t_prts				*ft_type_c(va_list ap, t_pmts *pmts);
 t_prts				*ft_type_s(va_list ap);
 t_prts				*ft_type_p(va_list ap);
 t_prts				*ft_type_d(va_list ap, int type);
