@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/./libft/libft.h
 string.h
 -
 stdlib.h
@@ -14,7 +14,11 @@ stdlib.h
 unistd.h
 -
 
-/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/ft_minor_parsing.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/ft_printf.h
+
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/ft_printf.h
 stdio.h
 -
 stdarg.h
@@ -26,9 +30,9 @@ unistd.h
 string.h
 -
 ./libft/libft.h
-/Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/./libft/libft.h
 
-/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/main.c
 ft_printf.h
-/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+/Users/olrudenk/CLionProjects/untitled folder/ft_printf/ft_printf.h
 

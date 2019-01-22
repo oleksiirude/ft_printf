@@ -29,7 +29,7 @@ t_prts	*ft_invalid_str_form(char **fmt, t_pmts **pmts)
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->str = (char*)malloc(len + 1);
 	node->len = len;
-	node->type_c_zero = NO;
+	//node->type_c_zero = NO;
 	node->next = NULL;
 	node->str[len + 1] = 0;
 	len = 0;

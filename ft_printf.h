@@ -27,9 +27,6 @@
 # define LL 4
 # define LBIG 5
 
-# define YES 1
-# define NO 0
-
 typedef struct		s_final
 {
 	char			*str;
@@ -38,7 +35,6 @@ typedef struct		s_final
 
 typedef struct		s_prts
 {
-	int				type_c_zero;
 	char			*str;
 	size_t			len;
 	struct s_prts	*next;

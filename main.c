@@ -14,9 +14,11 @@
 
 int main(void)
 {
-	printf("\nmy-> %d", ft_printf("\nHello %+10corld\n", 'W'));
-	printf("\nor-> %d", printf("\nHello %+10corld\n", 'W'));
-	//printf("Hello%999corld\n", 'W');
+    int res, res1;
+
+    res = ft_printf("Hello %+9corld\n", 'W');
+    res1 = printf("Hello %+9corld\n", 'W');
+    printf("my->%d\nor->%d\n", res, res1);
 	//system("leaks ft_printf");
 	return (0);
 }
