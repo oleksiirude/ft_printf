@@ -35,7 +35,6 @@ size_t	ft_len_sum(t_prts *start, size_t *len)
 
 t_final	*ft_assembly(t_prts *start)
 {
-	ok
 	size_t	i;
 	t_final	*res;
 	char	*zero_elem;
