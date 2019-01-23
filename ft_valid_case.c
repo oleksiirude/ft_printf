@@ -34,5 +34,7 @@ t_prts	*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt)
 	}
 	if (pmts->type == 'c')
 		return (ft_type_c(ap, pmts));
+	else if (pmts->type == 's')
+		return (ft_type_s(ap, pmts));
 	return (NULL);
 }

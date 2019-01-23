@@ -17,28 +17,34 @@ t_prts	*ft_create_str_c(t_prts **node, int value, int res, int sign)
 	int i;
 
 	i = -1;
-	if (!sign)
+	(*node)->str = (char*)malloc((size_t)value + 1);
+	(*node)->len = (size_t)value;
+	(*node)->next = NULL;
+	if (!sign || sign == 1)
 	{
-		(*node)->str = (char*)malloc((size_t)value + 1);
-		(*node)->len = (size_t)value;
-		(*node)->next = NULL;
+		while (value > ++i)
+			(*node)->str[i] = sign ? '0' : ' ';
+		(*node)->str[--i] = (unsigned char)res;
+	}
+	else if (sign == 2)
+	{
+		(*node)->str[++i] = (unsigned char)res;
 		while (value > ++i)
 			(*node)->str[i] = ' ';
-		(*node)->str[--i] = (unsigned char)res;
-		return (*node);
 	}
+	return (*node);
 }
 
 t_prts	*ft_handle_c(t_pmts *pmts, t_prts **node, int res)
 {
 	if (pmts->minus)
-		pmts->zero = 0;
-	if (pmts->plus && !pmts->zero)
+		pmts->plus = 0;
+	if ((pmts->plus && !pmts->zero) || !pmts->minus)
 		return (ft_create_str_c(node, pmts->value, res, 0));
-	/*else if (pmts->minus)
-		return (ft_create_str_c(node, res, pmts->value, 1));
-	else if (pmts->plus && pmts->zero)
-		return (ft_create_str_c(node, res, pmts->zero_value, 2));*/
+	else if (pmts->zero)
+		return (ft_create_str_c(node, pmts->zero_value, res, 1));
+	else if (pmts->minus)
+		return (ft_create_str_c(node, pmts->value, res, 2));
 }
 
 t_prts	*ft_type_c(va_list ap, t_pmts *pmts)
@@ -56,16 +62,3 @@ t_prts	*ft_type_c(va_list ap, t_pmts *pmts)
 	node->str[0] = (unsigned char)res;
 	return (node);
 }
-
-/*printf("minus-> %2d\n", pmts->minus);
-printf("plus-> %3d\n", pmts->plus);
-printf("space-> %2d\n", pmts->space);
-printf("hash-> %3d\n", pmts->hash);
-printf("value-> %2d\n", pmts->value);
-printf("zero-> %3d\n", pmts->zero);
-printf("zero_v-> %d\n", pmts->zero_value);
-printf("prec-> %3d\n", pmts->prec);
-printf("prec_v-> %d\n", pmts->prec_value);
-printf("mod-> %4d\n", pmts->mod);
-printf("type-> %3c\n", pmts->type);
-printf("zero_c-> %d\n", pmts->type_c_zero_case);*/

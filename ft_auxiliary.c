@@ -39,6 +39,16 @@ void	ft_find_last_node(t_prts **start, t_prts **node)
 		*node = (*node)->next;
 }
 
+int 	ft_calc_flags_sum(t_pmts *pmts)
+{
+	int res;
+
+	res = pmts->minus + pmts->plus + pmts->space +
+			pmts->hash + pmts->value + pmts->zero +
+			pmts->prec + pmts->mod;
+	return (res);
+}
+
 t_pmts	*ft_set_flags_to_zero(void)
 {
 	t_pmts	*flags;

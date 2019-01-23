@@ -44,6 +44,8 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 
 	pmts = ft_set_flags_to_zero();
 	result = ft_main_parse(fmt, &pmts);
+	if (pmts->minus)
+		pmts->plus = 0;
 	if (!result)
 		return (ft_invalid_str_form(fmt, &pmts));
 	else if (result == 1)

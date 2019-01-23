@@ -56,8 +56,8 @@ typedef struct		s_pmts
 }					t_pmts;
 
 t_prts				*ft_type_c(va_list ap, t_pmts *pmts);
-t_prts				*ft_type_s(va_list ap);
-t_prts				*ft_type_p(va_list ap);
+t_prts				*ft_type_s(va_list ap, t_pmts *pmts);
+t_prts				*ft_type_p(va_list ap, t_pmts *pmts);
 t_prts				*ft_type_d(va_list ap, int type);
 t_prts				*ft_type_u(va_list ap, int type);
 t_prts				*ft_type_o(va_list ap, int type);
@@ -72,5 +72,6 @@ t_prts				*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt);
 t_prts				*ft_invalid_str_form(char **fmt, t_pmts **pmts);
 int					ft_atoi_light(char **str);
 void				ft_rec_params(char **fmt, t_pmts **params);
+int					ft_calc_flags_sum(t_pmts *pmts);
 
 #endif
