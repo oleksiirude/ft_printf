@@ -70,7 +70,12 @@ void	ft_rec_params(char **fmt, t_pmts **params)
 	else if (**fmt == L)
 		ft_l_or_ll_case(fmt, params);
 	else if (**fmt >= '1' && **fmt <= '9')
-		(*params)->value = ft_atoi_light(fmt);
+	{
+		if ((*params)->zero)
+			(*params)->zero_value = ft_atoi_light(fmt);
+		else
+			(*params)->value = ft_atoi_light(fmt);
+	}
 	else if (**fmt == '#')
 		(*params)->hash = 1;
 	else if (**fmt == '+')

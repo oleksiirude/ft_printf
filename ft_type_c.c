@@ -22,6 +22,7 @@ t_prts	*ft_create_str_c(t_prts **node, int value, int res, int sign)
 	(*node)->next = NULL;
 	if (!sign || sign == 1)
 	{
+		printf("sign %d\n", sign);
 		while (value > ++i)
 			(*node)->str[i] = sign ? '0' : ' ';
 		(*node)->str[--i] = (unsigned char)res;
@@ -38,8 +39,11 @@ t_prts	*ft_create_str_c(t_prts **node, int value, int res, int sign)
 t_prts	*ft_handle_c(t_pmts *pmts, t_prts **node, int res)
 {
 	if (pmts->minus)
+	{
 		pmts->plus = 0;
-	if ((pmts->plus && !pmts->zero) || !pmts->minus)
+		pmts->zero = 0;
+	}
+	if ((pmts->plus && !pmts->zero) && !pmts->minus)
 		return (ft_create_str_c(node, pmts->value, res, 0));
 	else if (pmts->zero)
 		return (ft_create_str_c(node, pmts->zero_value, res, 1));

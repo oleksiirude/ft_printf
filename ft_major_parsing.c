@@ -24,15 +24,15 @@ size_t	ft_main_parse(char **fmt, t_pmts **params)
 	}
 	if (**fmt == PERC)
 	{
-		(*fmt)++;
 		(*params)->type = PERC;
+		(*fmt)++;
 		return (1);
 	}
 	if (**fmt)
 	{
 		(*params)->type = **fmt;
 		(*fmt)++;
-		return (2);
+		return (1);
 	}
 	return (0);
 }
@@ -48,8 +48,6 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 		pmts->plus = 0;
 	if (!result)
 		return (ft_invalid_str_form(fmt, &pmts));
-	else if (result == 1)
-		return (ft_valid_str_form(ap, pmts, fmt));
 	else
 		return (ft_valid_str_form(ap, pmts, fmt));
 }

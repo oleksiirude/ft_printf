@@ -94,7 +94,7 @@ int		ft_printf(const char *format, ...)
 
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
-	write(1, final->str, final->len);
+	//write(1, final->str, final->len);
 	result = final->len;
 	free(final->str);
 	free(final);
