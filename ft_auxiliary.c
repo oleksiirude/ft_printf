@@ -12,11 +12,21 @@
 
 #include "ft_printf.h"
 
-int		ft_atoi_light(char **fmt)
+int		ft_atoi_modificated(char **fmt, int sign)
 {
-	size_t res;
+	int		minus;
+	size_t	res;
 
 	res = 0;
+	minus = 1;
+	while (**fmt == ' ')
+		(*fmt)++;
+	if (sign)
+		if (**fmt == '-')
+		{
+			minus = -1;
+			(*fmt)++;
+		}
 	while (**fmt)
 	{
 		while (**fmt >= '0' && **fmt <= '9')
@@ -25,9 +35,11 @@ int		ft_atoi_light(char **fmt)
 			(*fmt)++;
 		}
 		(*fmt)--;
+		if (res > 9223372036854775807 && minus == -1)
+			return (-2147483648);
 		if (res > 9223372036854775807)
 			return (2147483647);
-		return ((int)res);
+		return ((int)res * minus);
 	}
 	return (0);
 }

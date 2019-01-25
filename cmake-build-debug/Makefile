@@ -339,6 +339,33 @@ ft_type_s.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_s.c.s
 .PHONY : ft_type_s.c.s
 
+ft_type_s_auxiliary.o: ft_type_s_auxiliary.c.o
+
+.PHONY : ft_type_s_auxiliary.o
+
+# target to build an object file
+ft_type_s_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o
+.PHONY : ft_type_s_auxiliary.c.o
+
+ft_type_s_auxiliary.i: ft_type_s_auxiliary.c.i
+
+.PHONY : ft_type_s_auxiliary.i
+
+# target to preprocess a source file
+ft_type_s_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.i
+.PHONY : ft_type_s_auxiliary.c.i
+
+ft_type_s_auxiliary.s: ft_type_s_auxiliary.c.s
+
+.PHONY : ft_type_s_auxiliary.s
+
+# target to generate assembly for a file
+ft_type_s_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.s
+.PHONY : ft_type_s_auxiliary.c.s
+
 ft_valid_case.o: ft_valid_case.c.o
 
 .PHONY : ft_valid_case.o
@@ -2235,6 +2262,9 @@ help:
 	@echo "... ft_type_s.o"
 	@echo "... ft_type_s.i"
 	@echo "... ft_type_s.s"
+	@echo "... ft_type_s_auxiliary.o"
+	@echo "... ft_type_s_auxiliary.i"
+	@echo "... ft_type_s_auxiliary.s"
 	@echo "... ft_valid_case.o"
 	@echo "... ft_valid_case.i"
 	@echo "... ft_valid_case.s"

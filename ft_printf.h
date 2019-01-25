@@ -70,8 +70,9 @@ void				ft_find_last_node(t_prts **start, t_prts **node);
 t_pmts				*ft_set_flags_to_zero(void);
 t_prts				*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt);
 t_prts				*ft_invalid_str_form(char **fmt, t_pmts **pmts);
-int					ft_atoi_light(char **str);
+int					ft_atoi_modificated(char **str, int sign);
 void				ft_rec_params(char **fmt, t_pmts **params);
 int					ft_calc_flags_sum(t_pmts *pmts);
+size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
 
 #endif

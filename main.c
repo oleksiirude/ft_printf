@@ -11,17 +11,15 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%-222.22s]\n", "string"
+#define FMT "[%s]", "string"
 
 int main(void)
 {
     int res, res1;
 
-    //res = ft_printf("%s\n", "String");
-    //res1 = printf("%s\n", "String");
-    //printf("\nmy->%d\nor->%d", res, res1);
-	ft_printf(FMT);
-    printf(FMT);
+    res = ft_printf(FMT);
+    res1 = printf(FMT);
+    printf("\noriginal[%d]\n", res1 - 2);
 	//system("leaks ft_printf");
 	return (0);
 }
