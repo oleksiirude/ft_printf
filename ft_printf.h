@@ -74,5 +74,6 @@ int					ft_atoi_modificated(char **str, int sign);
 void				ft_rec_params(char **fmt, t_pmts **params);
 int					ft_calc_flags_sum(t_pmts *pmts);
 size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
+t_prts				*ft_work_with_null(t_pmts *pmts, t_prts **node);
 
 #endif

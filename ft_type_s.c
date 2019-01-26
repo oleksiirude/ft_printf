@@ -12,106 +12,83 @@
 
 #include "ft_printf.h"
 
+void	ft_form_case1(t_prts **node, t_pmts *pmts, char *res, size_t lfin)
+{
+	size_t start;
+
+	if (!pmts->prec && !pmts->prec_value)
+		start = lfin - ft_strlen(res);
+	else
+		start = lfin - pmts->prec_value;
+	while (start < lfin)
+		(*node)->str[start++] = *(res)++;
+	(*node)->len = lfin;
+}
+
+void	ft_form_case2(t_prts **node, t_pmts *pmts, char *res, size_t lfin)
+{
+	size_t start;
+	size_t len;
+
+	(*node)->len = lfin;
+	if (pmts->prec_value < 0)
+		return ;
+	if (!pmts->prec && !pmts->prec_value)
+	{
+		len = pmts->minus ? ft_strlen(res) : pmts->value;
+		start = pmts->minus ? 0 : lfin - ft_strlen(res);
+		while (start < lfin && start < len)
+			(*node)->str[start++] = *(res)++;
+	}
+	else
+	{
+		len = pmts->minus ? (size_t)pmts->prec_value : lfin;
+		start = pmts->minus ? 0 : lfin - pmts->prec_value;
+		while (start < lfin && start < len)
+			(*node)->str[start++] = *(res)++;
+	}
+}
+
 t_prts	*ft_handle_s(t_pmts *pmts, t_prts **node, char *res)
 {
-	int 	stop;
-	int		tmp;
 	size_t	len_res;
 	size_t	len_final;
 
-	tmp = 0;
 	len_res = ft_strlen(res);
 	len_final = ft_getting_total_len_s(pmts, len_res);
-	printf("len_final[%zu]\n", len_final);
 	(*node)->str = (char*)malloc(len_final + 1);
+	(*node)->len = len_final;
 	(*node)->str[len_final] = 0;
-	if ((size_t)pmts->prec_value > len_final)
-		pmts->prec_value = (int)len_final;
-	if (pmts->value && pmts->value < ft_strlen(res))
-		pmts->value = (int)ft_strlen(res);
-	if (pmts->zero_value && pmts->zero_value < ft_strlen(res))
-		pmts->zero_value = (int)ft_strlen(res);
-	if (pmts->minus || pmts->value)
-		(*node)->str = ft_memset((*node)->str, 32, len_final);
+	if (pmts->prec_value < 0)
+		pmts->value = pmts->zero_value;
+	if (pmts->prec_value &&  pmts->prec_value > 0 && pmts->prec_value > len_res)
+		pmts->prec_value = (int)len_res;
+	if (pmts->value && pmts->value < len_res)
+		pmts->value = (int)len_res;
+//	printf("minus-> %2d\n", pmts->minus);
+//	printf("plus-> %3d\n", pmts->plus);
+//	printf("space-> %2d\n", pmts->space);
+//	printf("hash-> %3d\n", pmts->hash);
+//	printf("value-> %2d\n", pmts->value);
+//	printf("zero-> %3d\n", pmts->zero);
+//	printf("zero_v-> %d\n", pmts->zero_value);
+//	printf("prec-> %3d\n", pmts->prec);
+//	printf("prec_v-> %d\n", pmts->prec_value);
+//	printf("mod-> %4d\n", pmts->mod);
+//	printf("type-> %3c\n", pmts->type);
 	if (pmts->zero_value)
+	{
 		(*node)->str = ft_memset((*node)->str, 48, len_final);
-	if (!pmts->value && pmts->prec_value)
-		while (tmp < len_final)
-			(*node)->str[tmp++] = *(res++);
-	if (pmts->value && !pmts->prec_value)
-	{
-		if (pmts->minus)
-		{
-			tmp = 0;
-			stop = len_res - 1;
-		}
-		else
-		{
-			tmp = pmts->value - len_res;
-			stop = (int)len_final;
-		}
-		if (!pmts->prec)
-			while (tmp <= stop)
-				(*node)->str[tmp++] = *(res++);
+		ft_form_case1(node, pmts, res, len_final);
+		return (*node);
 	}
-	if (pmts->value && pmts->prec_value)
+	if (pmts->prec_value || pmts->minus || pmts->value || pmts->prec_value < 0)
 	{
-		if (pmts->minus)
-		{
-			tmp = 0;
-			stop = pmts->prec_value;
-		}
-		else
-		{
-			tmp = pmts->value - pmts->prec_value;
-			stop = pmts->value;
-		}
-		printf("1->value[%d]\n", pmts->value);
-		printf("1->len_final[%zu]\n", len_final);
-		printf("1->len_res[%d]\n", len_res);
-		printf("1->stop[%d]\n", stop);
-		printf("1->tmp[%d]\n", tmp);
-		while (++tmp < stop)
-			(*node)->str[tmp] = *(res++);
+		(*node)->str = ft_memset((*node)->str, 32, len_final);
+		ft_form_case2(node, pmts, res, len_final);
+		return (*node);
 	}
-	if (pmts->zero_value && !pmts->prec_value)
-	{
-		if (pmts->minus)
-		{
-			tmp = 0;
-			stop = len_res - 1;
-		}
-		else
-		{
-			tmp = pmts->zero_value - len_res;
-			stop = (int)len_final;
-		}
-		if (!pmts->prec)
-			while (tmp <= stop)
-				(*node)->str[tmp++] = *(res++);
-	}
-	if (pmts->zero_value && pmts->prec_value)
-	{
-		if (pmts->minus)
-		{
-			tmp = 0;
-			stop = pmts->prec_value;
-		}
-		else
-		{
-			tmp = pmts->zero_value - pmts->prec_value;
-			stop = pmts->zero_value;
-		}
-		printf("1->value[%d]\n", pmts->value);
-		printf("1->len_final[%zu]\n", len_final);
-		printf("1->len_res[%d]\n", len_res);
-		printf("1->stop[%d]\n", stop);
-		printf("1->tmp[%d]\n", tmp);
-		while (++tmp < stop)
-			(*node)->str[tmp] = *(res++);
-	}
-	printf("[%s]\n", (*node)->str);
-	return (NULL);
+	return (*node);
 }
 
 t_prts	*ft_rec_given_str(t_prts **node, char *res)
@@ -127,7 +104,6 @@ t_prts	*ft_rec_given_str(t_prts **node, char *res)
 	while (res[i])
 		(*node)->str[len++] = res[i++];
 	(*node)->str[len] = 0;
-	printf("simple[%s]\n", (*node)->str);
 	return (*node);
 }
 
@@ -141,11 +117,18 @@ t_prts	*ft_type_s(va_list ap, t_pmts *pmts)
 	pmts->space = 0;
 	pmts->hash = 0;
 	pmts->mod = 0;
+	if (pmts->zero && pmts->value)
+	{
+		pmts->zero_value = pmts->value;
+		pmts->value = 0;
+	}
 	if (!pmts->zero_value && !pmts->value)
 		pmts->minus = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	if (!ft_calc_flags_sum(pmts))
+	if (!res)
+		return (ft_work_with_null(pmts, &node));
+	else if (!ft_calc_flags_sum(pmts))
 		return (ft_rec_given_str(&node, res));
 	else
 		return (ft_handle_s(pmts, &node, res));
@@ -162,10 +145,3 @@ t_prts	*ft_type_s(va_list ap, t_pmts *pmts)
 //	printf("prec_v-> %d\n", pmts->prec_value);
 //	printf("mod-> %4d\n", pmts->mod);
 //	printf("type-> %3c\n", pmts->type);
-
-
-//		printf("1->value[%d]\n", pmts->value);
-//		printf("1->len_final[%zu]\n", len_final);
-//		printf("1->len_res[%d]\n", len_res);
-//		printf("1->stop[%d]\n", stop);
-//		printf("1->tmp[%d]\n", tmp);

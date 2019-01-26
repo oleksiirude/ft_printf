@@ -17,6 +17,8 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 	(*params)->prec = 1;
 	if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
 	{
+		if ((*params)->prec_value)
+			return ;
 		(*fmt)++;
 		(*params)->prec_value = ft_atoi_modificated(fmt, 1);
 	}
@@ -24,6 +26,8 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 
 void	ft_zero_case(char **fmt, t_pmts **params)
 {
+	if ((*params)->zero_value)
+		return ;
 	if ((*params)->minus)
 	{
 		if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
@@ -70,12 +74,10 @@ void	ft_rec_params(char **fmt, t_pmts **params)
 	else if (**fmt == 'l')
 		ft_l_or_ll_case(fmt, params);
 	else if (**fmt >= '1' && **fmt <= '9')
-	{
 		if ((*params)->zero)
 			(*params)->zero_value = ft_atoi_modificated(fmt, 0);
 		else
 			(*params)->value = ft_atoi_modificated(fmt, 0);
-	}
 	else if (**fmt == '#')
 		(*params)->hash = 1;
 	else if (**fmt == '+')

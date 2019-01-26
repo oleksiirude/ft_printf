@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%s]", "string"
+#define FMT "[%s]", "Lorem Ipsum"
 
 int main(void)
 {

@@ -20,6 +20,8 @@ size_t	ft_main_parse(char **fmt, t_pmts **params)
 			ft_rec_params(fmt, params);
 		else
 			return (0);
+		if (**fmt == '-')
+			(*params)->minus = 1;
 		(*fmt)++;
 	}
 	if (**fmt == PERC)
@@ -45,7 +47,27 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 	pmts = ft_set_flags_to_zero();
 	result = ft_main_parse(fmt, &pmts);
 	if (pmts->minus)
-		pmts->plus = 0;
+	{
+		if (pmts->type == 's')
+			pmts->plus = 0;
+		pmts->zero = 0;
+		if (!pmts->value)
+		{
+			pmts->value = pmts->zero_value;
+			pmts->zero_value = 0;
+		}
+	}
+//	printf("minus-> %2d\n", pmts->minus);
+//	printf("plus-> %3d\n", pmts->plus);
+//	printf("space-> %2d\n", pmts->space);
+//	printf("hash-> %3d\n", pmts->hash);
+//	printf("value-> %2d\n", pmts->value);
+//	printf("zero-> %3d\n", pmts->zero);
+//	printf("zero_v-> %d\n", pmts->zero_value);
+//	printf("prec-> %3d\n", pmts->prec);
+//	printf("prec_v-> %d\n", pmts->prec_value);
+//	printf("mod-> %4d\n", pmts->mod);
+//	printf("type-> %3c\n", pmts->type);
 	if (!result)
 		return (ft_invalid_str_form(fmt, &pmts));
 	else
