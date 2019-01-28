@@ -48,6 +48,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/libft/ft_striter.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o"
+  "CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strlcat.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strlen.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_strmap.c.o"
@@ -79,6 +80,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_type_s.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_p.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

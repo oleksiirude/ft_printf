@@ -33,6 +33,10 @@ CMakeFiles/ft_printf.dir/ft_type_p.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_p.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_p.c.o: ../ft_type_p.c
 
+CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: ../ft_type_p_auxiliary.c
+
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: ../ft_type_s.c
@@ -83,6 +87,9 @@ CMakeFiles/ft_printf.dir/libft/ft_itoa.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/ft_itoa_base_ull_ed.c
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/libft.h
@@ -188,6 +195,9 @@ CMakeFiles/ft_printf.dir/libft/ft_striteri.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o: ../libft/ft_strjoin.c
 CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.o: ../libft/ft_strjoin_free.c
+CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strlcat.c.o: ../libft/ft_strlcat.c
 CMakeFiles/ft_printf.dir/libft/ft_strlcat.c.o: ../libft/libft.h

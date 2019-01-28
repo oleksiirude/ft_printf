@@ -12,47 +12,47 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_form_case1(t_prts **node, t_pmts pmts, char *res, size_t lfin)
+static t_prts	*ft_form_case1(t_prts **node, t_pmts pmts, char *res, size_t lf)
 {
 	size_t start;
 
 	if (!pmts.prec && !pmts.prec_value)
-		start = lfin - ft_strlen(res);
+		start = lf - ft_strlen(res);
 	else
-		start = lfin - pmts.prec_value;
-	while (start < lfin)
+		start = lf - pmts.prec_value;
+	while (start < lf)
 		(*node)->str[start++] = *(res)++;
-	(*node)->len = lfin;
+	(*node)->len = lf;
 	return (*node);
 }
 
-t_prts	*ft_form_case2(t_prts **node, t_pmts pmts, char *res, size_t lfin)
+static t_prts	*ft_form_case2(t_prts **node, t_pmts pmts, char *res, size_t lf)
 {
-	size_t start;
 	size_t len;
+	size_t start;
 
-	(*node)->len = lfin;
+	(*node)->len = lf;
 	if (pmts.prec_value < 0)
 		return (*node);
 	if (!pmts.prec && !pmts.prec_value)
 	{
 		len = pmts.minus ? ft_strlen(res) : pmts.value;
-		start = pmts.minus ? 0 : lfin - ft_strlen(res);
-		while (start < lfin && start < len)
+		start = pmts.minus ? 0 : lf - ft_strlen(res);
+		while (start < lf && start < len)
 			(*node)->str[start++] = *(res)++;
 		return (*node);
 	}
 	else
 	{
-		len = pmts.minus ? (size_t)pmts.prec_value : lfin;
-		start = pmts.minus ? 0 : lfin - pmts.prec_value;
-		while (start < lfin && start < len)
+		len = pmts.minus ? (size_t)pmts.prec_value : lf;
+		start = pmts.minus ? 0 : lf - pmts.prec_value;
+		while (start < lf && start < len)
 			(*node)->str[start++] = *(res)++;
 		return (*node);
 	}
 }
 
-t_prts	*ft_handle_s(t_pmts pmts, t_prts **node, char *res)
+t_prts			*ft_handle_s(t_pmts pmts, t_prts **node, char *res)
 {
 	size_t	len_res;
 	size_t	len_final;
@@ -81,7 +81,7 @@ t_prts	*ft_handle_s(t_pmts pmts, t_prts **node, char *res)
 	return (*node);
 }
 
-t_prts	*ft_rec_given_str(t_prts **node, char *res)
+t_prts			*ft_rec_given_str(t_prts **node, char *res)
 {
 	size_t i;
 	size_t len;
@@ -97,7 +97,7 @@ t_prts	*ft_rec_given_str(t_prts **node, char *res)
 	return (*node);
 }
 
-t_prts	*ft_type_s(va_list ap, t_pmts pmts)
+t_prts			*ft_type_s(va_list ap, t_pmts pmts)
 {
 	char	*res;
 	t_prts	*node;

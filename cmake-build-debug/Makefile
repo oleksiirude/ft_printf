@@ -339,6 +339,33 @@ ft_type_p.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p.c.s
 .PHONY : ft_type_p.c.s
 
+ft_type_p_auxiliary.o: ft_type_p_auxiliary.c.o
+
+.PHONY : ft_type_p_auxiliary.o
+
+# target to build an object file
+ft_type_p_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o
+.PHONY : ft_type_p_auxiliary.c.o
+
+ft_type_p_auxiliary.i: ft_type_p_auxiliary.c.i
+
+.PHONY : ft_type_p_auxiliary.i
+
+# target to preprocess a source file
+ft_type_p_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.i
+.PHONY : ft_type_p_auxiliary.c.i
+
+ft_type_p_auxiliary.s: ft_type_p_auxiliary.c.s
+
+.PHONY : ft_type_p_auxiliary.s
+
+# target to generate assembly for a file
+ft_type_p_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.s
+.PHONY : ft_type_p_auxiliary.c.s
+
 ft_type_s.o: ft_type_s.c.o
 
 .PHONY : ft_type_s.o
@@ -1743,6 +1770,33 @@ libft/ft_strjoin.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strjoin.c.s
 .PHONY : libft/ft_strjoin.c.s
 
+libft/ft_strjoin_free.o: libft/ft_strjoin_free.c.o
+
+.PHONY : libft/ft_strjoin_free.o
+
+# target to build an object file
+libft/ft_strjoin_free.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.o
+.PHONY : libft/ft_strjoin_free.c.o
+
+libft/ft_strjoin_free.i: libft/ft_strjoin_free.c.i
+
+.PHONY : libft/ft_strjoin_free.i
+
+# target to preprocess a source file
+libft/ft_strjoin_free.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.i
+.PHONY : libft/ft_strjoin_free.c.i
+
+libft/ft_strjoin_free.s: libft/ft_strjoin_free.c.s
+
+.PHONY : libft/ft_strjoin_free.s
+
+# target to generate assembly for a file
+libft/ft_strjoin_free.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strjoin_free.c.s
+.PHONY : libft/ft_strjoin_free.c.s
+
 libft/ft_strlcat.o: libft/ft_strlcat.c.o
 
 .PHONY : libft/ft_strlcat.o
@@ -2316,6 +2370,9 @@ help:
 	@echo "... ft_type_p.o"
 	@echo "... ft_type_p.i"
 	@echo "... ft_type_p.s"
+	@echo "... ft_type_p_auxiliary.o"
+	@echo "... ft_type_p_auxiliary.i"
+	@echo "... ft_type_p_auxiliary.s"
 	@echo "... ft_type_s.o"
 	@echo "... ft_type_s.i"
 	@echo "... ft_type_s.s"
@@ -2472,6 +2529,9 @@ help:
 	@echo "... libft/ft_strjoin.o"
 	@echo "... libft/ft_strjoin.i"
 	@echo "... libft/ft_strjoin.s"
+	@echo "... libft/ft_strjoin_free.o"
+	@echo "... libft/ft_strjoin_free.i"
+	@echo "... libft/ft_strjoin_free.s"
 	@echo "... libft/ft_strlcat.o"
 	@echo "... libft/ft_strlcat.i"
 	@echo "... libft/ft_strlcat.s"

@@ -107,6 +107,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_p.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_p_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_s.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -261,6 +264,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strjoin.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strjoin_free.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strlcat.c">
