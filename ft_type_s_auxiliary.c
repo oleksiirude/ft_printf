@@ -12,12 +12,7 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_work_with_null(t_pmts *pmts, t_prts **node)
-{
-	return (NULL);
-}
-
-size_t 	ft_work_with_zero_value(t_pmts *pmts, size_t len)
+size_t	ft_work_with_zero_value(t_pmts *pmts, size_t len)
 {
 	if (pmts->prec && !pmts->prec_value)
 		return ((size_t)pmts->zero_value);
@@ -36,12 +31,12 @@ size_t 	ft_work_with_zero_value(t_pmts *pmts, size_t len)
 	return ((size_t)pmts->zero_value);
 }
 
-size_t 	ft_work_with_value(t_pmts *pmts, size_t len)
+size_t	ft_work_with_value(t_pmts *pmts, size_t len)
 {
 	if (pmts->prec && !pmts->prec_value)
 		return ((size_t)pmts->value);
 	if (pmts->value < pmts->prec_value && pmts->prec_value <= len)
-		return ((size_t) pmts->prec_value);
+		return ((size_t)pmts->prec_value);
 	if (pmts->value < len && !pmts->prec_value)
 		return (len);
 	if (pmts->value < len && pmts->prec_value < len)

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%s]", "Lorem Ipsum"
+#define FMT "[%Bs]", "Lorem Ipsum"
 
 int main(void)
 {
@@ -23,3 +23,15 @@ int main(void)
 	//system("leaks ft_printf");
 	return (0);
 }
+
+//	printf("minus-> %2d\n", pmts->minus);
+//	printf("plus-> %3d\n", pmts->plus);
+//	printf("space-> %2d\n", pmts->space);
+//	printf("hash-> %3d\n", pmts->hash);
+//	printf("value-> %2d\n", pmts->value);
+//	printf("zero-> %3d\n", pmts->zero);
+//	printf("zero_v-> %d\n", pmts->zero_value);
+//	printf("prec-> %3d\n", pmts->prec);
+//	printf("prec_v-> %d\n", pmts->prec_value);
+//	printf("mod-> %4d\n", pmts->mod);
+//	printf("type-> %3c\n", pmts->type);

@@ -14,19 +14,12 @@
 
 int		ft_atoi_modificated(char **fmt, int sign)
 {
-	int		minus;
 	size_t	res;
 
 	res = 0;
-	minus = 1;
-	while (**fmt == ' ')
-		(*fmt)++;
 	if (sign)
 		if (**fmt == '-')
-		{
-			minus = -1;
 			(*fmt)++;
-		}
 	while (**fmt)
 	{
 		while (**fmt >= '0' && **fmt <= '9')
@@ -35,11 +28,9 @@ int		ft_atoi_modificated(char **fmt, int sign)
 			(*fmt)++;
 		}
 		(*fmt)--;
-		if (res > 9223372036854775807 && minus == -1)
-			return (-2147483648);
 		if (res > 9223372036854775807)
 			return (2147483647);
-		return ((int)res * minus);
+		return ((int)res);
 	}
 	return (0);
 }
@@ -51,31 +42,30 @@ void	ft_find_last_node(t_prts **start, t_prts **node)
 		*node = (*node)->next;
 }
 
-int 	ft_calc_flags_sum(t_pmts *pmts)
+int		ft_calc_flags_sum(t_pmts pmts)
 {
 	int res;
 
-	res = pmts->minus + pmts->plus + pmts->space +
-			pmts->hash + pmts->value + pmts->zero +
-			pmts->prec + pmts->mod;
+	res = pmts.minus + pmts.plus + pmts.space +
+			pmts.hash + pmts.value + pmts.zero +
+			pmts.prec + pmts.mod;
 	return (res);
 }
 
-t_pmts	*ft_set_flags_to_zero(void)
+t_pmts	ft_set_flags_to_zero(void)
 {
-	t_pmts	*flags;
+	t_pmts	flags;
 
-	flags = (t_pmts*)malloc(sizeof(t_pmts));
-	flags->minus = 0;
-	flags->plus = 0;
-	flags->space = 0;
-	flags->hash = 0;
-	flags->value = 0;
-	flags->zero = 0;
-	flags->zero_value = 0;
-	flags->prec = 0;
-	flags->prec_value = 0;
-	flags->mod = 0;
-	flags->type = 0;
+	flags.minus = 0;
+	flags.plus = 0;
+	flags.space = 0;
+	flags.hash = 0;
+	flags.value = 0;
+	flags.zero = 0;
+	flags.zero_value = 0;
+	flags.prec = 0;
+	flags.prec_value = 0;
+	flags.mod = 0;
+	flags.type = 0;
 	return (flags);
 }

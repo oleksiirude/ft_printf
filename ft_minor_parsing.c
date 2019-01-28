@@ -14,13 +14,20 @@
 
 void	ft_prec_case(char **fmt, t_pmts **params)
 {
+	int	minus;
+
+	minus = 0;
 	(*params)->prec = 1;
 	if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
 	{
 		if ((*params)->prec_value)
 			return ;
 		(*fmt)++;
+		if (**fmt == '-')
+			minus = -1;
 		(*params)->prec_value = ft_atoi_modificated(fmt, 1);
+		if (minus < 0)
+			(*params)->prec_value *= -1;
 	}
 }
 

@@ -55,8 +55,8 @@ typedef struct		s_pmts
 	char			type;
 }					t_pmts;
 
-t_prts				*ft_type_c(va_list ap, t_pmts *pmts);
-t_prts				*ft_type_s(va_list ap, t_pmts *pmts);
+t_prts				*ft_type_c(va_list ap, t_pmts pmts);
+t_prts				*ft_type_s(va_list ap, t_pmts pmts);
 t_prts				*ft_type_p(va_list ap, t_pmts *pmts);
 t_prts				*ft_type_d(va_list ap, int type);
 t_prts				*ft_type_u(va_list ap, int type);
@@ -67,13 +67,12 @@ int					ft_printf(const char *format, ...);
 t_final				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);
-t_pmts				*ft_set_flags_to_zero(void);
-t_prts				*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt);
-t_prts				*ft_invalid_str_form(char **fmt, t_pmts **pmts);
+t_pmts				ft_set_flags_to_zero(void);
+t_prts				*ft_valid_str_form(va_list ap, t_pmts pmts);
+t_prts				*ft_invalid_str_form(char **fmt, t_pmts pmts);
 int					ft_atoi_modificated(char **str, int sign);
 void				ft_rec_params(char **fmt, t_pmts **params);
-int					ft_calc_flags_sum(t_pmts *pmts);
+int					ft_calc_flags_sum(t_pmts pmts);
 size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
-t_prts				*ft_work_with_null(t_pmts *pmts, t_prts **node);
 
 #endif

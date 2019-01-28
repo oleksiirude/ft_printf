@@ -65,12 +65,10 @@ t_final	*ft_main_funct(va_list ap, char *fmt)
 	while (*fmt)
 	{
 		if ((ft_check_len(fmt)))
-		{
 			if (!start)
 				ft_rec_simple_str(&fmt, &start, &node, 0);
 			else
 				ft_rec_simple_str(&fmt, &start, &node, 1);
-		}
 		else
 		{
 			fmt++;
@@ -94,7 +92,7 @@ int		ft_printf(const char *format, ...)
 
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
-	printf("myprintf[%zu]\n", final->len -  2);
+	printf("myprintf[%zu]\n", final->len - 2);
 	write(1, final->str, final->len);
 	write(1, "\n", 1);
 	result = final->len;

@@ -12,29 +12,63 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_simply_add_perc(void)
+t_prts	*ft_create_str_perc(t_prts **node, int value, int sign)
+{
+	int i;
+
+	i = -1;
+	(*node)->str = (char*)malloc((size_t)value + 1);
+	(*node)->len = (size_t)value;
+	(*node)->next = NULL;
+	if (!sign || sign == 1)
+	{
+		while (value > ++i)
+			(*node)->str[i] = sign ? '0' : ' ';
+		(*node)->str[--i] = '%';
+	}
+	else if (sign == 2)
+	{
+		(*node)->str[++i] = '%';
+		while (value > ++i)
+			(*node)->str[i] = ' ';
+	}
+	return (*node);
+}
+
+t_prts	*ft_handle_perc(t_pmts pmts, t_prts **node)
+{
+	if (pmts.prec_value < 0)
+		return (ft_create_str_perc(node, pmts.prec_value * -1, 2));
+	else if (!pmts.zero && !pmts.minus)
+		return (ft_create_str_perc(node, pmts.value, 0));
+	else if (pmts.zero)
+		return (ft_create_str_perc(node, pmts.zero_value, 1));
+	else if (pmts.minus)
+		return (ft_create_str_perc(node, pmts.value, 2));
+	return (NULL);
+}
+
+t_prts	*ft_type_perc(t_pmts pmts)
 {
 	t_prts	*node;
 
 	node = (t_prts*)malloc(sizeof(t_prts));
-	node->str = (char*)malloc(2);
+	if (pmts.value || pmts.zero || pmts.prec_value < 0)
+		return (ft_handle_perc(pmts, &node));
+	node->str = (char*)malloc(1);
 	node->len = 1;
 	node->next = NULL;
 	node->str[0] = '%';
-	node->str[1] = 0;
 	return (node);
 }
 
-t_prts	*ft_valid_str_form(va_list ap, t_pmts *pmts, char **fmt)
+t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
 {
-	if (pmts->type == PERC)
-	{
-		free(pmts);
-		return (ft_simply_add_perc());
-	}
-	if (pmts->type == 'c')
+	if (pmts.type == PERC)
+		return (ft_type_perc(pmts));
+	else if (pmts.type == 'c')
 		return (ft_type_c(ap, pmts));
-	else if (pmts->type == 's')
+	else if (pmts.type == 's')
 		return (ft_type_s(ap, pmts));
 	return (NULL);
 }
