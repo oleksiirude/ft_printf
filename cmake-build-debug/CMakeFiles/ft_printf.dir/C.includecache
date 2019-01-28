@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+string.h
+-
+stdlib.h
+-
+unistd.h
+-
+
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+stdio.h
+-
+stdarg.h
+-
+stdlib.h
+-
+unistd.h
+-
+string.h
+-
+./libft/libft.h
+/Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+
+/Users/olrudenk/CLionProjects/ft_printf/main.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
