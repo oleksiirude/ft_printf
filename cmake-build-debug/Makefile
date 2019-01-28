@@ -312,6 +312,33 @@ ft_type_c.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_c.c.s
 .PHONY : ft_type_c.c.s
 
+ft_type_p.o: ft_type_p.c.o
+
+.PHONY : ft_type_p.o
+
+# target to build an object file
+ft_type_p.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p.c.o
+.PHONY : ft_type_p.c.o
+
+ft_type_p.i: ft_type_p.c.i
+
+.PHONY : ft_type_p.i
+
+# target to preprocess a source file
+ft_type_p.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p.c.i
+.PHONY : ft_type_p.c.i
+
+ft_type_p.s: ft_type_p.c.s
+
+.PHONY : ft_type_p.s
+
+# target to generate assembly for a file
+ft_type_p.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p.c.s
+.PHONY : ft_type_p.c.s
+
 ft_type_s.o: ft_type_s.c.o
 
 .PHONY : ft_type_s.o
@@ -743,6 +770,33 @@ libft/ft_itoa_base.s: libft/ft_itoa_base.c.s
 libft/ft_itoa_base.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.s
 .PHONY : libft/ft_itoa_base.c.s
+
+libft/ft_itoa_base_ull_ed.o: libft/ft_itoa_base_ull_ed.c.o
+
+.PHONY : libft/ft_itoa_base_ull_ed.o
+
+# target to build an object file
+libft/ft_itoa_base_ull_ed.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o
+.PHONY : libft/ft_itoa_base_ull_ed.c.o
+
+libft/ft_itoa_base_ull_ed.i: libft/ft_itoa_base_ull_ed.c.i
+
+.PHONY : libft/ft_itoa_base_ull_ed.i
+
+# target to preprocess a source file
+libft/ft_itoa_base_ull_ed.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.i
+.PHONY : libft/ft_itoa_base_ull_ed.c.i
+
+libft/ft_itoa_base_ull_ed.s: libft/ft_itoa_base_ull_ed.c.s
+
+.PHONY : libft/ft_itoa_base_ull_ed.s
+
+# target to generate assembly for a file
+libft/ft_itoa_base_ull_ed.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.s
+.PHONY : libft/ft_itoa_base_ull_ed.c.s
 
 libft/ft_lstadd.o: libft/ft_lstadd.c.o
 
@@ -2259,6 +2313,9 @@ help:
 	@echo "... ft_type_c.o"
 	@echo "... ft_type_c.i"
 	@echo "... ft_type_c.s"
+	@echo "... ft_type_p.o"
+	@echo "... ft_type_p.i"
+	@echo "... ft_type_p.s"
 	@echo "... ft_type_s.o"
 	@echo "... ft_type_s.i"
 	@echo "... ft_type_s.s"
@@ -2307,6 +2364,9 @@ help:
 	@echo "... libft/ft_itoa_base.o"
 	@echo "... libft/ft_itoa_base.i"
 	@echo "... libft/ft_itoa_base.s"
+	@echo "... libft/ft_itoa_base_ull_ed.o"
+	@echo "... libft/ft_itoa_base_ull_ed.i"
+	@echo "... libft/ft_itoa_base_ull_ed.s"
 	@echo "... libft/ft_lstadd.o"
 	@echo "... libft/ft_lstadd.i"
 	@echo "... libft/ft_lstadd.s"

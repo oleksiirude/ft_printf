@@ -12,6 +12,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/libft/ft_isprint.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_itoa.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o"
+  "CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_lstdel.c.o"
   "CMakeFiles/ft_printf.dir/libft/ft_lstdelone.c.o"
@@ -77,6 +78,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_type_c.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_s.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_p.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

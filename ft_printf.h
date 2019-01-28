@@ -57,7 +57,7 @@ typedef struct		s_pmts
 
 t_prts				*ft_type_c(va_list ap, t_pmts pmts);
 t_prts				*ft_type_s(va_list ap, t_pmts pmts);
-t_prts				*ft_type_p(va_list ap, t_pmts *pmts);
+t_prts				*ft_type_p(va_list ap, t_pmts pmts);
 t_prts				*ft_type_d(va_list ap, int type);
 t_prts				*ft_type_u(va_list ap, int type);
 t_prts				*ft_type_o(va_list ap, int type);

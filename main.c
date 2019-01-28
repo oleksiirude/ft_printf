@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%Bs]", "Lorem Ipsum"
+#define FMT "[%p]", 'z'
 
 int main(void)
 {
     int res, res1;
 
-    res = ft_printf(FMT);
+    //res = ft_printf(FMT);
     res1 = printf(FMT);
     printf("\noriginal[%d]\n", res1 - 2);
 	//system("leaks ft_printf");

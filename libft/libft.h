@@ -6,7 +6,7 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/10/25 18:42:01 by olrudenk          #+#    #+#             */
-/*   Updated: 2018/11/18 14:05:30 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/01/28 16:46:37 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -101,6 +101,7 @@ t_list				*ft_contmaxlst(t_list *head);
 t_list				*ft_contminlst(t_list *head);
 int					ft_lstlen(t_list *head);
 char				*ft_itoa_base(int value, int base);
+char				*ft_itoa_base_ull_ed(unsigned long long value, int base);
 int					get_next_line(const int fd, char **line);
 
 #endif

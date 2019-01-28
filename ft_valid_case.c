@@ -70,5 +70,7 @@ t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
 		return (ft_type_c(ap, pmts));
 	else if (pmts.type == 's')
 		return (ft_type_s(ap, pmts));
+	else if (pmts.type == 'p')
+		return (ft_type_p(ap, pmts));
 	return (NULL);
 }

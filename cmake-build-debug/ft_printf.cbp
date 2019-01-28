@@ -104,6 +104,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_p.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_s.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -150,6 +153,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base_ull_ed.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_lstadd.c">
