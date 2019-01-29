@@ -6,7 +6,7 @@
 #    By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/25 18:44:12 by olrudenk          #+#    #+#              #
-#    Updated: 2019/01/28 20:42:07 by olrudenk         ###   ########.fr        #
+#    Updated: 2019/01/29 15:42:07 by olrudenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -23,7 +23,7 @@ SRCS = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c ft_memchr.c 
 		ft_putendl.c ft_putnbr.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 		ft_lstnew.c ft_lstdelone.c ft_lstdel.c ft_lstadd.c ft_lstiter.c ft_lstmap.c \
 		ft_elemmaxarr.c ft_elemminarr.c ft_swap.c ft_lstprint.c ft_contmaxlst.c \
-		ft_contminlst.c ft_lstlen.c ft_itoa_base.c ft_itoa_base_ull_ed.c get_next_line.c
+		ft_contminlst.c ft_lstlen.c ft_itoa_base.c ft_itoa_base_ll_ed.c get_next_line.c
 
 OBJ = $(SRCS:.c=.o)
 

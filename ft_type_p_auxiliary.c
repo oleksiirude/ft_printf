@@ -24,6 +24,7 @@ t_prts	*ft_put_ptr_adr_whithout_flags(char *res, t_prts **node)
 	(*node)->str = ft_strcpy((*node)->str, res);
 	(*node)->str -= 2;
 	(*node)->len = ft_strlen(res) + 2;
+	free(res);
 	return (*node);
 }
 

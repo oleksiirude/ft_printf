@@ -29,6 +29,18 @@ CMakeFiles/ft_printf.dir/ft_type_c.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_c.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_c.c.o: ../ft_type_c.c
 
+CMakeFiles/ft_printf.dir/ft_type_d.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_d.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_d.c.o: ../ft_type_d.c
+
+CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: ../ft_type_d_auxiliary.c
+
+CMakeFiles/ft_printf.dir/ft_type_o.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_o.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_o.c.o: ../ft_type_o.c
+
 CMakeFiles/ft_printf.dir/ft_type_p.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_p.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_p.c.o: ../ft_type_p.c
@@ -44,6 +56,14 @@ CMakeFiles/ft_printf.dir/ft_type_s.c.o: ../ft_type_s.c
 CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o: ../ft_type_s_auxiliary.c
+
+CMakeFiles/ft_printf.dir/ft_type_u.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_u.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_u.c.o: ../ft_type_u.c
+
+CMakeFiles/ft_printf.dir/ft_type_x.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_x.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_x.c.o: ../ft_type_x.c
 
 CMakeFiles/ft_printf.dir/ft_valid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_valid_case.c.o: ../ft_printf.h
@@ -88,8 +108,8 @@ CMakeFiles/ft_printf.dir/libft/ft_itoa.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o: ../libft/ft_itoa_base.c
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o: ../libft/libft.h
 
-CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/ft_itoa_base_ull_ed.c
-CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o: ../libft/ft_itoa_base_ll_ed.c
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/libft.h

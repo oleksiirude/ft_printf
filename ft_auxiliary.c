@@ -12,6 +12,46 @@
 
 #include "ft_printf.h"
 
+long long   ft_cast_given_mod(t_pmts pmts, long long res)
+{
+	long long value;
+
+	if (pmts.mod == H)
+		value = (short int)res;
+	else if (pmts.mod == HH)
+		value = (char)res;
+	else if (pmts.mod == L)
+		value = (long)res;
+	else if (pmts.mod == LL)
+		value = res;
+	else if (!pmts.mod)
+	{
+		if (pmts.type == 'u' || pmts.type == 'x' ||
+				pmts.type == 'X' || pmts.type == 'o')
+			value = (unsigned int)res;
+		else
+			value = (int) res;
+	}
+	return (value);
+}
+
+t_prts	*ft_rec_given_data(t_prts **node, char *res)
+{
+	size_t i;
+	size_t len;
+
+	i = 0;
+	len = ft_strlen(res);
+	(*node)->len = len;
+	(*node)->str = (char*)malloc(len + 1);
+	len = 0;
+	while (res[i])
+		(*node)->str[len++] = res[i++];
+	(*node)->str[len] = 0;
+	free(res);
+	return (*node);
+}
+
 int		ft_atoi_modificated(char **fmt, int sign)
 {
 	size_t	res;

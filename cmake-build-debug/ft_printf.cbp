@@ -104,6 +104,15 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_d.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_d_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_o.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_p.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -114,6 +123,12 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_s_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_u.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_x.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c">
@@ -158,7 +173,7 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base.c">
 			<Option target="ft_printf"/>
 		</Unit>
-		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base_ull_ed.c">
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base_ll_ed.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_lstadd.c">

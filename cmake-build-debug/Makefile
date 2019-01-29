@@ -312,6 +312,87 @@ ft_type_c.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_c.c.s
 .PHONY : ft_type_c.c.s
 
+ft_type_d.o: ft_type_d.c.o
+
+.PHONY : ft_type_d.o
+
+# target to build an object file
+ft_type_d.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d.c.o
+.PHONY : ft_type_d.c.o
+
+ft_type_d.i: ft_type_d.c.i
+
+.PHONY : ft_type_d.i
+
+# target to preprocess a source file
+ft_type_d.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d.c.i
+.PHONY : ft_type_d.c.i
+
+ft_type_d.s: ft_type_d.c.s
+
+.PHONY : ft_type_d.s
+
+# target to generate assembly for a file
+ft_type_d.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d.c.s
+.PHONY : ft_type_d.c.s
+
+ft_type_d_auxiliary.o: ft_type_d_auxiliary.c.o
+
+.PHONY : ft_type_d_auxiliary.o
+
+# target to build an object file
+ft_type_d_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o
+.PHONY : ft_type_d_auxiliary.c.o
+
+ft_type_d_auxiliary.i: ft_type_d_auxiliary.c.i
+
+.PHONY : ft_type_d_auxiliary.i
+
+# target to preprocess a source file
+ft_type_d_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.i
+.PHONY : ft_type_d_auxiliary.c.i
+
+ft_type_d_auxiliary.s: ft_type_d_auxiliary.c.s
+
+.PHONY : ft_type_d_auxiliary.s
+
+# target to generate assembly for a file
+ft_type_d_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.s
+.PHONY : ft_type_d_auxiliary.c.s
+
+ft_type_o.o: ft_type_o.c.o
+
+.PHONY : ft_type_o.o
+
+# target to build an object file
+ft_type_o.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_o.c.o
+.PHONY : ft_type_o.c.o
+
+ft_type_o.i: ft_type_o.c.i
+
+.PHONY : ft_type_o.i
+
+# target to preprocess a source file
+ft_type_o.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_o.c.i
+.PHONY : ft_type_o.c.i
+
+ft_type_o.s: ft_type_o.c.s
+
+.PHONY : ft_type_o.s
+
+# target to generate assembly for a file
+ft_type_o.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_o.c.s
+.PHONY : ft_type_o.c.s
+
 ft_type_p.o: ft_type_p.c.o
 
 .PHONY : ft_type_p.o
@@ -419,6 +500,60 @@ ft_type_s_auxiliary.s: ft_type_s_auxiliary.c.s
 ft_type_s_auxiliary.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.s
 .PHONY : ft_type_s_auxiliary.c.s
+
+ft_type_u.o: ft_type_u.c.o
+
+.PHONY : ft_type_u.o
+
+# target to build an object file
+ft_type_u.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u.c.o
+.PHONY : ft_type_u.c.o
+
+ft_type_u.i: ft_type_u.c.i
+
+.PHONY : ft_type_u.i
+
+# target to preprocess a source file
+ft_type_u.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u.c.i
+.PHONY : ft_type_u.c.i
+
+ft_type_u.s: ft_type_u.c.s
+
+.PHONY : ft_type_u.s
+
+# target to generate assembly for a file
+ft_type_u.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u.c.s
+.PHONY : ft_type_u.c.s
+
+ft_type_x.o: ft_type_x.c.o
+
+.PHONY : ft_type_x.o
+
+# target to build an object file
+ft_type_x.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_x.c.o
+.PHONY : ft_type_x.c.o
+
+ft_type_x.i: ft_type_x.c.i
+
+.PHONY : ft_type_x.i
+
+# target to preprocess a source file
+ft_type_x.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_x.c.i
+.PHONY : ft_type_x.c.i
+
+ft_type_x.s: ft_type_x.c.s
+
+.PHONY : ft_type_x.s
+
+# target to generate assembly for a file
+ft_type_x.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_x.c.s
+.PHONY : ft_type_x.c.s
 
 ft_valid_case.o: ft_valid_case.c.o
 
@@ -798,32 +933,32 @@ libft/ft_itoa_base.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.s
 .PHONY : libft/ft_itoa_base.c.s
 
-libft/ft_itoa_base_ull_ed.o: libft/ft_itoa_base_ull_ed.c.o
+libft/ft_itoa_base_ll_ed.o: libft/ft_itoa_base_ll_ed.c.o
 
-.PHONY : libft/ft_itoa_base_ull_ed.o
+.PHONY : libft/ft_itoa_base_ll_ed.o
 
 # target to build an object file
-libft/ft_itoa_base_ull_ed.c.o:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o
-.PHONY : libft/ft_itoa_base_ull_ed.c.o
+libft/ft_itoa_base_ll_ed.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o
+.PHONY : libft/ft_itoa_base_ll_ed.c.o
 
-libft/ft_itoa_base_ull_ed.i: libft/ft_itoa_base_ull_ed.c.i
+libft/ft_itoa_base_ll_ed.i: libft/ft_itoa_base_ll_ed.c.i
 
-.PHONY : libft/ft_itoa_base_ull_ed.i
+.PHONY : libft/ft_itoa_base_ll_ed.i
 
 # target to preprocess a source file
-libft/ft_itoa_base_ull_ed.c.i:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.i
-.PHONY : libft/ft_itoa_base_ull_ed.c.i
+libft/ft_itoa_base_ll_ed.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.i
+.PHONY : libft/ft_itoa_base_ll_ed.c.i
 
-libft/ft_itoa_base_ull_ed.s: libft/ft_itoa_base_ull_ed.c.s
+libft/ft_itoa_base_ll_ed.s: libft/ft_itoa_base_ll_ed.c.s
 
-.PHONY : libft/ft_itoa_base_ull_ed.s
+.PHONY : libft/ft_itoa_base_ll_ed.s
 
 # target to generate assembly for a file
-libft/ft_itoa_base_ull_ed.c.s:
-	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.s
-.PHONY : libft/ft_itoa_base_ull_ed.c.s
+libft/ft_itoa_base_ll_ed.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.s
+.PHONY : libft/ft_itoa_base_ll_ed.c.s
 
 libft/ft_lstadd.o: libft/ft_lstadd.c.o
 
@@ -2367,6 +2502,15 @@ help:
 	@echo "... ft_type_c.o"
 	@echo "... ft_type_c.i"
 	@echo "... ft_type_c.s"
+	@echo "... ft_type_d.o"
+	@echo "... ft_type_d.i"
+	@echo "... ft_type_d.s"
+	@echo "... ft_type_d_auxiliary.o"
+	@echo "... ft_type_d_auxiliary.i"
+	@echo "... ft_type_d_auxiliary.s"
+	@echo "... ft_type_o.o"
+	@echo "... ft_type_o.i"
+	@echo "... ft_type_o.s"
 	@echo "... ft_type_p.o"
 	@echo "... ft_type_p.i"
 	@echo "... ft_type_p.s"
@@ -2379,6 +2523,12 @@ help:
 	@echo "... ft_type_s_auxiliary.o"
 	@echo "... ft_type_s_auxiliary.i"
 	@echo "... ft_type_s_auxiliary.s"
+	@echo "... ft_type_u.o"
+	@echo "... ft_type_u.i"
+	@echo "... ft_type_u.s"
+	@echo "... ft_type_x.o"
+	@echo "... ft_type_x.i"
+	@echo "... ft_type_x.s"
 	@echo "... ft_valid_case.o"
 	@echo "... ft_valid_case.i"
 	@echo "... ft_valid_case.s"
@@ -2421,9 +2571,9 @@ help:
 	@echo "... libft/ft_itoa_base.o"
 	@echo "... libft/ft_itoa_base.i"
 	@echo "... libft/ft_itoa_base.s"
-	@echo "... libft/ft_itoa_base_ull_ed.o"
-	@echo "... libft/ft_itoa_base_ull_ed.i"
-	@echo "... libft/ft_itoa_base_ull_ed.s"
+	@echo "... libft/ft_itoa_base_ll_ed.o"
+	@echo "... libft/ft_itoa_base_ll_ed.i"
+	@echo "... libft/ft_itoa_base_ll_ed.s"
 	@echo "... libft/ft_lstadd.o"
 	@echo "... libft/ft_lstadd.i"
 	@echo "... libft/ft_lstadd.s"

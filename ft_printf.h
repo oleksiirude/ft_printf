@@ -58,11 +58,11 @@ typedef struct		s_pmts
 t_prts				*ft_type_c(va_list ap, t_pmts pmts);
 t_prts				*ft_type_s(va_list ap, t_pmts pmts);
 t_prts				*ft_type_p(va_list ap, t_pmts pmts);
-t_prts				*ft_type_d(va_list ap, int type);
-t_prts				*ft_type_u(va_list ap, int type);
-t_prts				*ft_type_o(va_list ap, int type);
+t_prts				*ft_type_d(va_list ap, t_pmts pmts);
+t_prts				*ft_type_o(va_list ap, t_pmts pmts);
+t_prts				*ft_type_u(va_list ap, t_pmts pmts);
+t_prts				*ft_type_x(va_list ap, t_pmts pmts);
 t_prts				*ft_type_f(va_list ap, int type);
-t_prts				*ft_type_x(va_list ap, int type, int reg);
 int					ft_printf(const char *format, ...);
 t_final				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
@@ -76,5 +76,7 @@ int					ft_calc_flags_sum(t_pmts pmts);
 size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
 size_t				ft_getting_total_len_p(t_pmts *pmts, size_t len);
 t_prts				*ft_put_ptr_adr_whithout_flags(char *res, t_prts **node);
+long long           ft_cast_given_mod(t_pmts pmts, long long res);
+t_prts				*ft_rec_given_data(t_prts **node, char *res);
 
 #endif
