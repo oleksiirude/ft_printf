@@ -52,22 +52,36 @@ void	ft_h_or_hh_case(char **fmt, t_pmts **params)
 {
 	if (*(*fmt + 1) == 'h')
 	{
+		{
+			if ((*params)->mod > HH)
+				return ;
+		}
 		(*params)->mod = HH;
 		(*fmt)++;
 	}
 	else
+	{
+		if ((*params)->mod > H)
+			return ;
 		(*params)->mod = H;
+	}
 }
 
 void	ft_l_or_ll_case(char **fmt, t_pmts **params)
 {
 	if (*(*fmt + 1) == 'l')
 	{
+		if ((*params)->mod > LL)
+			return ;
 		(*params)->mod = LL;
 		(*fmt)++;
 	}
 	else
+	{
+		if ((*params)->mod > L)
+			return ;
 		(*params)->mod = L;
+	}
 }
 
 void	ft_rec_params(char **fmt, t_pmts **params)

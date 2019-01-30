@@ -11,13 +11,13 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%+02d]", 569819
+#define FMT "[%50.d]", 0
 
 int main(void)
 {
     int res, res1;
 
-    res = ft_printf(FMT);
+	res = ft_printf(FMT);
     res1 = printf(FMT);
     printf("\noriginal[%d]\n", res1 - 2);
 	//system("leaks ft_printf");

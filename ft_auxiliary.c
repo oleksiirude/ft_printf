@@ -30,7 +30,7 @@ long long   ft_cast_given_mod(t_pmts pmts, long long res)
 				pmts.type == 'X' || pmts.type == 'o')
 			value = (unsigned int)res;
 		else
-			value = (int) res;
+			value = (int)res;
 	}
 	return (value);
 }
@@ -82,9 +82,9 @@ void	ft_find_last_node(t_prts **start, t_prts **node)
 		*node = (*node)->next;
 }
 
-int		ft_calc_flags_sum(t_pmts pmts)
+size_t	ft_calc_flags_sum(t_pmts pmts)
 {
-	int res;
+	size_t res;
 
 	res = pmts.minus + pmts.plus + pmts.space +
 			pmts.hash + pmts.value + pmts.zero +

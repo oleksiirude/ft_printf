@@ -46,6 +46,22 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 
 	pmts = ft_set_flags_to_zero();
 	result = ft_main_parse(fmt, &pmts);
+//	printf("minus-> %2zu\n", pmts.minus);
+//	printf("plus-> %3zu\n", pmts.plus);
+//	printf("space-> %2zu\n", pmts.space);
+//	printf("hash-> %3zu\n", pmts.hash);
+//	printf("value-> %2zu\n", pmts.value);
+//	printf("zero-> %3zu\n", pmts.zero);
+//	printf("zero_v-> %zu\n", pmts.zero_value);
+//	printf("prec-> %3zu\n", pmts.prec);
+//	printf("prec_v-> %d\n", pmts.prec_value);
+//	printf("mod-> %4zu\n", pmts.mod);
+//	printf("type-> %3c\n", pmts.type);
+	if (pmts.type != 'f')
+		if (pmts.mod == LBIG)
+			pmts.mod = L;
+	if (!pmts.value)
+		pmts.minus = 0;
 	if (pmts.minus)
 	{
 		if (pmts.type == 's')

@@ -12,11 +12,52 @@
 
 #include "ft_printf.h"
 
-void	ft_set_d_flags_according_to_input(t_pmts *pmts, int *minus, char c)
+void	ft_set_d_flags(t_pmts *pmts, int *minus, char c, size_t len)
 {
 	*minus = 0;
+	if (pmts->prec_value && pmts->prec_value < (int)len)
+		pmts->prec_value = (int)len;
 	if (pmts->plus)
 		pmts->space = 0;
+	if (pmts->prec && !pmts->prec_value)
+	{
+		pmts->prec = 0;
+		pmts->zero = 0;
+		if (pmts->zero_value)
+		{
+			pmts->value = pmts->zero_value;
+			pmts->zero_value = 0;
+		}
+	}
+	if (pmts->prec_value && pmts->prec_value <= (int)len
+		&& (pmts->zero_value || pmts->value))
+	{
+		pmts->prec = 0;
+		if (pmts->zero_value > len)
+		{
+			pmts->value = pmts->zero_value;
+			pmts->prec_value = 0;
+			pmts->zero_value = 0;
+			pmts->zero = 0;
+		}
+		if (pmts->value > len)
+			pmts->prec_value = 0;
+	}
+	if (pmts->prec_value < 0)
+	{
+		pmts->value = pmts->prec_value * -1;
+		pmts->minus = 1;
+		pmts->zero = 0;
+		pmts->zero_value = 0;
+		pmts->prec = 0;
+		pmts->prec_value = 0;
+	}
+	if (pmts->prec_value > (int)len && pmts->zero_value)
+	{
+		pmts->value = pmts->zero_value;
+		pmts->zero_value = 0;
+		pmts->zero = 0;
+	}
 	if (c == '-')
 	{
 		*minus = 1;
