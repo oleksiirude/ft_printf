@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%x]", 20
+#define FMT "[%+02d]", 569819
 
 int main(void)
 {
@@ -24,14 +24,14 @@ int main(void)
 	return (0);
 }
 
-//	printf("minus-> %2d\n", pmts.minus);
-//	printf("plus-> %3d\n", pmts.plus);
-//	printf("space-> %2d\n", pmts.space);
-//	printf("hash-> %3d\n", pmts.hash);
-//	printf("value-> %2d\n", pmts.value);
-//	printf("zero-> %3d\n", pmts.zero);
-//	printf("zero_v-> %d\n", pmts.zero_value);
-//	printf("prec-> %3d\n", pmts.prec);
-//	printf("prec_v-> %d\n", pmts.prec_value);
-//	printf("mod-> %4d\n", pmts.mod);
-//	printf("type-> %3c\n", pmts.type);
+//printf("minus-> %2zu\n", pmts.minus);
+//printf("plus-> %3zu\n", pmts.plus);
+//printf("space-> %2zu\n", pmts.space);
+//printf("hash-> %3zu\n", pmts.hash);
+//printf("value-> %2zu\n", pmts.value);
+//printf("zero-> %3zu\n", pmts.zero);
+//printf("zero_v-> %zu\n", pmts.zero_value);
+//printf("prec-> %3zu\n", pmts.prec);
+//printf("prec_v-> %d\n", pmts.prec_value);
+//printf("mod-> %4zu\n", pmts.mod);
+//printf("type-> %3c\n", pmts.type);

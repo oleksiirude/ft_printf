@@ -46,4 +46,6 @@ size_t	ft_getting_total_len_p(t_pmts *pmts, size_t len)
 	}
 	if (pmts->value && pmts->value > len)
 		return ((size_t)pmts->value);
+	else
+		return (len);
 }

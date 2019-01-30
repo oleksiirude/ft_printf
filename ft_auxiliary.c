@@ -24,7 +24,7 @@ long long   ft_cast_given_mod(t_pmts pmts, long long res)
 		value = (long)res;
 	else if (pmts.mod == LL)
 		value = res;
-	else if (!pmts.mod)
+	else
 	{
 		if (pmts.type == 'u' || pmts.type == 'x' ||
 				pmts.type == 'X' || pmts.type == 'o')

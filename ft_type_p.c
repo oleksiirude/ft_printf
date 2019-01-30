@@ -33,7 +33,7 @@ t_prts	*ft_form_case2(t_prts **node, t_pmts pmts, char *res, size_t lfin)
 	char	*tmp;
 	size_t	start;
 
-	res = ft_strjoin_free("0x", res, 1);
+	res = ft_strjoin_free("0x", res, 2);
 	tmp = res;
 	start = pmts.minus ? 0 : lfin - ft_strlen(res);
 	while (*res)

@@ -135,6 +135,9 @@ CMakeFiles/ft_printf.dir/libft/ft_lstnew.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_lstprint.c.o: ../libft/ft_lstprint.c
 CMakeFiles/ft_printf.dir/libft/ft_lstprint.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.o: ../libft/ft_malloc_sz.c
+CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_memalloc.c.o: ../libft/ft_memalloc.c
 CMakeFiles/ft_printf.dir/libft/ft_memalloc.c.o: ../libft/libft.h
 
@@ -260,6 +263,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strstr.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strsub.c.o: ../libft/ft_strsub.c
 CMakeFiles/ft_printf.dir/libft/ft_strsub.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.o: ../libft/ft_strsub_free.c
+CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strtrim.c.o: ../libft/ft_strtrim.c
 CMakeFiles/ft_printf.dir/libft/ft_strtrim.c.o: ../libft/libft.h

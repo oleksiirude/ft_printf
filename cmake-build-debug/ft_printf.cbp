@@ -200,6 +200,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_lstprint.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_malloc_sz.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_memalloc.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -324,6 +327,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strsub.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strsub_free.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/libft/ft_strtrim.c">

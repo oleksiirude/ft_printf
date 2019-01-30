@@ -64,7 +64,7 @@ t_prts			*ft_handle_s(t_pmts pmts, t_prts **node, char *res)
 	(*node)->str[len_final] = 0;
 	if (pmts.prec_value < 0)
 		pmts.value = pmts.zero_value;
-	if (pmts.prec_value && pmts.prec_value > 0 && pmts.prec_value > len_res)
+	if (pmts.prec_value && pmts.prec_value > 0 && pmts.prec_value > (int)len_res)
 		pmts.prec_value = (int)len_res;
 	if (pmts.value && pmts.value < len_res)
 		pmts.value = (int)len_res;

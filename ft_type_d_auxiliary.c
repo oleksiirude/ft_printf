@@ -11,3 +11,18 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+
+void	ft_set_d_flags_according_to_input(t_pmts *pmts, int *minus, char c)
+{
+	*minus = 0;
+	if (pmts->plus)
+		pmts->space = 0;
+	if (c == '-')
+	{
+		*minus = 1;
+		pmts->space = 0;
+		pmts->plus = 0;
+	}
+	pmts->hash = 0;
+	pmts->mod = 0;
+}

@@ -1176,6 +1176,33 @@ libft/ft_lstprint.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_lstprint.c.s
 .PHONY : libft/ft_lstprint.c.s
 
+libft/ft_malloc_sz.o: libft/ft_malloc_sz.c.o
+
+.PHONY : libft/ft_malloc_sz.o
+
+# target to build an object file
+libft/ft_malloc_sz.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.o
+.PHONY : libft/ft_malloc_sz.c.o
+
+libft/ft_malloc_sz.i: libft/ft_malloc_sz.c.i
+
+.PHONY : libft/ft_malloc_sz.i
+
+# target to preprocess a source file
+libft/ft_malloc_sz.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.i
+.PHONY : libft/ft_malloc_sz.c.i
+
+libft/ft_malloc_sz.s: libft/ft_malloc_sz.c.s
+
+.PHONY : libft/ft_malloc_sz.s
+
+# target to generate assembly for a file
+libft/ft_malloc_sz.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.s
+.PHONY : libft/ft_malloc_sz.c.s
+
 libft/ft_memalloc.o: libft/ft_memalloc.c.o
 
 .PHONY : libft/ft_memalloc.o
@@ -2310,6 +2337,33 @@ libft/ft_strsub.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strsub.c.s
 .PHONY : libft/ft_strsub.c.s
 
+libft/ft_strsub_free.o: libft/ft_strsub_free.c.o
+
+.PHONY : libft/ft_strsub_free.o
+
+# target to build an object file
+libft/ft_strsub_free.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.o
+.PHONY : libft/ft_strsub_free.c.o
+
+libft/ft_strsub_free.i: libft/ft_strsub_free.c.i
+
+.PHONY : libft/ft_strsub_free.i
+
+# target to preprocess a source file
+libft/ft_strsub_free.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.i
+.PHONY : libft/ft_strsub_free.c.i
+
+libft/ft_strsub_free.s: libft/ft_strsub_free.c.s
+
+.PHONY : libft/ft_strsub_free.s
+
+# target to generate assembly for a file
+libft/ft_strsub_free.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.s
+.PHONY : libft/ft_strsub_free.c.s
+
 libft/ft_strtrim.o: libft/ft_strtrim.c.o
 
 .PHONY : libft/ft_strtrim.o
@@ -2598,6 +2652,9 @@ help:
 	@echo "... libft/ft_lstprint.o"
 	@echo "... libft/ft_lstprint.i"
 	@echo "... libft/ft_lstprint.s"
+	@echo "... libft/ft_malloc_sz.o"
+	@echo "... libft/ft_malloc_sz.i"
+	@echo "... libft/ft_malloc_sz.s"
 	@echo "... libft/ft_memalloc.o"
 	@echo "... libft/ft_memalloc.i"
 	@echo "... libft/ft_memalloc.s"
@@ -2724,6 +2781,9 @@ help:
 	@echo "... libft/ft_strsub.o"
 	@echo "... libft/ft_strsub.i"
 	@echo "... libft/ft_strsub.s"
+	@echo "... libft/ft_strsub_free.o"
+	@echo "... libft/ft_strsub_free.i"
+	@echo "... libft/ft_strsub_free.s"
 	@echo "... libft/ft_strtrim.o"
 	@echo "... libft/ft_strtrim.i"
 	@echo "... libft/ft_strtrim.s"

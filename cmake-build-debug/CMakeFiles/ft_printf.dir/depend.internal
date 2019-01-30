@@ -135,6 +135,9 @@ CMakeFiles/ft_printf.dir/libft/ft_lstnew.c.o
 CMakeFiles/ft_printf.dir/libft/ft_lstprint.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_lstprint.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_malloc_sz.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/libft/ft_malloc_sz.c
+ /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_memalloc.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_memalloc.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
@@ -260,6 +263,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strstr.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strsub.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strsub.c
+ /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_strsub_free.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strsub_free.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strtrim.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strtrim.c

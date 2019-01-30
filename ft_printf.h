@@ -42,16 +42,16 @@ typedef struct		s_prts
 
 typedef struct		s_pmts
 {
-	int				minus;
-	int				plus;
-	int				space;
-	int				hash;
-	int				value;
-	int				zero;
-	int				zero_value;
-	int				prec;
+	size_t			minus;
+	size_t			plus;
+	size_t			space;
+	size_t			hash;
+	size_t			value;
+	size_t			zero;
+	size_t			zero_value;
+	size_t			prec;
 	int				prec_value;
-	int				mod;
+	size_t			mod;
 	char			type;
 }					t_pmts;
 
@@ -78,5 +78,6 @@ size_t				ft_getting_total_len_p(t_pmts *pmts, size_t len);
 t_prts				*ft_put_ptr_adr_whithout_flags(char *res, t_prts **node);
 long long           ft_cast_given_mod(t_pmts pmts, long long res);
 t_prts				*ft_rec_given_data(t_prts **node, char *res);
+void				ft_set_d_flags_according_to_input(t_pmts *pmts, int *minus, char c);
 
 #endif

@@ -12,9 +12,9 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_create_str_perc(t_prts **node, int value, int sign)
+t_prts	*ft_create_str_perc(t_prts **node, size_t value, int sign)
 {
-	int i;
+	size_t i;
 
 	i = -1;
 	(*node)->str = (char*)malloc((size_t)value + 1);
