@@ -17,7 +17,6 @@ void	ft_set_p_flags(t_pmts *pmts, size_t len)
 	pmts->plus = 0;
 	pmts->space = 0;
 	pmts->hash = 0;
-	pmts->mod = 0;
 	if (pmts->prec && !pmts->prec_value)
 		pmts->prec = 0;
 	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= len)
@@ -33,6 +32,13 @@ void	ft_set_p_flags(t_pmts *pmts, size_t len)
 			pmts->prec_value = 0;
 		}
 	}
+	if (pmts->prec)
+		if (pmts->zero_value)
+		{
+			pmts->value = pmts->zero_value;
+			pmts->zero_value = 0;
+			pmts->zero = 0;
+		}
 }
 
 t_prts	*ft_handle_p_zv(t_pmts pmts, t_prts **node, char *res)
@@ -111,6 +117,17 @@ void	ft_modificate_str_1(char **str, size_t len, t_pmts *pmts, t_prts **node)
 	pmts->prec_value = 0;
 }
 
+void	helper(t_pmts *pmts, size_t len, char **str, t_prts **node)
+{
+	if (pmts->prec_value > (int)len)
+		ft_modificate_str_1(str, len, pmts, node);
+	else if (pmts->prec_value < 0)
+	{
+		pmts->value = (size_t)pmts->prec_value * -1;
+		ft_modificate_str_2(str, len, pmts, node);
+	}
+}
+
 t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 {
 	size_t 		len;
@@ -122,22 +139,10 @@ t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 	str = ft_itoa_base_ll_ed(res, 16);
 	len = ft_strlen(str);
 	ft_set_p_flags(&pmts, ft_strlen(str));
+	pmts.mod = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	if (pmts.prec)
-		if (pmts.zero_value)
-		{
-			pmts.value = pmts.zero_value;
-			pmts.zero_value = 0;
-			pmts.zero = 0;
-		}
-	if (pmts.prec_value > (int)len)
-		ft_modificate_str_1(&str, len, &pmts, &node);
-	else if (pmts.prec_value < 0)
-	{
-		pmts.value = (size_t)pmts.prec_value * -1;
-		ft_modificate_str_2(&str, len, &pmts, &node);
-	}
+	helper(&pmts, len, &str, &node);
 	if (!ft_calc_flags_sum(pmts))
 	{
 		if (!pmts.prec_value)

@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%10p]", "Hello"
+#define FMT "[%321.-25p]", "Hello"
 
 int main(void)
 {
