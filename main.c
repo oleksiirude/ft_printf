@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%d]", "Hello"
+#define FMT "[%10p]", "Hello"
 
 int main(void)
 {
@@ -28,10 +28,11 @@ int main(void)
 //printf("plus-> %3zu\n", pmts.plus);
 //printf("space-> %2zu\n", pmts.space);
 //printf("hash-> %3zu\n", pmts.hash);
-//printf("value-> %2zu\n", pmts.value);
+//printf("value-> %3zu\n", pmts.value);
 //printf("zero-> %3zu\n", pmts.zero);
 //printf("zero_v-> %zu\n", pmts.zero_value);
 //printf("prec-> %3zu\n", pmts.prec);
 //printf("prec_v-> %d\n", pmts.prec_value);
 //printf("mod-> %4zu\n", pmts.mod);
 //printf("type-> %3c\n", pmts.type);
+
