@@ -14,7 +14,7 @@
 
 t_prts	*ft_put_ptr_adr_whithout_flags(char *res, t_prts **node)
 {
-	size_t i;
+	size_t	i;
 
 	i = 0;
 	(*node)->str = (char*)malloc(ft_strlen(res) + 3);

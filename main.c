@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%50.d]", 0
+#define FMT "[%d]", "Hello"
 
 int main(void)
 {
@@ -19,8 +19,8 @@ int main(void)
 
 	res = ft_printf(FMT);
     res1 = printf(FMT);
-    printf("\noriginal[%d]\n", res1 - 2);
-	//system("leaks ft_printf");
+    printf("\noriginal[%d]\nmy%7[%d]\n", res1 - 2, res - 2);
+//	system("leaks ft_printf -q");
 	return (0);
 }
 

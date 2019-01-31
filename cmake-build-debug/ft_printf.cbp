@@ -86,6 +86,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary_2.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>

@@ -54,7 +54,14 @@ size_t	ft_work_with_value(t_pmts *pmts, size_t len)
 size_t	ft_getting_total_len_s(t_pmts *pmts, size_t len)
 {
 	if (pmts->prec_value < 0)
+	{
+		if ((pmts->prec_value * -1) > len)
+		{
+			pmts->prec_value *= -1;
+			return (len);
+		}
 		return ((size_t)pmts->prec_value * -1);
+	}
 	if ((size_t)pmts->prec_value > len)
 		pmts->prec_value = (int)len;
 	if (pmts->prec && !pmts->prec_value && !pmts->zero && !pmts->value)

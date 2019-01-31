@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-long long   ft_cast_given_mod(t_pmts pmts, long long res)
+long long	ft_cast_given_mod(t_pmts pmts, long long res)
 {
 	long long value;
 
@@ -35,10 +35,10 @@ long long   ft_cast_given_mod(t_pmts pmts, long long res)
 	return (value);
 }
 
-t_prts	*ft_rec_given_data(t_prts **node, char *res)
+t_prts		*ft_rec_given_data(t_prts **node, char *res)
 {
-	size_t i;
-	size_t len;
+	size_t	i;
+	size_t	len;
 
 	i = 0;
 	len = ft_strlen(res);
@@ -52,7 +52,7 @@ t_prts	*ft_rec_given_data(t_prts **node, char *res)
 	return (*node);
 }
 
-int		ft_atoi_modificated(char **fmt, int sign)
+int			ft_atoi_modificated(char **fmt, int sign)
 {
 	size_t	res;
 
@@ -75,14 +75,14 @@ int		ft_atoi_modificated(char **fmt, int sign)
 	return (0);
 }
 
-void	ft_find_last_node(t_prts **start, t_prts **node)
+void		ft_find_last_node(t_prts **start, t_prts **node)
 {
 	*(node) = *(start);
 	while ((*node)->next)
 		*node = (*node)->next;
 }
 
-size_t	ft_calc_flags_sum(t_pmts pmts)
+size_t		ft_calc_flags_sum(t_pmts pmts)
 {
 	size_t res;
 
@@ -92,20 +92,4 @@ size_t	ft_calc_flags_sum(t_pmts pmts)
 	return (res);
 }
 
-t_pmts	ft_set_flags_to_zero(void)
-{
-	t_pmts	flags;
 
-	flags.minus = 0;
-	flags.plus = 0;
-	flags.space = 0;
-	flags.hash = 0;
-	flags.value = 0;
-	flags.zero = 0;
-	flags.zero_value = 0;
-	flags.prec = 0;
-	flags.prec_value = 0;
-	flags.mod = 0;
-	flags.type = 0;
-	return (flags);
-}

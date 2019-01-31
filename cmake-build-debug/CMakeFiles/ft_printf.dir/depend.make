@@ -9,6 +9,10 @@ CMakeFiles/ft_printf.dir/ft_auxiliary.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_auxiliary.c.o: ../ft_auxiliary.c
 CMakeFiles/ft_printf.dir/ft_auxiliary.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: ../ft_auxiliary_2.c
+CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: ../ft_printf.h
+
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_invalid_case.c
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_printf.h

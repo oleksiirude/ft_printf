@@ -177,6 +177,33 @@ ft_auxiliary.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary.c.s
 .PHONY : ft_auxiliary.c.s
 
+ft_auxiliary_2.o: ft_auxiliary_2.c.o
+
+.PHONY : ft_auxiliary_2.o
+
+# target to build an object file
+ft_auxiliary_2.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o
+.PHONY : ft_auxiliary_2.c.o
+
+ft_auxiliary_2.i: ft_auxiliary_2.c.i
+
+.PHONY : ft_auxiliary_2.i
+
+# target to preprocess a source file
+ft_auxiliary_2.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.i
+.PHONY : ft_auxiliary_2.c.i
+
+ft_auxiliary_2.s: ft_auxiliary_2.c.s
+
+.PHONY : ft_auxiliary_2.s
+
+# target to generate assembly for a file
+ft_auxiliary_2.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.s
+.PHONY : ft_auxiliary_2.c.s
+
 ft_invalid_case.o: ft_invalid_case.c.o
 
 .PHONY : ft_invalid_case.o
@@ -2541,6 +2568,9 @@ help:
 	@echo "... ft_auxiliary.o"
 	@echo "... ft_auxiliary.i"
 	@echo "... ft_auxiliary.s"
+	@echo "... ft_auxiliary_2.o"
+	@echo "... ft_auxiliary_2.i"
+	@echo "... ft_auxiliary_2.s"
 	@echo "... ft_invalid_case.o"
 	@echo "... ft_invalid_case.i"
 	@echo "... ft_invalid_case.s"

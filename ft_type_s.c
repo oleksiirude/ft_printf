@@ -54,20 +54,20 @@ static t_prts	*ft_form_case2(t_prts **node, t_pmts pmts, char *res, size_t lf)
 
 t_prts			*ft_handle_s(t_pmts pmts, t_prts **node, char *res)
 {
-	size_t	len_res;
+	size_t	len;
 	size_t	len_final;
 
-	len_res = ft_strlen(res);
-	len_final = ft_getting_total_len_s(&pmts, len_res);
+	len = ft_strlen(res);
+	len_final = ft_getting_total_len_s(&pmts, len);
 	(*node)->str = (char*)malloc(len_final + 1);
 	(*node)->len = len_final;
 	(*node)->str[len_final] = 0;
 	if (pmts.prec_value < 0)
 		pmts.value = pmts.zero_value;
-	if (pmts.prec_value && pmts.prec_value > 0 && pmts.prec_value > (int)len_res)
-		pmts.prec_value = (int)len_res;
-	if (pmts.value && pmts.value < len_res)
-		pmts.value = (int)len_res;
+	if (pmts.prec_value && pmts.prec_value > 0 && pmts.prec_value > (int)len)
+		pmts.prec_value = (int)len;
+	if (pmts.value && pmts.value < len)
+		pmts.value = (int)len;
 	if (pmts.zero_value)
 	{
 		(*node)->str = ft_memset((*node)->str, 48, len_final);

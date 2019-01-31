@@ -92,7 +92,6 @@ int		ft_printf(const char *format, ...)
 
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
-	printf("myprintf[%zu]\n", final->len - 2);
 	write(1, final->str, final->len);
 	write(1, "\n", 1);
 	result = final->len;

@@ -50,7 +50,7 @@ typedef struct		s_pmts
 	size_t			zero;
 	size_t			zero_value;
 	size_t			prec;
-	int				prec_value;
+	long long		prec_value;
 	int				mod;
 	char			type;
 }					t_pmts;
@@ -76,8 +76,9 @@ size_t				ft_calc_flags_sum(t_pmts pmts);
 size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
 size_t				ft_getting_total_len_p(t_pmts *pmts, size_t len);
 t_prts				*ft_put_ptr_adr_whithout_flags(char *res, t_prts **node);
-long long           ft_cast_given_mod(t_pmts pmts, long long res);
+long long			ft_cast_given_mod(t_pmts pmts, long long res);
 t_prts				*ft_rec_given_data(t_prts **node, char *res);
-void				ft_set_d_flags(t_pmts *pmts, int *minus, char c, size_t len);
-
+void				ft_set_d_flags(t_pmts *pmts, int *mns, char c, size_t len);
+void				ft_handle_d_p_helper(int minus, char **tmp, t_pmts pmts);
+void				ft_handle_d_v_helper(char **res, t_pmts *pmts);
 #endif

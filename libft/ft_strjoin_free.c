@@ -27,5 +27,10 @@ char	*ft_strjoin_free(char *s1, char *s2, int sign)
 		free(s1);
 	else if (sign == 2)
 		free(s2);
+	else if (sign == 3)
+	{
+		free(s1);
+		free(s2);
+	}
 	return (conc);
 }
