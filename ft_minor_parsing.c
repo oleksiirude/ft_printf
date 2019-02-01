@@ -26,6 +26,8 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 		if (**fmt == '-')
 			minus = -1;
 		(*params)->prec_value = ft_atoi_modificated(fmt, 1);
+		if (!(*params)->prec_value && minus == -1) // IF NO VALUE IN PREC BUT MINUS IS
+			(*params)->minus = 1;
 		if (minus < 0)
 			(*params)->prec_value *= -1;
 	}
@@ -37,8 +39,9 @@ void	ft_zero_case(char **fmt, t_pmts **params)
 		return ;
 	if ((*params)->minus)
 	{
-		if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
-			(*params)->value = ft_atoi_modificated(fmt, 0);
+		if (!(*params)->value)
+			if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
+				(*params)->value = ft_atoi_modificated(fmt, 0);
 	}
 	else
 	{

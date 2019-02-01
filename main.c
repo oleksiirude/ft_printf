@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%u]", 289
+#define FMT "[%10x]", 270232
 
 //NEED NORME AND MORE LEAK CHECKS, ALSO MORE TESTS!!!
 

@@ -64,6 +64,8 @@ t_prts	*ft_type_perc(t_pmts pmts)
 
 t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
 {
+	t_prts *temp;
+
 	if (pmts.type == PERC)
 		return (ft_type_perc(pmts));
 	else if (pmts.type == 'c')
@@ -79,6 +81,13 @@ t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
 	else if (pmts.type == 'u')
 		return (ft_type_u(ap, pmts));
 	else if (pmts.type == 'x' || pmts.type == 'X')
-		return (ft_type_x(ap, pmts));
+	{
+		temp = ft_type_x(ap, pmts);
+		if (pmts.type == 'X')
+			ft_make_me_bigger(&temp->str);
+		return (temp);
+	}
+//	else if (pmts.type == 'f')
+//		return (ft_type_f(ap, pmts));
 	return (NULL);
 }

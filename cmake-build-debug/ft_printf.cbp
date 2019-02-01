@@ -140,6 +140,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_x.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_x_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_valid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>

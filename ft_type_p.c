@@ -99,7 +99,6 @@ t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 	str = ft_itoa_base_ll_ed(res, 16);
 	len = ft_strlen(str);
 	ft_set_p_flags(&pmts, ft_strlen(str));
-	pmts.mod = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
 	ft_helper_type_p(&pmts, len, &str, &node);
