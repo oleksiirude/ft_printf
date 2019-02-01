@@ -59,7 +59,7 @@ void	ft_case2_p(char **s, size_t l, t_pmts *p, t_prts **n)
 	size_t	var;
 
 	p->prec_value *= -1;
-	if (p->prec_value > l + 2)
+	if (p->prec_value > (int)l + 2)
 	{
 		var = p->prec_value - l - 2;
 		tmp = ft_malloc_sz(var);

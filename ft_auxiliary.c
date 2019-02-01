@@ -17,9 +17,9 @@ long long	ft_cast_given_mod(t_pmts *pmts, long long res)
 	long long value;
 
 	if (pmts->mod == H)
-		value = (short int)res;
+		value = (short)res;
 	else if (pmts->mod == HH)
-		value = (unsigned char)res;
+		value = (char)res;
 	else if (pmts->mod == L)
 		value = (long)res;
 	else if (pmts->mod == LL)

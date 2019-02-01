@@ -107,13 +107,12 @@ t_prts	*ft_type_d(va_list ap, t_pmts pmts)
 	t_prts		*node;
 
 	minus = 0;
-	res = va_arg(ap, long long);
+	res = va_arg(ap, int);
 	res = ft_cast_given_mod(&pmts, res);
 	str = ft_itoa_base_ll_ed(res, 10);
 	ft_set_d_flags(&pmts, &minus, str[0], ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	pmts.hash = 0;
 	if (!ft_calc_flags_sum(pmts))
 		return (ft_rec_given_data(&node, str));
 	else if (!pmts.prec && !pmts.prec_value && pmts.zero)

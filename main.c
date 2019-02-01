@@ -11,7 +11,9 @@
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#define FMT "[%10x]", 270232
+#include <limits.h>
+
+#define FMT "[%u]", 6321312312321732
 
 //NEED NORME AND MORE LEAK CHECKS, ALSO MORE TESTS!!!
 
@@ -21,7 +23,7 @@ int main(void)
 
 	res = ft_printf(FMT);
     res1 = printf(FMT);
-    printf("\noriginal[%d]\nmy%7[%d]\n", res1 - 2, res - 2);
+    printf("\nmy[%d]\nor[%d]\n", res - 2, res1 - 2);
 	system("leaks ft_printf -q");
 	return (0);
 }

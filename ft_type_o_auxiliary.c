@@ -29,14 +29,14 @@ void	ft_set_o_flags(t_pmts *pmts, size_t len)
 	pmts->space = 0;
 	if (pmts->prec && !pmts->prec_value)
 		pmts->prec = 0;
-	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= len)
+	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= (int)len)
 	{
 		pmts->prec = 0;
 		pmts->prec_value = 0;
 	}
 	if (pmts->prec && pmts->prec_value < 0)
 	{
-		if (pmts->prec_value * -1 <= len)
+		if (pmts->prec_value * -1 <= (int)len)
 			ft_zeroed_pmts_ptr(pmts);
 	}
 	if (pmts->prec)

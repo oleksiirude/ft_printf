@@ -77,6 +77,7 @@ size_t				ft_calc_flags_sum(t_pmts pmts);
 size_t				ft_getting_total_len_s(t_pmts *pmts, size_t len);
 long long			ft_cast_given_mod(t_pmts *pmts, long long res);
 t_prts				*ft_rec_given_data(t_prts **node, char *res);
+void				ft_set_s_flags(t_pmts *pmts);
 void				ft_set_p_flags(t_pmts *pmts, size_t len);
 void				ft_set_o_flags(t_pmts *pmts, size_t len);
 void				ft_set_d_flags(t_pmts *pmts, int *mns, char c, size_t len);

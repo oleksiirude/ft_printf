@@ -61,7 +61,7 @@ void	ft_case2_o(char **s, size_t l, t_pmts *p, t_prts **n)
 	size_t	var;
 
 	p->prec_value *= -1;
-	if (p->prec_value > l)
+	if (p->prec_value > (int)l)
 	{
 		if (p->hash)
 			p->prec_value -= 1;

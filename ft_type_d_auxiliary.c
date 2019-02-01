@@ -26,6 +26,7 @@ void	ft_set_d_flags_3(t_pmts *pmts, int *mns, char c, size_t len)
 		pmts->space = 0;
 		pmts->plus = 0;
 	}
+	pmts->hash = 0;
 }
 
 void	ft_set_d_flags_2(t_pmts *pmts, int *mns, char c, size_t len)

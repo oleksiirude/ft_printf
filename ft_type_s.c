@@ -103,21 +103,17 @@ t_prts			*ft_type_s(va_list ap, t_pmts pmts)
 	t_prts	*node;
 
 	res = va_arg(ap, char*);
-	pmts.plus = 0;
-	pmts.space = 0;
-	pmts.hash = 0;
-	pmts.mod = 0;
-	if (pmts.zero && pmts.value)
-	{
-		pmts.zero_value = pmts.value;
-		pmts.value = 0;
-	}
-	if (!pmts.zero_value && !pmts.value)
-		pmts.minus = 0;
-	if (pmts.prec_value < 0)
-		pmts.zero_value = 0;
+	ft_set_s_flags(&pmts);
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
+	if (pmts.prec_value < 0)
+	{
+		node->str = ft_malloc_sz(pmts.prec_value * -1);
+		node->str = ft_memset(node->str, 32, pmts.prec_value * -1);
+		node->len = pmts.prec_value * -1;
+		ft_zeroed_pmts_ptr(&pmts);
+		return (node);
+	}
 	if (!res)
 		res = "(null)";
 	if (!ft_calc_flags_sum(pmts))

@@ -55,7 +55,7 @@ size_t	ft_getting_total_len_s(t_pmts *pmts, size_t len)
 {
 	if (pmts->prec_value < 0)
 	{
-		if ((pmts->prec_value * -1) > len)
+		if ((pmts->prec_value * -1) > (int)len)
 		{
 			pmts->prec_value *= -1;
 			return (len);
@@ -78,4 +78,23 @@ size_t	ft_getting_total_len_s(t_pmts *pmts, size_t len)
 		return ((size_t)pmts->prec_value);
 	else
 		return (len);
+}
+
+void	ft_set_s_flags(t_pmts *pmts)
+{
+	pmts->plus = 0;
+	pmts->space = 0;
+	pmts->hash = 0;
+	pmts->mod = 0;
+	if (pmts->zero && !pmts->zero_value)
+		pmts->zero = 0;
+	if (pmts->zero && pmts->value)
+	{
+		pmts->zero_value = pmts->value;
+		pmts->value = 0;
+	}
+	if (!pmts->zero_value && !pmts->value)
+		pmts->minus = 0;
+	if (pmts->prec_value < 0)
+		pmts->zero_value = 0;
 }
