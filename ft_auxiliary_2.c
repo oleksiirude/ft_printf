@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-t_pmts		ft_set_flags_to_zero(void)
+t_pmts		ft_set_start_flags_to_zero(void)
 {
 	t_pmts	flags;
 
@@ -28,4 +28,19 @@ t_pmts		ft_set_flags_to_zero(void)
 	flags.mod = 0;
 	flags.type = 0;
 	return (flags);
+}
+
+void		ft_zeroed_pmts_ptr(t_pmts *p)
+{
+	p->minus = 0;
+	p->plus = 0;
+	p->space = 0;
+	p->hash = 0;
+	p->value = 0;
+	p->zero = 0;
+	p->zero_value = 0;
+	p->prec = 0;
+	p->prec_value = 0;
+	p->mod = 0;
+	p->type = 0;
 }

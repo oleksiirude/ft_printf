@@ -19,9 +19,8 @@ t_prts			*ft_type_x(va_list ap, t_pmts pmts)
 	t_prts		*node;
 
 	res = va_arg(ap, unsigned long long);
-	res = ft_cast_given_mod(pmts, res);
+	res = ft_cast_given_mod(&pmts, res);
 	res_str = ft_itoa_base_ll_ed(res, 16);
-	pmts.mod = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
 	if (!ft_calc_flags_sum(pmts))

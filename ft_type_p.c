@@ -12,35 +12,6 @@
 
 #include "ft_printf.h"
 
-void	ft_set_p_flags(t_pmts *pmts, size_t len)
-{
-	pmts->plus = 0;
-	pmts->space = 0;
-	pmts->hash = 0;
-	if (pmts->prec && !pmts->prec_value)
-		pmts->prec = 0;
-	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= len)
-	{
-		pmts->prec = 0;
-		pmts->prec_value = 0;
-	}
-	if (pmts->prec && pmts->prec_value < 0)
-	{
-		if (pmts->prec_value * -1 <= len + 2)
-		{
-			pmts->prec = 0;
-			pmts->prec_value = 0;
-		}
-	}
-	if (pmts->prec)
-		if (pmts->zero_value)
-		{
-			pmts->value = pmts->zero_value;
-			pmts->zero_value = 0;
-			pmts->zero = 0;
-		}
-}
-
 t_prts	*ft_handle_p_zv(t_pmts pmts, t_prts **node, char *res)
 {
 	char	*tmp;
@@ -82,55 +53,44 @@ t_prts	*ft_handle_p_v(t_pmts pmts, t_prts **node, char *res)
 	return (*node);
 }
 
-void	ft_modificate_str_2(char **str, size_t len, t_pmts *pmts, t_prts **node)
+void	ft_case2_p(char **s, size_t l, t_pmts *p, t_prts **n)
 {
 	char	*tmp;
 	size_t	var;
 
-	pmts->prec_value *= -1;
-	if (pmts->prec_value > len + 2)
+	p->prec_value *= -1;
+	if (p->prec_value > l + 2)
 	{
-		var = pmts->prec_value - len - 2;
+		var = p->prec_value - l - 2;
 		tmp = ft_malloc_sz(var);
 		tmp = ft_memset(tmp, 32, var);
-		*str = ft_strjoin_free(*str, tmp, 3);
-		(*node)->len = ft_strlen(*str);
-		pmts->prec = 0;
-		pmts->prec_value = 0;
+		*s = ft_strjoin_free(*s, tmp, 3);
+		(*n)->len = ft_strlen(*s);
+		p->prec = 0;
+		p->prec_value = 0;
 	}
-	pmts->minus = 0;
-	pmts->prec = 0;
-	pmts->prec_value = 0;
+	p->minus = 0;
+	p->prec = 0;
+	p->prec_value = 0;
 }
 
-void	ft_modificate_str_1(char **str, size_t len, t_pmts *pmts, t_prts **node)
+void	ft_case1_p(char **s, size_t l, t_pmts *p, t_prts **n)
 {
 	char	*tmp;
 	size_t	var;
 
-	var = pmts->prec_value - len;
+	var = p->prec_value - l;
 	tmp = ft_malloc_sz(var);
 	tmp = ft_memset(tmp, 48, var);
-	*str = ft_strjoin_free(tmp, *str, 3);
-	(*node)->len = ft_strlen(*str);
-	pmts->prec = 0;
-	pmts->prec_value = 0;
-}
-
-void	helper(t_pmts *pmts, size_t len, char **str, t_prts **node)
-{
-	if (pmts->prec_value > (int)len)
-		ft_modificate_str_1(str, len, pmts, node);
-	else if (pmts->prec_value < 0)
-	{
-		pmts->value = (size_t)pmts->prec_value * -1;
-		ft_modificate_str_2(str, len, pmts, node);
-	}
+	*s = ft_strjoin_free(tmp, *s, 3);
+	(*n)->len = ft_strlen(*s);
+	p->prec = 0;
+	p->prec_value = 0;
 }
 
 t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 {
-	size_t 		len;
+	size_t		len;
 	char		*str;
 	t_prts		*node;
 	long long	res;
@@ -142,7 +102,7 @@ t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 	pmts.mod = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	helper(&pmts, len, &str, &node);
+	ft_helper_type_p(&pmts, len, &str, &node);
 	if (!ft_calc_flags_sum(pmts))
 	{
 		if (!pmts.prec_value)

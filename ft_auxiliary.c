@@ -12,26 +12,27 @@
 
 #include "ft_printf.h"
 
-long long	ft_cast_given_mod(t_pmts pmts, long long res)
+long long	ft_cast_given_mod(t_pmts *pmts, long long res)
 {
 	long long value;
 
-	if (pmts.mod == H)
+	if (pmts->mod == H)
 		value = (short int)res;
-	else if (pmts.mod == HH)
-		value = (char)res;
-	else if (pmts.mod == L)
+	else if (pmts->mod == HH)
+		value = (unsigned char)res;
+	else if (pmts->mod == L)
 		value = (long)res;
-	else if (pmts.mod == LL)
+	else if (pmts->mod == LL)
 		value = res;
 	else
 	{
-		if (pmts.type == 'u' || pmts.type == 'x' ||
-				pmts.type == 'X' || pmts.type == 'o')
+		if (pmts->type == 'u' || pmts->type == 'x' ||
+				pmts->type == 'X' || pmts->type == 'o')
 			value = (unsigned int)res;
 		else
 			value = (int)res;
 	}
+	pmts->mod = 0;
 	return (value);
 }
 
@@ -91,5 +92,3 @@ size_t		ft_calc_flags_sum(t_pmts pmts)
 			pmts.prec + pmts.mod;
 	return (res);
 }
-
-

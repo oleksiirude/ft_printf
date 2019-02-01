@@ -44,7 +44,7 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 	size_t result;
 	t_pmts pmts;
 
-	pmts = ft_set_flags_to_zero();
+	pmts = ft_set_start_flags_to_zero();
 	result = ft_main_parse(fmt, &pmts);
 	if (pmts.type != 'f')
 		if (pmts.mod == LBIG)
