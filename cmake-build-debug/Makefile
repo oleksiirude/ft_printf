@@ -582,6 +582,33 @@ ft_type_u.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u.c.s
 .PHONY : ft_type_u.c.s
 
+ft_type_u_auxiliary.o: ft_type_u_auxiliary.c.o
+
+.PHONY : ft_type_u_auxiliary.o
+
+# target to build an object file
+ft_type_u_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u_auxiliary.c.o
+.PHONY : ft_type_u_auxiliary.c.o
+
+ft_type_u_auxiliary.i: ft_type_u_auxiliary.c.i
+
+.PHONY : ft_type_u_auxiliary.i
+
+# target to preprocess a source file
+ft_type_u_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u_auxiliary.c.i
+.PHONY : ft_type_u_auxiliary.c.i
+
+ft_type_u_auxiliary.s: ft_type_u_auxiliary.c.s
+
+.PHONY : ft_type_u_auxiliary.s
+
+# target to generate assembly for a file
+ft_type_u_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_u_auxiliary.c.s
+.PHONY : ft_type_u_auxiliary.c.s
+
 ft_type_x.o: ft_type_x.c.o
 
 .PHONY : ft_type_x.o
@@ -2640,6 +2667,9 @@ help:
 	@echo "... ft_type_u.o"
 	@echo "... ft_type_u.i"
 	@echo "... ft_type_u.s"
+	@echo "... ft_type_u_auxiliary.o"
+	@echo "... ft_type_u_auxiliary.i"
+	@echo "... ft_type_u_auxiliary.s"
 	@echo "... ft_type_x.o"
 	@echo "... ft_type_x.i"
 	@echo "... ft_type_x.s"

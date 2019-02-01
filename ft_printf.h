@@ -80,12 +80,16 @@ t_prts				*ft_rec_given_data(t_prts **node, char *res);
 void				ft_set_p_flags(t_pmts *pmts, size_t len);
 void				ft_set_o_flags(t_pmts *pmts, size_t len);
 void				ft_set_d_flags(t_pmts *pmts, int *mns, char c, size_t len);
+void				ft_set_u_flags(t_pmts *pmts, size_t len);
 void				ft_handle_d_p_helper(int minus, char **tmp, t_pmts pmts);
 void				ft_handle_d_v_helper(char **res, t_pmts *pmts);
 void				ft_case1_p(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case2_p(char **s, size_t l, t_pmts *p, t_prts **n);
-void				ft_helper_type_p(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_case1_o(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case2_o(char **s, size_t l, t_pmts *p, t_prts **n);
+void				ft_case1_u(char **s, size_t l, t_pmts *p, t_prts **n);
+void				ft_case2_u(char **s, size_t l, t_pmts *p, t_prts **n);
+void				ft_helper_type_p(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_helper_type_o(t_pmts *p, size_t l, char **s, t_prts **n);
+void				ft_helper_type_u(t_pmts *p, size_t l, char **s, t_prts **n);
 #endif
