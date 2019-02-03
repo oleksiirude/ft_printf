@@ -20,8 +20,6 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 	(*params)->prec = 1;
 	if ((*(*fmt) + 1) >= '0' || (*(*fmt) + 1) <= '9')
 	{
-//		if ((*params)->prec_value)
-//			return ;
 		(*fmt)++;
 		if (**fmt == '-')
 			minus = -1;

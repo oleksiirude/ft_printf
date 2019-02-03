@@ -40,8 +40,7 @@ void	ft_set_p_flags(t_pmts *pmts, size_t len)
 		if (pmts->prec_value * -1 <= (int)len + 2)
 			ft_zeroed_pmts_ptr(pmts);
 	}
-	if (pmts->prec)
-		if (pmts->zero_value)
+	if (pmts->prec && pmts->zero_value)
 		{
 			pmts->value = pmts->zero_value;
 			pmts->zero_value = 0;

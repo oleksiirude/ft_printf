@@ -13,7 +13,8 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-#define FMT "[%u]", 6321312312321732
+#define FMT "[%#o]", 0
+
 
 //NEED NORME AND MORE LEAK CHECKS, ALSO MORE TESTS!!!
 
@@ -40,3 +41,5 @@ int main(void)
 //printf("mod-> %4zu\n", pmts.mod);
 //printf("type-> %3c\n", pmts.type);
 
+//9223372036854775807
+//18446744073709551615

@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa_base_ll_ed.c                               :+:      :+:    :+:   */
+/*   ft_itoa_base_ull_ed.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,18 +12,12 @@
 
 #include "libft.h"
 
-static size_t		ft_lensize(long long value, int base)
+static size_t	ft_lensize(unsigned long long value, int base)
 {
 	size_t	len;
 
 	len = 0;
-	if (value < 0)
-	{
-		value *= -1;
-		if (base == 10)
-			len++;
-	}
-	while (value >= (long long)base)
+	while (value >= (unsigned long long)base)
 	{
 		value /= base;
 		len++;
@@ -31,7 +25,7 @@ static size_t		ft_lensize(long long value, int base)
 	return (len);
 }
 
-static char			*ft_fill(size_t len, long long v, char *arr, int b)
+char			*ft_fill(size_t l, unsigned long long v, char *arr, int b)
 {
 	unsigned int	tmp;
 
@@ -39,19 +33,19 @@ static char			*ft_fill(size_t len, long long v, char *arr, int b)
 	{
 		tmp = v % b;
 		if (tmp > 9)
-			arr[len--] = 'a' + (tmp - 10);
+			arr[l--] = 'a' + (tmp - 10);
 		else
-			arr[len--] = tmp + '0';
+			arr[l--] = tmp + '0';
 		v /= b;
 	}
 	if (v > 9)
-		arr[len] = 'a' + (v - 10);
+		arr[l] = 'a' + (v - 10);
 	else
-		arr[len] = v + '0';
+		arr[l] = v + '0';
 	return (arr);
 }
 
-char				*ft_itoa_base_ll_ed(long long value, int base)
+char			*ft_itoa_base_ull_ed(unsigned long long value, int base)
 {
 	size_t				len;
 	char				*arr;
@@ -60,10 +54,6 @@ char				*ft_itoa_base_ll_ed(long long value, int base)
 		return (NULL);
 	len = ft_lensize(value, base);
 	arr = (char*)malloc(sizeof(char) * len + 1);
-	if (base == 10 && value < 0)
-		*arr = '-';
-	if (value < 0)
-		value *= -1;
 	arr[len + 1] = 0;
 	return (ft_fill(len, value, arr, base));
 }

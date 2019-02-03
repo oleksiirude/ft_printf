@@ -107,9 +107,23 @@ t_prts	*ft_type_d(va_list ap, t_pmts pmts)
 	t_prts		*node;
 
 	minus = 0;
-	res = va_arg(ap, int);
-	res = ft_cast_given_mod(&pmts, res);
-	str = ft_itoa_base_ll_ed(res, 10);
+	res = va_arg(ap, long long);
+	res = ft_cast_given_mod_s(&pmts, res);
+	if (res < -9223372036854775807)
+		str = ft_strdup("-9223372036854775808");
+	else
+		str = ft_itoa_base_ll_ed(res, 10);
+//	printf("minus-> %2zu\n", pmts.minus);
+//	printf("plus-> %3zu\n", pmts.plus);
+//	printf("space-> %2zu\n", pmts.space);
+//	printf("hash-> %3zu\n", pmts.hash);
+//	printf("value-> %3zu\n", pmts.value);
+//	printf("zero-> %3zu\n", pmts.zero);
+//	printf("zero_v-> %zu\n", pmts.zero_value);
+//	printf("prec-> %3zu\n", pmts.prec);
+//	printf("prec_v-> %d\n", pmts.prec_value);
+//	printf("mod-> %4zu\n", pmts.mod);
+//	printf("type-> %3c\n", pmts.type);
 	ft_set_d_flags(&pmts, &minus, str[0], ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;

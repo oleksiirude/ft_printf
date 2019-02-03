@@ -127,6 +127,9 @@ CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base_ll_ed.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/libft/ft_itoa_base_ull_ed.c
+ /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_lstadd.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
@@ -219,6 +222,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strcpy.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strdel.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strdel.c
+ /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
+CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strdub_free.c
  /Users/olrudenk/CLionProjects/ft_printf/libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o
  /Users/olrudenk/CLionProjects/ft_printf/libft/ft_strdup.c

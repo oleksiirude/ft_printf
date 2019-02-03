@@ -84,12 +84,12 @@ t_prts	*ft_type_u(va_list ap, t_pmts pmts)
 {
 	size_t		len;
 	char		*str;
-	long long	res;
+	unsigned long long	res;
 	t_prts		*node;
 
 	res = va_arg(ap, unsigned long long);
-	res = ft_cast_given_mod(&pmts, res);
-	str = ft_itoa_base_ll_ed(res, 10);
+	res = ft_cast_given_mod_u(&pmts, res);
+	str = ft_itoa_base_ull_ed(res, 10);
 	len = ft_strlen(str);
 	ft_set_u_flags(&pmts, ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));

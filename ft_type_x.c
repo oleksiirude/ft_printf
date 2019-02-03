@@ -100,15 +100,18 @@ void	ft_case1_x(char **s, size_t l, t_pmts *p, t_prts **n)
 
 t_prts	*ft_type_x(va_list ap, t_pmts pmts)
 {
-	size_t		len;
-	char		*str;
-	t_prts		*node;
-	long long	res;
+	size_t				len;
+	char				*str;
+	t_prts				*node;
+	unsigned long long	res;
 
-	res = va_arg(ap, long long);
-	str = ft_itoa_base_ll_ed(res, 16);
+	res = va_arg(ap, unsigned long long);
+	res = ft_cast_given_mod_u(&pmts, res);
+	str = ft_itoa_base_ull_ed(res, 16);
 	len = ft_strlen(str);
-	ft_set_x_flags(&pmts, ft_strlen(str));
+	if (!res)
+		pmts.hash = 0;
+	ft_set_x_flags(&pmts, &str, ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
 	ft_helper_type_x(&pmts, len, &str, &node);

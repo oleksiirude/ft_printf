@@ -23,12 +23,18 @@ void	ft_helper_type_o(t_pmts *p, size_t l, char **s, t_prts **n)
 	}
 }
 
-void	ft_set_o_flags(t_pmts *pmts, size_t len)
+void	ft_set_o_flags(t_pmts *pmts, char **str, size_t len)
 {
 	pmts->plus = 0;
 	pmts->space = 0;
+//	if (*str[0] == '0')
+//		pmts->hash = 0;
 	if (pmts->prec && !pmts->prec_value)
+	{
+		if (*str[0] == '0')
+			*str = ft_strdup_free(*str, "");
 		pmts->prec = 0;
+	}
 	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= (int)len)
 	{
 		pmts->prec = 0;

@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-long long	ft_cast_given_mod(t_pmts *pmts, long long res)
+long long	ft_cast_given_mod_s(t_pmts *pmts, long long res)
 {
 	long long value;
 
@@ -20,21 +20,30 @@ long long	ft_cast_given_mod(t_pmts *pmts, long long res)
 		value = (short)res;
 	else if (pmts->mod == HH)
 		value = (char)res;
-	else if (pmts->mod == L)
-		value = (long)res;
-	else if (pmts->mod == LL)
+	else if (pmts->mod == L || pmts->mod == LL)
 		value = res;
 	else
-	{
-		if (pmts->type == 'u' || pmts->type == 'x' ||
-				pmts->type == 'X' || pmts->type == 'o')
-			value = (unsigned int)res;
-		else
-			value = (int)res;
-	}
+		value = (int)res;
 	pmts->mod = 0;
 	return (value);
 }
+
+unsigned long long	ft_cast_given_mod_u(t_pmts *pmts, unsigned long long res)
+{
+	unsigned long long value;
+
+	if (pmts->mod == H)
+		value = (unsigned short)res;
+	else if (pmts->mod == HH)
+		value = (unsigned char)res;
+	else if (pmts->mod == L || pmts->mod == LL)
+		value = res;
+	else
+		value = (unsigned int)res;
+	pmts->mod = 0;
+	return (value);
+}
+
 
 t_prts		*ft_rec_given_data(t_prts **node, char *res)
 {
@@ -89,6 +98,6 @@ size_t		ft_calc_flags_sum(t_pmts pmts)
 
 	res = pmts.minus + pmts.plus + pmts.space +
 			pmts.hash + pmts.value + pmts.zero +
-			pmts.prec + pmts.mod;
+			pmts.prec;
 	return (res);
 }

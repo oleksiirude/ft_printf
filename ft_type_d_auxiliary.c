@@ -14,6 +14,12 @@
 
 void	ft_set_d_flags_3(t_pmts *pmts, int *mns, char c, size_t len)
 {
+	if (pmts->prec_value == (int)len && pmts->zero_value)
+	{
+		pmts->zero_value = (size_t)pmts->prec_value + 1;
+		pmts->prec_value = 0;
+		pmts->prec = 0;
+	}
 	if (pmts->prec_value > (int)len && pmts->zero_value)
 	{
 		pmts->value = pmts->zero_value;
@@ -31,7 +37,7 @@ void	ft_set_d_flags_3(t_pmts *pmts, int *mns, char c, size_t len)
 
 void	ft_set_d_flags_2(t_pmts *pmts, int *mns, char c, size_t len)
 {
-	if (pmts->prec_value && pmts->prec_value <= (int)len
+	if (pmts->prec_value && pmts->prec_value < (int)len
 		&& (pmts->zero_value || pmts->value))
 	{
 		pmts->prec = 0;

@@ -1068,6 +1068,33 @@ libft/ft_itoa_base_ll_ed.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.s
 .PHONY : libft/ft_itoa_base_ll_ed.c.s
 
+libft/ft_itoa_base_ull_ed.o: libft/ft_itoa_base_ull_ed.c.o
+
+.PHONY : libft/ft_itoa_base_ull_ed.o
+
+# target to build an object file
+libft/ft_itoa_base_ull_ed.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o
+.PHONY : libft/ft_itoa_base_ull_ed.c.o
+
+libft/ft_itoa_base_ull_ed.i: libft/ft_itoa_base_ull_ed.c.i
+
+.PHONY : libft/ft_itoa_base_ull_ed.i
+
+# target to preprocess a source file
+libft/ft_itoa_base_ull_ed.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.i
+.PHONY : libft/ft_itoa_base_ull_ed.c.i
+
+libft/ft_itoa_base_ull_ed.s: libft/ft_itoa_base_ull_ed.c.s
+
+.PHONY : libft/ft_itoa_base_ull_ed.s
+
+# target to generate assembly for a file
+libft/ft_itoa_base_ull_ed.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.s
+.PHONY : libft/ft_itoa_base_ull_ed.c.s
+
 libft/ft_lstadd.o: libft/ft_lstadd.c.o
 
 .PHONY : libft/ft_lstadd.o
@@ -1904,6 +1931,33 @@ libft/ft_strdel.s: libft/ft_strdel.c.s
 libft/ft_strdel.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strdel.c.s
 .PHONY : libft/ft_strdel.c.s
+
+libft/ft_strdub_free.o: libft/ft_strdub_free.c.o
+
+.PHONY : libft/ft_strdub_free.o
+
+# target to build an object file
+libft/ft_strdub_free.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.o
+.PHONY : libft/ft_strdub_free.c.o
+
+libft/ft_strdub_free.i: libft/ft_strdub_free.c.i
+
+.PHONY : libft/ft_strdub_free.i
+
+# target to preprocess a source file
+libft/ft_strdub_free.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.i
+.PHONY : libft/ft_strdub_free.c.i
+
+libft/ft_strdub_free.s: libft/ft_strdub_free.c.s
+
+.PHONY : libft/ft_strdub_free.s
+
+# target to generate assembly for a file
+libft/ft_strdub_free.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.s
+.PHONY : libft/ft_strdub_free.c.s
 
 libft/ft_strdup.o: libft/ft_strdup.c.o
 
@@ -2748,6 +2802,9 @@ help:
 	@echo "... libft/ft_itoa_base_ll_ed.o"
 	@echo "... libft/ft_itoa_base_ll_ed.i"
 	@echo "... libft/ft_itoa_base_ll_ed.s"
+	@echo "... libft/ft_itoa_base_ull_ed.o"
+	@echo "... libft/ft_itoa_base_ull_ed.i"
+	@echo "... libft/ft_itoa_base_ull_ed.s"
 	@echo "... libft/ft_lstadd.o"
 	@echo "... libft/ft_lstadd.i"
 	@echo "... libft/ft_lstadd.s"
@@ -2841,6 +2898,9 @@ help:
 	@echo "... libft/ft_strdel.o"
 	@echo "... libft/ft_strdel.i"
 	@echo "... libft/ft_strdel.s"
+	@echo "... libft/ft_strdub_free.o"
+	@echo "... libft/ft_strdub_free.i"
+	@echo "... libft/ft_strdub_free.s"
 	@echo "... libft/ft_strdup.o"
 	@echo "... libft/ft_strdup.i"
 	@echo "... libft/ft_strdup.s"

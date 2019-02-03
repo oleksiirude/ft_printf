@@ -127,6 +127,9 @@ CMakeFiles/ft_printf.dir/libft/ft_itoa_base.c.o: ../libft/libft.h
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o: ../libft/ft_itoa_base_ll_ed.c
 CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ll_ed.c.o: ../libft/libft.h
 
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/ft_itoa_base_ull_ed.c
+CMakeFiles/ft_printf.dir/libft/ft_itoa_base_ull_ed.c.o: ../libft/libft.h
+
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/ft_lstadd.c
 CMakeFiles/ft_printf.dir/libft/ft_lstadd.c.o: ../libft/libft.h
 
@@ -219,6 +222,9 @@ CMakeFiles/ft_printf.dir/libft/ft_strcpy.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strdel.c.o: ../libft/ft_strdel.c
 CMakeFiles/ft_printf.dir/libft/ft_strdel.c.o: ../libft/libft.h
+
+CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.o: ../libft/ft_strdub_free.c
+CMakeFiles/ft_printf.dir/libft/ft_strdub_free.c.o: ../libft/libft.h
 
 CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o: ../libft/ft_strdup.c
 CMakeFiles/ft_printf.dir/libft/ft_strdup.c.o: ../libft/libft.h
