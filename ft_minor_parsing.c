@@ -24,7 +24,7 @@ void	ft_prec_case(char **fmt, t_pmts **params)
 		if (**fmt == '-')
 			minus = -1;
 		(*params)->prec_value = ft_atoi_modificated(fmt, 1);
-		if (!(*params)->prec_value && minus == -1) // IF NO VALUE IN PREC BUT MINUS IS
+		if (!(*params)->prec_value && minus == -1)
 			(*params)->minus = 1;
 		if (minus < 0)
 			(*params)->prec_value *= -1;

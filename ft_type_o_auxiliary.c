@@ -27,9 +27,7 @@ void	ft_set_o_flags(t_pmts *pmts, char **str, size_t len)
 {
 	pmts->plus = 0;
 	pmts->space = 0;
-//	if (*str[0] == '0')
-//		pmts->hash = 0;
-	if (pmts->prec && !pmts->prec_value)
+	if (pmts->prec && !pmts->prec_value && !pmts->hash)
 	{
 		if (*str[0] == '0')
 			*str = ft_strdup_free(*str, "");
@@ -41,10 +39,8 @@ void	ft_set_o_flags(t_pmts *pmts, char **str, size_t len)
 		pmts->prec_value = 0;
 	}
 	if (pmts->prec && pmts->prec_value < 0)
-	{
 		if (pmts->prec_value * -1 <= (int)len)
 			ft_zeroed_pmts_ptr(pmts);
-	}
 	if (pmts->prec)
 		if (pmts->zero_value)
 		{

@@ -44,3 +44,12 @@ void		ft_zeroed_pmts_ptr(t_pmts *p)
 	p->mod = 0;
 	p->type = 0;
 }
+
+size_t		ft_calc_flags_sum(t_pmts pmts)
+{
+	size_t res;
+
+	res = pmts.minus + pmts.plus + pmts.space +
+			pmts.hash + pmts.value + pmts.zero + pmts.prec;
+	return (res);
+}

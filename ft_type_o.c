@@ -112,7 +112,8 @@ t_prts	*ft_type_o(va_list ap, t_pmts pmts)
 	if (pmts.hash && !pmts.zero_value && !pmts.value)
 	{
 		pmts.hash = 0;
-		str = ft_strjoin_free("0", str, 2);
+		if (res != 0)
+			str = ft_strjoin_free("0", str, 2);
 	}
 	if (!ft_calc_flags_sum(pmts))
 		return (ft_rec_given_data(&node, str));

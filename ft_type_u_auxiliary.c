@@ -23,12 +23,17 @@ void	ft_helper_type_u(t_pmts *p, size_t l, char **s, t_prts **n)
 	}
 }
 
-void	ft_set_u_flags(t_pmts *pmts, size_t len)
+void	ft_set_u_flags(t_pmts *pmts, char *str, size_t len)
 {
 	pmts->plus = 0;
 	pmts->space = 0;
 	pmts->hash = 0;
-	if (pmts->prec && !pmts->prec_value)
+	if (pmts->prec && !pmts->prec_value && str[0] == '0')
+	{
+		pmts->prec_value = 1;
+		pmts->prec = 0;
+	}
+	if (pmts->prec && !pmts->prec_value && str[0] != '0')
 		pmts->prec = 0;
 	if (pmts->prec && pmts->prec_value > 0 && pmts->prec_value <= (int)len)
 	{
@@ -36,10 +41,8 @@ void	ft_set_u_flags(t_pmts *pmts, size_t len)
 		pmts->prec_value = 0;
 	}
 	if (pmts->prec && pmts->prec_value < 0)
-	{
 		if (pmts->prec_value * -1 <= (int)len)
 			ft_zeroed_pmts_ptr(pmts);
-	}
 	if (pmts->prec)
 		if (pmts->zero_value)
 		{

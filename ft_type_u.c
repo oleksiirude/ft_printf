@@ -82,21 +82,25 @@ void	ft_case1_u(char **s, size_t l, t_pmts *p, t_prts **n)
 
 t_prts	*ft_type_u(va_list ap, t_pmts pmts)
 {
-	size_t		len;
-	char		*str;
+	size_t				len;
+	char				*str;
+	t_prts				*node;
 	unsigned long long	res;
-	t_prts		*node;
 
 	res = va_arg(ap, unsigned long long);
 	res = ft_cast_given_mod_u(&pmts, res);
 	str = ft_itoa_base_ull_ed(res, 10);
 	len = ft_strlen(str);
-	ft_set_u_flags(&pmts, ft_strlen(str));
+	ft_set_u_flags(&pmts, str, ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
 	ft_helper_type_u(&pmts, len, &str, &node);
 	if (!ft_calc_flags_sum(pmts))
+	{
+		if (str[0] == '0' && pmts.prec_value)
+			str = ft_strdup_free(str, "");
 		return (ft_rec_given_data(&node, str));
+	}
 	else if (pmts.zero_value)
 		return (ft_handle_u_zv(pmts, &node, str));
 	else

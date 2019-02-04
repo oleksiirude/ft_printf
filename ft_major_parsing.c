@@ -63,5 +63,5 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 	if (!result)
 		return (ft_invalid_str_form(fmt, pmts));
 	else
-		return (ft_valid_str_form(ap, pmts));
+		return (ft_valid_str_form_1(ap, pmts));
 }

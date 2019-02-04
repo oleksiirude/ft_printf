@@ -98,17 +98,16 @@ t_prts	*ft_type_p(va_list ap, t_pmts pmts)
 	res = va_arg(ap, unsigned long long);
 	str = ft_itoa_base_ull_ed(res, 16);
 	len = ft_strlen(str);
-
-	ft_set_p_flags(&pmts, ft_strlen(str));
+	ft_set_p_flags(&pmts, str, ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
 	ft_helper_type_p(&pmts, len, &str, &node);
 	if (!ft_calc_flags_sum(pmts))
 	{
-		if (!pmts.prec_value && str[0] != '0')
-			str = ft_strjoin_free("0x", str, 2);
-		else if (str[0] == '0')
+		if (pmts.prec_value && str[0] == '0')
 			str = ft_strjoin_free(str, "x", 1);
+		else
+			str = ft_strjoin_free("0x", str, 2);
 		return (ft_rec_given_data(&node, str));
 	}
 	else if (pmts.zero_value)

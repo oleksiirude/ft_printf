@@ -12,7 +12,7 @@
 
 #include "ft_printf.h"
 
-long long	ft_cast_given_mod_s(t_pmts *pmts, long long res)
+long long			ft_cast_given_mod_s(t_pmts *pmts, long long res)
 {
 	long long value;
 
@@ -44,8 +44,7 @@ unsigned long long	ft_cast_given_mod_u(t_pmts *pmts, unsigned long long res)
 	return (value);
 }
 
-
-t_prts		*ft_rec_given_data(t_prts **node, char *res)
+t_prts				*ft_rec_given_data(t_prts **node, char *res)
 {
 	size_t	i;
 	size_t	len;
@@ -62,7 +61,7 @@ t_prts		*ft_rec_given_data(t_prts **node, char *res)
 	return (*node);
 }
 
-int			ft_atoi_modificated(char **fmt, int sign)
+int					ft_atoi_modificated(char **fmt, int sign)
 {
 	size_t	res;
 
@@ -85,19 +84,9 @@ int			ft_atoi_modificated(char **fmt, int sign)
 	return (0);
 }
 
-void		ft_find_last_node(t_prts **start, t_prts **node)
+void				ft_find_last_node(t_prts **start, t_prts **node)
 {
 	*(node) = *(start);
 	while ((*node)->next)
 		*node = (*node)->next;
-}
-
-size_t		ft_calc_flags_sum(t_pmts pmts)
-{
-	size_t res;
-
-	res = pmts.minus + pmts.plus + pmts.space +
-			pmts.hash + pmts.value + pmts.zero +
-			pmts.prec;
-	return (res);
 }

@@ -52,6 +52,8 @@ t_prts	*ft_type_perc(t_pmts pmts)
 {
 	t_prts	*node;
 
+	if (pmts.zero && !pmts.zero_value)
+		pmts.zero = 0;
 	node = (t_prts*)malloc(sizeof(t_prts));
 	if (pmts.value || pmts.zero || pmts.prec_value < 0)
 		return (ft_handle_perc(pmts, &node));
@@ -62,7 +64,14 @@ t_prts	*ft_type_perc(t_pmts pmts)
 	return (node);
 }
 
-t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
+//t_prts	*ft_valid_str_form_2(va_list ap, t_pmts pmts)
+//{
+//	if (pmts.type == 'f')
+//		return (ft_type_f(ap, pmts));
+//	return (NULL);
+//}
+
+t_prts	*ft_valid_str_form_1(va_list ap, t_pmts pmts)
 {
 	t_prts *temp;
 
@@ -87,7 +96,6 @@ t_prts	*ft_valid_str_form(va_list ap, t_pmts pmts)
 			ft_make_me_bigger(&temp->str);
 		return (temp);
 	}
-//	else if (pmts.type == 'f')
-//		return (ft_type_f(ap, pmts));
+	//return (ft_valid_str_form_2(ap, pmts));
 	return (NULL);
 }
