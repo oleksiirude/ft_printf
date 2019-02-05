@@ -85,6 +85,7 @@ t_prts				*ft_type_o(va_list ap, t_pmts pmts);
 t_prts				*ft_type_u(va_list ap, t_pmts pmts);
 t_prts				*ft_type_x(va_list ap, t_pmts pmts);
 t_prts				*ft_type_f(va_list ap, t_pmts pmts);
+t_prts				*ft_type_b(va_list ap, t_pmts pmts);
 t_final				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);

@@ -366,6 +366,33 @@ ft_printf.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_printf.c.s
 .PHONY : ft_printf.c.s
 
+ft_type_b.o: ft_type_b.c.o
+
+.PHONY : ft_type_b.o
+
+# target to build an object file
+ft_type_b.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_b.c.o
+.PHONY : ft_type_b.c.o
+
+ft_type_b.i: ft_type_b.c.i
+
+.PHONY : ft_type_b.i
+
+# target to preprocess a source file
+ft_type_b.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_b.c.i
+.PHONY : ft_type_b.c.i
+
+ft_type_b.s: ft_type_b.c.s
+
+.PHONY : ft_type_b.s
+
+# target to generate assembly for a file
+ft_type_b.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_b.c.s
+.PHONY : ft_type_b.c.s
+
 ft_type_c.o: ft_type_c.c.o
 
 .PHONY : ft_type_c.o
@@ -2805,6 +2832,9 @@ help:
 	@echo "... ft_printf.o"
 	@echo "... ft_printf.i"
 	@echo "... ft_printf.s"
+	@echo "... ft_type_b.o"
+	@echo "... ft_type_b.i"
+	@echo "... ft_type_b.s"
 	@echo "... ft_type_c.o"
 	@echo "... ft_type_c.i"
 	@echo "... ft_type_c.s"

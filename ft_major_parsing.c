@@ -14,7 +14,7 @@
 
 size_t	ft_main_parse(char **fmt, t_pmts *params)
 {
-	while (!ft_strchr("diouxXcspf%", **fmt) && **fmt)
+	while (!ft_strchr("diouxXcspfb%", **fmt) && **fmt)
 	{
 		if (ft_strchr("#+- .0123456789hlL", **fmt))
 			ft_rec_params(fmt, &params);

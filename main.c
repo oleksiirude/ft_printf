@@ -13,14 +13,14 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-#define FMT "[%.2s%.3s]", "Hello World", "Universe"
+//#define FMT "[%b]", 3123231
 
 int main(void)
 {
     int res, res1;
 
-	res = ft_printf(FMT);
-    res1 = printf(FMT);
+	res = ft_printf("Hello");
+    res1 = printf("Hello");
     printf("\nmy[%d]\nor[%d]\n", res - 2, res1 - 2);
 	system("leaks ft_printf -q");
 	return (0);
