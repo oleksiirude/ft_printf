@@ -12,9 +12,8 @@
 
 #include "ft_printf.h"
 #include <limits.h>
-#include <fcntl.h>
 
-#define FMT "[%d]", 31
+#define FMT "[%.2s%.3s]", "Hello World", "Universe"
 
 int main(void)
 {

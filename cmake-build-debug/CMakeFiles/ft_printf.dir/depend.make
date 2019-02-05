@@ -17,6 +17,10 @@ CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: ../ft_basic_functions.c
 CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/ft_color_output.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_color_output.c.o: ../ft_color_output.c
+CMakeFiles/ft_printf.dir/ft_color_output.c.o: ../ft_printf.h
+
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_invalid_case.c
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_printf.h

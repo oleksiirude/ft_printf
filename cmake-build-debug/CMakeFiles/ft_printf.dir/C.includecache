@@ -30,6 +30,10 @@ ft_printf.h
 ft_printf.h
 /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 
+/Users/olrudenk/CLionProjects/ft_printf/ft_color_output.c
+ft_printf.h
+/Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+
 /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c
 ft_printf.h
 /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
@@ -124,7 +128,5 @@ ft_printf.h
 ft_printf.h
 /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 limits.h
--
-fcntl.h
 -
 

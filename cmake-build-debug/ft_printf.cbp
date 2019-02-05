@@ -92,6 +92,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_basic_functions.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_color_output.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>

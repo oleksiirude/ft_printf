@@ -96,6 +96,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_type_x_auxiliary.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_f.c.o"
   "CMakeFiles/ft_printf.dir/ft_basic_functions.c.o"
+  "CMakeFiles/ft_printf.dir/ft_color_output.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

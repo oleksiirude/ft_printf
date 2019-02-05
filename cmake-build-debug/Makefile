@@ -231,6 +231,33 @@ ft_basic_functions.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_basic_functions.c.s
 .PHONY : ft_basic_functions.c.s
 
+ft_color_output.o: ft_color_output.c.o
+
+.PHONY : ft_color_output.o
+
+# target to build an object file
+ft_color_output.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_color_output.c.o
+.PHONY : ft_color_output.c.o
+
+ft_color_output.i: ft_color_output.c.i
+
+.PHONY : ft_color_output.i
+
+# target to preprocess a source file
+ft_color_output.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_color_output.c.i
+.PHONY : ft_color_output.c.i
+
+ft_color_output.s: ft_color_output.c.s
+
+.PHONY : ft_color_output.s
+
+# target to generate assembly for a file
+ft_color_output.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_color_output.c.s
+.PHONY : ft_color_output.c.s
+
 ft_invalid_case.o: ft_invalid_case.c.o
 
 .PHONY : ft_invalid_case.o
@@ -2763,6 +2790,9 @@ help:
 	@echo "... ft_basic_functions.o"
 	@echo "... ft_basic_functions.i"
 	@echo "... ft_basic_functions.s"
+	@echo "... ft_color_output.o"
+	@echo "... ft_color_output.i"
+	@echo "... ft_color_output.s"
 	@echo "... ft_invalid_case.o"
 	@echo "... ft_invalid_case.i"
 	@echo "... ft_invalid_case.s"

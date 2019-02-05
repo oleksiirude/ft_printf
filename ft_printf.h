@@ -13,6 +13,20 @@
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
+/*
+**  ---COLOR FUNCTION USAGE:---
+**  REDCL -> apply red color
+**  GRNCL -> apply green color
+** 	YELCL -> apply yellow color
+** 	BLUCL -> apply blue color
+** 	PURCL -> apply purple color
+**  GGRCL -> apply green-grass color
+**	GRYCL -> apply grey color
+**  FONDL -> apply background (white)
+**  FATL  -> apply fatty font
+**  STPC  -> stop this madness!
+*/
+
 # include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
@@ -57,6 +71,7 @@ typedef struct		s_pmts
 
 int					ft_printf(const char *format, ...);
 int					ft_fprintf(int fd, const char *format, ...);
+void				ft_check_ifcolor(char **final);
 size_t				ft_check_len(char *fmt);
 t_prts				*ft_rec_node(char **fmt, size_t len);
 void				ft_rec_simple_str(char **fmt, t_prts **start,

@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_auxiliary.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary_2.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_basic_functions.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_basic_functions.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_color_output.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_color_output.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_invalid_case.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_major_parsing.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_major_parsing.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_minor_parsing.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_minor_parsing.c.o"

@@ -17,6 +17,10 @@ CMakeFiles/ft_printf.dir/ft_basic_functions.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_basic_functions.c
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+CMakeFiles/ft_printf.dir/ft_color_output.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+ /Users/olrudenk/CLionProjects/ft_printf/ft_color_output.c
+ /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c
