@@ -14,15 +14,12 @@
 
 int		ft_printf(const char *format, ...)
 {
-	char	*tmp;
 	size_t	result;
 	va_list ap;
 	t_final *final;
 
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
-	tmp = final->str;
-	ft_check_ifcolor(&tmp);
 	write(1, final->str, final->len);
 	write(1, "\n", 1);
 	result = final->len;
@@ -47,6 +44,25 @@ int		ft_fprintf(int fd, const char *format, ...)
 		return (-1);
 	}
 	write(fd, final->str, final->len);
+	result = final->len;
+	free(final->str);
+	free(final);
+	va_end(ap);
+	return ((int)result);
+}
+
+int		ft_cprintf(const char *format, ...)
+{
+	char	*tmp;
+	size_t	result;
+	va_list ap;
+	t_final *final;
+
+	va_start(ap, format);
+	final = ft_main_funct(ap, (char*)format);
+	tmp = final->str;
+	ft_check_ifcolor(&tmp);
+	write(1, final->str, final->len);
 	result = final->len;
 	free(final->str);
 	free(final);

@@ -13,15 +13,16 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-//#define FMT "[%b]", 3123231
+#define FMT "%X", 0
 
 int main(void)
 {
     int res, res1;
 
-	res = ft_printf("Hello");
-    res1 = printf("Hello");
-    printf("\nmy[%d]\nor[%d]\n", res - 2, res1 - 2);
+	res = ft_printf(FMT);
+    res1 = printf(FMT);
+//    ft_cprintf("REDCLThis sting has red color! GRNCLAnd this is green! FATLLOLSTPC\n");
+    printf("\nmy[%d]\nor[%d]\n", res, res1);
 	system("leaks ft_printf -q");
 	return (0);
 }

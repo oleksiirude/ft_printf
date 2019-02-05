@@ -12,14 +12,14 @@
 
 #include "ft_printf.h"
 
-t_prts	*ft_type_f(va_list ap, t_pmts pmts)
-{
-	t_prts		*node;
-	long double	res;
-
-	res = va_arg(ap, long double);
-	node = (t_prts*)malloc(sizeof(t_prts));
-	node->next = NULL;
-	printf("%Lf\n", res);
-	return (NULL);
-}
+//t_prts	*ft_type_f(va_list ap, t_pmts pmts)
+//{
+//	t_prts		*node;
+//	long double	res;
+//
+//	res = va_arg(ap, long double);
+//	node = (t_prts*)malloc(sizeof(t_prts));
+//	node->next = NULL;
+//	printf("%Lf\n", res);
+//	return (NULL);
+//}

@@ -71,6 +71,7 @@ typedef struct		s_pmts
 
 int					ft_printf(const char *format, ...);
 int					ft_fprintf(int fd, const char *format, ...);
+int					ft_cprintf(const char *format, ...);
 void				ft_check_ifcolor(char **final);
 size_t				ft_check_len(char *fmt);
 t_prts				*ft_rec_node(char **fmt, size_t len);
