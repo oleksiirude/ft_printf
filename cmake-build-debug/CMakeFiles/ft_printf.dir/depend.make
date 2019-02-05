@@ -13,6 +13,10 @@ CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: ../ft_auxiliary_2.c
 CMakeFiles/ft_printf.dir/ft_auxiliary_2.c.o: ../ft_printf.h
 
+CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: ../ft_basic_functions.c
+CMakeFiles/ft_printf.dir/ft_basic_functions.c.o: ../ft_printf.h
+
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_invalid_case.c
 CMakeFiles/ft_printf.dir/ft_invalid_case.c.o: ../ft_printf.h
@@ -40,6 +44,10 @@ CMakeFiles/ft_printf.dir/ft_type_d.c.o: ../ft_type_d.c
 CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_d_auxiliary.c.o: ../ft_type_d_auxiliary.c
+
+CMakeFiles/ft_printf.dir/ft_type_f.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_f.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_f.c.o: ../ft_type_f.c
 
 CMakeFiles/ft_printf.dir/ft_type_o.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_o.c.o: ../ft_printf.h

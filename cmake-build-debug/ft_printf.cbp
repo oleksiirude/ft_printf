@@ -89,6 +89,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_auxiliary_2.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_basic_functions.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_invalid_case.c">
 			<Option target="ft_printf"/>
 		</Unit>
@@ -111,6 +114,9 @@
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_d_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_f.c">
 			<Option target="ft_printf"/>
 		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_o.c">

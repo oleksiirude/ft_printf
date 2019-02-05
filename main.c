@@ -12,12 +12,9 @@
 
 #include "ft_printf.h"
 #include <limits.h>
+#include <fcntl.h>
 
-#define FMT "[%%]", "test"
-//#define FMT "[%#.o][%#.0o][%#o]", 0, 0, 0
-
-
-//NEED NORME AND MORE LEAK CHECKS, ALSO MORE TESTS!!!
+#define FMT "[%d]", 31
 
 int main(void)
 {

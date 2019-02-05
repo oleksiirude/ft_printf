@@ -64,12 +64,12 @@ t_prts	*ft_type_perc(t_pmts pmts)
 	return (node);
 }
 
-//t_prts	*ft_valid_str_form_2(va_list ap, t_pmts pmts)
-//{
-//	if (pmts.type == 'f')
-//		return (ft_type_f(ap, pmts));
-//	return (NULL);
-//}
+t_prts	*ft_valid_str_form_2(va_list ap, t_pmts pmts)
+{
+	if (pmts.type == 'f')
+		return (ft_type_f(ap, pmts));
+	return (NULL);
+}
 
 t_prts	*ft_valid_str_form_1(va_list ap, t_pmts pmts)
 {
@@ -96,6 +96,5 @@ t_prts	*ft_valid_str_form_1(va_list ap, t_pmts pmts)
 			ft_make_me_bigger(&temp->str);
 		return (temp);
 	}
-	//return (ft_valid_str_form_2(ap, pmts));
-	return (NULL);
+	return (ft_valid_str_form_2(ap, pmts));
 }
