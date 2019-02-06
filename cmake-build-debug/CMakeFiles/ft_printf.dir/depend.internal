@@ -73,6 +73,14 @@ CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_type_p_auxiliary.c
+CMakeFiles/ft_printf.dir/ft_type_r.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+ /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+ /Users/olrudenk/CLionProjects/ft_printf/ft_type_r.c
+CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o
+ /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
+ /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h
+ /Users/olrudenk/CLionProjects/ft_printf/ft_type_r_auxiliary.c
 CMakeFiles/ft_printf.dir/ft_type_s.c.o
  /Users/olrudenk/CLionProjects/ft_printf/./libft/libft.h
  /Users/olrudenk/CLionProjects/ft_printf/ft_printf.h

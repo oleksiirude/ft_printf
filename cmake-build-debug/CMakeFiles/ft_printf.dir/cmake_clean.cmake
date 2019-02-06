@@ -98,6 +98,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_basic_functions.c.o"
   "CMakeFiles/ft_printf.dir/ft_color_output.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_b.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_r.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

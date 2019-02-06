@@ -73,6 +73,14 @@ CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o: ../ft_type_p_auxiliary.c
 
+CMakeFiles/ft_printf.dir/ft_type_r.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_r.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_r.c.o: ../ft_type_r.c
+
+CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o: .././libft/libft.h
+CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o: ../ft_printf.h
+CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o: ../ft_type_r_auxiliary.c
+
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: .././libft/libft.h
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: ../ft_printf.h
 CMakeFiles/ft_printf.dir/ft_type_s.c.o: ../ft_type_s.c

@@ -609,6 +609,60 @@ ft_type_p_auxiliary.c.s:
 	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.s
 .PHONY : ft_type_p_auxiliary.c.s
 
+ft_type_r.o: ft_type_r.c.o
+
+.PHONY : ft_type_r.o
+
+# target to build an object file
+ft_type_r.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r.c.o
+.PHONY : ft_type_r.c.o
+
+ft_type_r.i: ft_type_r.c.i
+
+.PHONY : ft_type_r.i
+
+# target to preprocess a source file
+ft_type_r.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r.c.i
+.PHONY : ft_type_r.c.i
+
+ft_type_r.s: ft_type_r.c.s
+
+.PHONY : ft_type_r.s
+
+# target to generate assembly for a file
+ft_type_r.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r.c.s
+.PHONY : ft_type_r.c.s
+
+ft_type_r_auxiliary.o: ft_type_r_auxiliary.c.o
+
+.PHONY : ft_type_r_auxiliary.o
+
+# target to build an object file
+ft_type_r_auxiliary.c.o:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o
+.PHONY : ft_type_r_auxiliary.c.o
+
+ft_type_r_auxiliary.i: ft_type_r_auxiliary.c.i
+
+.PHONY : ft_type_r_auxiliary.i
+
+# target to preprocess a source file
+ft_type_r_auxiliary.c.i:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.i
+.PHONY : ft_type_r_auxiliary.c.i
+
+ft_type_r_auxiliary.s: ft_type_r_auxiliary.c.s
+
+.PHONY : ft_type_r_auxiliary.s
+
+# target to generate assembly for a file
+ft_type_r_auxiliary.c.s:
+	$(MAKE) -f CMakeFiles/ft_printf.dir/build.make CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.s
+.PHONY : ft_type_r_auxiliary.c.s
+
 ft_type_s.o: ft_type_s.c.o
 
 .PHONY : ft_type_s.o
@@ -2859,6 +2913,12 @@ help:
 	@echo "... ft_type_p_auxiliary.o"
 	@echo "... ft_type_p_auxiliary.i"
 	@echo "... ft_type_p_auxiliary.s"
+	@echo "... ft_type_r.o"
+	@echo "... ft_type_r.i"
+	@echo "... ft_type_r.s"
+	@echo "... ft_type_r_auxiliary.o"
+	@echo "... ft_type_r_auxiliary.i"
+	@echo "... ft_type_r_auxiliary.s"
 	@echo "... ft_type_s.o"
 	@echo "... ft_type_s.i"
 	@echo "... ft_type_s.s"

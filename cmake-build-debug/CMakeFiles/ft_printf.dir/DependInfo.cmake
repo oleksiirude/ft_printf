@@ -22,6 +22,8 @@ set(CMAKE_DEPENDS_CHECK_C
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_o_auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_o_auxiliary.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_p.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_p.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_p_auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_p_auxiliary.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_type_r.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_r.c.o"
+  "/Users/olrudenk/CLionProjects/ft_printf/ft_type_r_auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_s.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_s.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_s_auxiliary.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_s_auxiliary.c.o"
   "/Users/olrudenk/CLionProjects/ft_printf/ft_type_u.c" "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/CMakeFiles/ft_printf.dir/ft_type_u.c.o"

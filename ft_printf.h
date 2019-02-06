@@ -87,6 +87,7 @@ t_prts				*ft_type_u(va_list ap, t_pmts pmts);
 t_prts				*ft_type_x(va_list ap, t_pmts pmts);
 t_prts				*ft_type_f(va_list ap, t_pmts pmts);
 t_prts				*ft_type_b(va_list ap, t_pmts pmts);
+t_prts				*ft_type_r(va_list ap);
 t_final				*ft_assembly(t_prts *start);
 t_prts				*ft_processing(va_list ap, char **fmt);
 void				ft_find_last_node(t_prts **start, t_prts **node);
@@ -123,4 +124,5 @@ void				ft_helper_type_o(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_helper_type_u(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_helper_type_x(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_make_me_bigger(char **str);
+char				*ft_unprint_to_print(char *str, size_t start, size_t len);
 #endif
