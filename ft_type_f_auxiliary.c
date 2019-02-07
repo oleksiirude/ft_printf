@@ -1,7 +1,7 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_type_f.c                                        :+:      :+:    :+:   */
+/*   ft_type_f_auxiliary.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
@@ -12,39 +12,19 @@
 
 #include "ft_printf.h"
 
-char 	*ft_get_1st_part(long double res, t_pmts pmts)
+int	ft_exponent(int nb, int pow)
 {
-	size_t		len;
-	long double nb;
+	int	i;
+	int	res;
 
-	len = 0;
-	printf("mod-> %4zu\n", pmts.mod);
-	if (pmts.mod != LBIG)
-		nb = (double)res;
-	else
-		nb = res;
-	if (nb < 0.0l)
-		len++;
-	printf("res->%f\n", nb);
-	while (nb > 1.0l)
-	{
-		write(1, "B\n", 2);
-		nb /= 10.0l;
-		len++;
-	}
-	printf("len->%zu\n", len);
-	return (0);
-}
-
-t_prts	*ft_type_f(va_list ap, t_pmts pmts)
-{
-	char		*str;
-	t_prts		*node;
-	long double	res;
-
-	res = va_arg(ap, long double); // или по даблу!!!!
-	node = (t_prts*)malloc(sizeof(t_prts));
-	node->next = NULL;
-	str = ft_get_1st_part(res, pmts);
-	return (NULL);
+	i = pow;
+	res = nb;
+	if (pow < 0)
+		return (0);
+	if (!pow)
+		return (1);
+	else if (pow > 1)
+		while (i-- > 1)
+			res *= nb;
+	return (res);
 }

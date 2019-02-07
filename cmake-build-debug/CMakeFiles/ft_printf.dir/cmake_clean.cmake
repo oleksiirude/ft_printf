@@ -101,6 +101,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/ft_printf.dir/ft_type_r.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_r_auxiliary.c.o"
   "CMakeFiles/ft_printf.dir/ft_type_b_auxiliary.c.o"
+  "CMakeFiles/ft_printf.dir/ft_type_f_auxiliary.c.o"
   "ft_printf.pdb"
   "ft_printf"
 )

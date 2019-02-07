@@ -66,8 +66,8 @@ t_prts	*ft_type_perc(t_pmts pmts)
 
 t_prts	*ft_valid_str_form_2(va_list ap, t_pmts pmts)
 {
-//	if (pmts.type == 'f')
-//		return (ft_type_f(ap, pmts));
+	if (pmts.type == 'f')
+		return (ft_type_f(ap, pmts));
 	if (pmts.type == 'b')
 		return (ft_type_b(ap, pmts));
 	else if (pmts.type == 'r')
