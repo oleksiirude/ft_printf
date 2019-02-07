@@ -113,6 +113,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_b.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_b_auxiliary.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_c.c">
 			<Option target="ft_printf"/>
 		</Unit>

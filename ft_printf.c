@@ -21,7 +21,7 @@ int		ft_printf(const char *format, ...)
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
 	write(1, final->str, final->len);
-//	write(1, "\n", 1);
+	write(1, "\n", 1);
 	result = final->len;
 	free(final->str);
 	free(final);
@@ -36,13 +36,9 @@ int		ft_fprintf(int fd, const char *format, ...)
 	t_final *final;
 
 	va_start(ap, format);
-	final = ft_main_funct(ap, (char*)format);
 	if (fd < 0 || write(fd, 0, 0) < 0)
-	{
-		free(final->str);
-		free(final);
 		return (-1);
-	}
+	final = ft_main_funct(ap, (char*)format);
 	write(fd, final->str, final->len);
 	result = final->len;
 	free(final->str);

@@ -46,7 +46,6 @@ void	ft_set_b_flags(t_pmts *pmts, size_t len)
 	pmts->hash = 0;
 	pmts->prec = 0;
 	pmts->prec_value = 0;
-	pmts->plus = 0;
 	pmts->mod = 0;
 	pmts->space = 0;
 	if (pmts->value <= len)
@@ -72,6 +71,11 @@ t_prts	*ft_type_b(va_list ap, t_pmts pmts)
 	ft_set_b_flags(&pmts, ft_strlen(str));
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
+	if (pmts.plus)
+	{
+		pmts.plus = 0;
+		ft_nice_view(&str);
+	}
 	if (!ft_calc_flags_sum(pmts))
 		return (ft_rec_given_data(&node, str));
 	else if (pmts.zero_value)

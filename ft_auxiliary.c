@@ -87,7 +87,7 @@ int					ft_atoi_modificated(char **fmt, int sign)
 			(*fmt)++;
 		}
 		(*fmt)--;
-		if (res > 9223372036854775807)
+		if (res > 2147483647)
 			return (2147483647);
 		return ((int)res);
 	}

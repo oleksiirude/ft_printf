@@ -111,4 +111,5 @@ void				ft_helper_type_u(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_helper_type_x(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_make_me_bigger(char **str);
 char				*ft_unprint_to_print(char *str, size_t start, size_t len);
+void				ft_nice_view(char **str);
 #endif
