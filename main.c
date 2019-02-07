@@ -13,7 +13,7 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-#define FMT "%+b", 321
+#define FMT "%s", "Hello"
 
 int main(void)
 {

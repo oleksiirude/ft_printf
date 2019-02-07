@@ -16,9 +16,9 @@ long long			ft_cast_given_mod_s(t_pmts *pmts, long long res)
 {
 	long long value;
 
-	if (pmts->mod == H || pmts->type != 'D')
+	if (pmts->mod == H && pmts->type != 'D')
 		value = (short)res;
-	else if (pmts->mod == HH || pmts->type != 'D')
+	else if (pmts->mod == HH && pmts->type != 'D')
 		value = (char)res;
 	else if (pmts->mod == L || pmts->mod == LL)
 		value = res;
@@ -37,9 +37,9 @@ unsigned long long	ft_cast_given_mod_u(t_pmts *pmts, unsigned long long res)
 {
 	unsigned long long value;
 
-	if (pmts->mod == H || pmts->type != 'O' || pmts->type != 'U')
+	if (pmts->mod == H && pmts->type != 'O' && pmts->type != 'U')
 		value = (unsigned short)res;
-	else if (pmts->mod == HH || pmts->type != 'O' || pmts->type != 'U')
+	else if (pmts->mod == HH && pmts->type != 'O' && pmts->type != 'U')
 		value = (unsigned char)res;
 	else if (pmts->mod == L || pmts->mod == LL)
 		value = res;
