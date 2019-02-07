@@ -21,7 +21,7 @@ int		ft_printf(const char *format, ...)
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
 	write(1, final->str, final->len);
-	write(1, "\n", 1);
+//	write(1, "\n", 1);
 	result = final->len;
 	free(final->str);
 	free(final);
@@ -51,6 +51,21 @@ int		ft_fprintf(int fd, const char *format, ...)
 	return ((int)result);
 }
 
+void	ft_cprintf_usage(void)
+{
+	ft_printf("\n\033[32m   COLOR FUNCTION USAGE:\033[0m\n");
+	ft_printf("REDCL -> apply \033[31mred\033[0m color\n");
+	ft_printf("GRNCL -> apply \033[32mgreen\033[0m color\n");
+	ft_printf("YELCL -> apply \033[33myellow\033[0m color\n");
+	ft_printf("BLUCL -> apply \033[34mblue\033[0m color\n");
+	ft_printf("PURCL -> apply \033[35mpurple\033[0m color\n");
+	ft_printf("GGRCL -> apply \033[36mgreen-grass\033[0m color\n");
+	ft_printf("GRYCL -> apply \033[37mgrey\033[0m color\n");
+	ft_printf("FONDL -> apply \033[40mbackground\033[0m\n");
+	ft_printf("FATL  -> apply \033[1mfatty\033[0m font\n");
+	ft_printf("STPC  -> \033[31mstop this madness!\033[0m\n\n");
+}
+
 int		ft_cprintf(const char *format, ...)
 {
 	char	*tmp;
@@ -59,6 +74,11 @@ int		ft_cprintf(const char *format, ...)
 	t_final *final;
 
 	va_start(ap, format);
+	if (!ft_strncmp((char*)format, "+usage", 6))
+	{
+		ft_cprintf_usage();
+		return (0);
+	}
 	final = ft_main_funct(ap, (char*)format);
 	tmp = final->str;
 	ft_check_ifcolor(&tmp);

@@ -62,6 +62,7 @@ t_final	*ft_main_funct(va_list ap, char *fmt)
 	t_prts	*start;
 	t_prts	*node;
 
+	start = NULL;
 	while (*fmt)
 	{
 		if ((ft_check_len(fmt)))

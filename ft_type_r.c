@@ -36,7 +36,7 @@ char	*ft_work_with_unprintable(char *str, size_t len)
 		i++;
 	}
 	if (j < ft_strlen(str))
-		res = ft_strjoin_free(res, &str[j + 1], 1);
+		res = ft_strjoin_free(res, &str[j], 1);
 	return (res);
 }
 
