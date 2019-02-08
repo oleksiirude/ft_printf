@@ -13,14 +13,15 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-#define FMT "%f", 34.32
+#define FMT "[%.12f]", -5783982.9999999999999
+
 int main(void)
 {
     int res, res1;
 
 	res = ft_printf(FMT);
     res1 = printf(FMT);
-    //ft_cprintf("REDCLThis sting has red color! GRNCLAnd this is green! FATLLOLSTPC\n");
+//    ft_cprintf("REDCLThis sting has red color! GRNCLAnd this is green! FATLLOLSTPC\n");
 //    ft_cprintf("+usage");
     printf("\nmy[%d]\nor[%d]\n", res, res1);
 //	system("leaks ft_printf -q");
@@ -38,3 +39,5 @@ int main(void)
 //printf("prec_v-> %d\n", pmts.prec_value);
 //printf("mod-> %4zu\n", pmts.mod);
 //printf("type-> %3c\n", pmts.type);
+
+//18446744073709551615

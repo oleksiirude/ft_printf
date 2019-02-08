@@ -112,5 +112,7 @@ void				ft_helper_type_x(t_pmts *p, size_t l, char **s, t_prts **n);
 void				ft_make_me_bigger(char **str);
 char				*ft_unprint_to_print(char *str, size_t start, size_t len);
 void				ft_nice_view(char **str);
-int					ft_exponent(int nb, int pow);
+size_t				ft_exp(size_t nb, size_t pow);
+void				ft_max(long double *res, size_t *e);
+char				*ft_round_off(char *str, t_pmts pmts);
 #endif

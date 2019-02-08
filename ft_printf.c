@@ -50,7 +50,7 @@ int		ft_fprintf(int fd, const char *format, ...)
 void	ft_cprintf_usage(void)
 {
 	ft_printf("\n\033[32m   COLOR FUNCTION USAGE:\033[0m\n");
-	ft_printf("REDCL -> apply \033[31mred\033[0m color\n");
+	ft_printf("REDCL -> apply \033[31m  red\033[0m color\n");
 	ft_printf("GRNCL -> apply \033[32mgreen\033[0m color\n");
 	ft_printf("YELCL -> apply \033[33myellow\033[0m color\n");
 	ft_printf("BLUCL -> apply \033[34mblue\033[0m color\n");
