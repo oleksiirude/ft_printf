@@ -12,37 +12,36 @@
 
 #include "ft_printf.h"
 
-void		ft_set_f_flags(t_pmts *pmts)
+void		ft_handle_res_minus(long double *r, va_list ap, int mod)
 {
-	if (!pmts->prec_value)
-	{
-		pmts->prec = 1;
-		pmts->prec_value = 6;
-	}
-}
-
-void		ft_handle_res_minus(long double *r, va_list ap, int *mns, int mod)
-{
-	*mns = 0;
 	if (mod != LBIG)
 		*r = va_arg(ap, double);
 	else
 		*r = va_arg(ap, long double);
-	if (*r < 0.0l)
-	{
-		*r *= -1.0l;
-		*mns = 1;
-	}
 }
 
-long double	ft_round_off(long double res, int prec)
+long double	ft_round_off(long double res, t_pmts *pmts)
 {
+	int 		perc;
+	int			mns;
 	long double nb;
 
-	nb = ft_exp(10, (size_t)prec + 1);
+	if (pmts->prec_value < 0)
+	{
+		pmts->value = pmts->prec_value * -1;
+		pmts->minus = 1;
+		pmts->zero = 0;
+		pmts->zero_value = 0;
+		pmts->prec_value = 0;
+	}
+	perc = pmts->prec_value ? pmts->prec_value : 6;
+	mns = res < 0.0l ? -1 : 1;
+	if (res < 0.0l)
+		res *= -1;
+	nb = ft_exp(10, (size_t)perc + 1);
 	if ((long long)(res * nb) % 10 >= 5)
-		return (res + (1.0l / (nb / 10.0l)));
-	return (res);
+		return ((res + (1.0l / (nb / 10.0l))) * mns);
+	return (res * mns);
 }
 
 void		ft_max(long double *res, size_t *e)

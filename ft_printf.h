@@ -115,8 +115,12 @@ char				*ft_unprint_to_print(char *str, size_t start, size_t len);
 void				ft_nice_view(char **str);
 size_t				ft_exp(size_t nb, size_t pow);
 void				ft_max(long double *res, size_t *e);
-long double			ft_round_off(long double res, int prec);
-void				ft_handle_res_minus(long double *r, va_list ap,
-						int *mns, int mod);
+long double			ft_round_off(long double res, t_pmts *pmts);
+void				ft_handle_res_minus(long double *r, va_list ap, int mod);
 char				*ft_check_nan_and_inf(long double res);
+
+//LOL
+t_prts				*ft_handle_d_p(t_pmts pmts, t_prts **node, char *res, int minus);
+t_prts				*ft_handle_d_v(t_pmts pmts, t_prts **node, char *res, size_t len);
+t_prts				*ft_handle_d_zv(t_pmts pmts, t_prts **node, char *res, int minus);
 #endif

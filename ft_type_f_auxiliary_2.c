@@ -17,6 +17,6 @@ char	*ft_check_nan_and_inf(long double res)
 	if (res != res)
 		return (ft_strdup("nan"));
 	else if (res * 2 == res && res != 0)
-		return (ft_strdup("inf"));
+		return (res < 0.0 ? ft_strdup("-inf") : ft_strdup("inf"));
 	return (NULL);
 }
