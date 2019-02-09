@@ -39,7 +39,7 @@ char	*ft_prt2(long double res, t_pmts pmts)
 	char	*str;
 	int		prec;
 
-	prec = pmts.prec_value ? pmts.prec_value + 1 : 7;
+	prec = pmts.prec_value ? pmts.prec_value : 6;
 	tmp = (size_t)prec;
 	str = ft_malloc_sz((size_t)prec);
 	str = ft_memset(str, 48, (size_t)prec);
@@ -73,23 +73,24 @@ char	*ft_prt1(long double res)
 
 t_prts	*ft_type_f(va_list ap, t_pmts pmts)
 {
-	int			prec;
+	long double	res;
 	int			minus;
 	char		*str;
 	t_prts		*node;
-	long double	res;
 
-	prec = pmts.prec_value ? pmts.prec_value : 6;
 	ft_handle_res_minus(&res, ap, &minus, (int)pmts.mod);
-	res = ft_round_off(res, prec);
-	ft_set_f_flags(&pmts);
+	res = ft_round_off(res, pmts.prec_value ? pmts.prec_value : 6);
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	str = ft_strjoin_free(ft_prt1(res),
-			ft_prt2(res - (long long)res, pmts), 3);
+	ft_set_f_flags(&pmts);
+	if ((str = ft_check_nan_and_inf(res)))
+		;
+	else
+		str = ft_strjoin_free(ft_prt1(res),
+				ft_prt2(res - (long long)res, pmts), 3);
 	if (minus)
 		str = ft_strjoin_free("-", str, 2);
 	node->str = str;
-	node->len = ft_strlen(str) - 1;
+	node->len = ft_strlen(str);
 	return (node);
 }

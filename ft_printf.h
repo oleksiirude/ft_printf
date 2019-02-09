@@ -118,4 +118,5 @@ void				ft_max(long double *res, size_t *e);
 long double			ft_round_off(long double res, int prec);
 void				ft_handle_res_minus(long double *r, va_list ap,
 						int *mns, int mod);
+char				*ft_check_nan_and_inf(long double res);
 #endif

@@ -131,6 +131,9 @@
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_f_auxiliary.c">
 			<Option target="ft_printf"/>
 		</Unit>
+		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_f_auxiliary_2.c">
+			<Option target="ft_printf"/>
+		</Unit>
 		<Unit filename="/Users/olrudenk/CLionProjects/ft_printf/ft_type_o.c">
 			<Option target="ft_printf"/>
 		</Unit>
