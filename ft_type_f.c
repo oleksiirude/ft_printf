@@ -12,10 +12,9 @@
 
 #include "ft_printf.h"
 
-char 	*ft_record_str_f(char *str, long double res, size_t e)
+char	*ft_record_str_f(char *str, long double res, size_t e)
 {
-	int 	i;
-	size_t 	val;
+	int		i;
 	size_t	nb;
 
 	i = 0;
@@ -34,11 +33,11 @@ char 	*ft_record_str_f(char *str, long double res, size_t e)
 	return (str);
 }
 
-char 	*ft_prt2(long double res, t_pmts pmts)
+char	*ft_prt2(long double res, t_pmts pmts)
 {
 	size_t	tmp;
-	char 	*str;
-	int	 	prec;
+	char	*str;
+	int		prec;
 
 	prec = pmts.prec_value ? pmts.prec_value + 1 : 7;
 	tmp = (size_t)prec;
@@ -50,9 +49,9 @@ char 	*ft_prt2(long double res, t_pmts pmts)
 	return (str);
 }
 
-char 	*ft_prt1(long double res, t_pmts pmts)
+char	*ft_prt1(long double res)
 {
-	char 		*str;
+	char		*str;
 	size_t		len;
 	long double nb;
 
@@ -74,27 +73,20 @@ char 	*ft_prt1(long double res, t_pmts pmts)
 
 t_prts	*ft_type_f(va_list ap, t_pmts pmts)
 {
-	size_t		len;
+	int			prec;
 	int			minus;
 	char		*str;
 	t_prts		*node;
 	long double	res;
 
-	minus = 0;
-	if (pmts.mod != LBIG)
-		res = va_arg(ap, double);
-	else
-		res = va_arg(ap, long double);
-	if (res < 0.0l)
-	{
-		res *= -1.0l;
-		minus = 1;
-	}
+	prec = pmts.prec_value ? pmts.prec_value : 6;
+	ft_handle_res_minus(&res, ap, &minus, (int)pmts.mod);
+	res = ft_round_off(res, prec);
+	ft_set_f_flags(&pmts);
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	str = ft_strjoin_free(ft_prt1(res, pmts),
+	str = ft_strjoin_free(ft_prt1(res),
 			ft_prt2(res - (long long)res, pmts), 3);
-	str = ft_round_off(str, pmts);
 	if (minus)
 		str = ft_strjoin_free("-", str, 2);
 	node->str = str;

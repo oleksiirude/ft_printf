@@ -12,39 +12,42 @@
 
 #include "ft_printf.h"
 
-char	*ft_round_off(char *str, t_pmts pmts)
+void		ft_set_f_flags(t_pmts *pmts)
 {
-	int tmp;
-	int	len;
-
-	len = (int)ft_strlen(str) - 1;
-	tmp = len;
-	printf("before[%s]\n", str);
-	while (str[len] == '9')
+	if (!pmts->prec_value)
 	{
-		str[len] -= 9;
-		len--;
-		if (str[len] != '9')
-		{
-			str[len] += 1;
-			break;
-		}
+		pmts->prec = 1;
+		pmts->prec_value = 6;
 	}
-	printf("[%c]\n", str[tmp]);
-	if (str[tmp] >= '5')
-	{
-		if (str[tmp - 1] == '9')
-			str[tmp - 1] -= 9;
-		else
-			str[tmp - 1] += 1;
-	}
-	printf("after [%s]\n", str);
-	return (str);
 }
 
-void	ft_max(long double *res, size_t *e)
+void		ft_handle_res_minus(long double *r, va_list ap, int *mns, int mod)
 {
-	size_t 	val;
+	*mns = 0;
+	if (mod != LBIG)
+		*r = va_arg(ap, double);
+	else
+		*r = va_arg(ap, long double);
+	if (*r < 0.0l)
+	{
+		*r *= -1.0l;
+		*mns = 1;
+	}
+}
+
+long double	ft_round_off(long double res, int prec)
+{
+	long double nb;
+
+	nb = ft_exp(10, (size_t)prec + 1);
+	if ((long long)(res * nb) % 10 >= 5)
+		return (res + (1.0l / (nb / 10.0l)));
+	return (res);
+}
+
+void		ft_max(long double *res, size_t *e)
+{
+	size_t	val;
 
 	val = *e - 19;
 	if (val > 19)
@@ -53,13 +56,11 @@ void	ft_max(long double *res, size_t *e)
 	*e = 19;
 }
 
-size_t	ft_exp(size_t nb, size_t pow)
+size_t		ft_exp(size_t nb, size_t pow)
 {
 	size_t	res;
 
 	res = nb;
-	if (pow < 0)
-		return (0);
 	if (!pow)
 		return (1);
 	else if (pow > 1)
