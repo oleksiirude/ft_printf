@@ -29,7 +29,7 @@ int		ft_printf(const char *format, ...)
 	return ((int)result);
 }
 
-int		ft_fprintf(int fd, const char *format, ...)
+int		ft_dprintf(int fd, const char *format, ...)
 {
 	size_t	result;
 	va_list ap;

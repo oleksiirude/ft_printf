@@ -12,17 +12,21 @@
 
 #include "ft_printf.h"
 
-char	*ft_record_str_f(char *str, long double res, size_t e)
+int g_sign = 0;
+
+char	*ft_record_before_f(char *str, long double res, size_t e)
 {
-	int		i;
-	size_t	nb;
+	int					i;
+	unsigned long long	nb;
 
 	i = 0;
+	if (e > 39)
+	{
+		str = ft_memset(str, 48, e);
+		return (str);
+	}
 	if (e > 19)
 		ft_max(&res, &e);
-	nb = res / ft_exp(10, e);
-	str[i++] = nb + '0';
-	e--;
 	while ((long long)e >= 0)
 	{
 		nb = res / ft_exp(10, e);
@@ -33,27 +37,56 @@ char	*ft_record_str_f(char *str, long double res, size_t e)
 	return (str);
 }
 
-char	*ft_prt2(long double res, t_pmts pmts)
+char 	*ft_str_round_off(char *str, int prec)
 {
-	size_t	tmp;
-	char	*str;
-	int		prec;
+	printf("str->%s\n", str);
+	while (prec >= 0)
+	{
+		if (str[prec] >= '5')
+		{
+			if (str[prec] > '8')
+				str[prec] = '0';
+			else
+				str[prec] += 1;
+			prec--;
+		}
+		else if (!prec)
+		{
+			if (str[prec] > '8')
+				str[prec] = '1';
+			else
+				str[prec] += 1;
+		}
+	}
+	return (str);
+}
 
+char	*ft_after_dot(long double res, t_pmts pmts)
+{
+	int 		i;
+	char		*str;
+	int			prec;
+
+	i = 0;
 	if (pmts.prec && !pmts.prec_value)
 		return (ft_strdup(""));
 	if (res < 0.0l)
 		res *= -1.0l;
-	prec = pmts.prec_value ? pmts.prec_value : 6;
-	tmp = (size_t)prec;
+	prec = pmts.prec_value ? pmts.prec_value + 1 : 7;
 	str = ft_malloc_sz((size_t)prec);
 	str = ft_memset(str, 48, (size_t)prec);
 	while (prec--)
-		res *= 10.0l;
-	str = ft_record_str_f(str, res, tmp - 1);
+	{
+		res *= 10.0;
+		str[i++] = (char)((long long)res % 10 + '0');
+		res -= (long long)res;
+	}
+	str = ft_str_round_off(str, (pmts.prec_value ? pmts.prec_value + 1 : 7) - 1);
+	str[(pmts.prec_value ? pmts.prec_value + 1 : 7) - 1] = 0;
 	return (str);
 }
 
-char	*ft_prt1(long double res, t_pmts pmts)
+char	*ft_before_dot(long double res, t_pmts pmts)
 {
 	int			minus;
 	char		*str;
@@ -61,12 +94,9 @@ char	*ft_prt1(long double res, t_pmts pmts)
 	long double nb;
 
 	len = 0;
-	minus = 0;
+	minus = ((*(((char*)&res) + 9)) >> 7) ? 1 : 0;
 	if (res < 0.0l)
-	{
-		minus = 1;
 		res *= -1.0l;
-	}
 	nb = res;
 	while (nb > 1.0l)
 	{
@@ -76,8 +106,8 @@ char	*ft_prt1(long double res, t_pmts pmts)
 	len ? 0 : len++;
 	str = ft_malloc_sz(len + 1);
 	str = ft_memset(str, 48, len + 1);
-	str[len] = pmts.prec && !pmts.prec_value ? 0 : '.';
-	str = ft_record_str_f(str, res, len - 1);
+	str[len] = pmts.prec && !pmts.prec_value && !pmts.hash ? 0 : '.';
+	str = ft_record_before_f(str, res, len - 1);
 	minus ? str = ft_strjoin_free("-", str, 2) : 0;
 	return (str);
 }
@@ -89,15 +119,20 @@ t_prts	*ft_type_f(va_list ap, t_pmts pmts)
 	char		*str;
 	t_prts		*node;
 
-	ft_handle_res_minus(&res, ap, (int)pmts.mod);
-	if ((!pmts.prec && !pmts.prec_value) || (pmts.prec && pmts.prec_value))
-		res = ft_round_off(res, &pmts);
+	ft_handle_res(&res, ap, (int)pmts.mod);
+//	res = ft_round_off(res, &pmts);
+//	printf("after rounding->%L.10f\n", res);
 	node = (t_prts*)malloc(sizeof(t_prts));
 	node->next = NULL;
-	if ((str = ft_check_nan_and_inf(res)))
+	if ((str = ft_check_nan_and_inf(res, &pmts)))
 		;
 	else
-		str = ft_strjoin_free(ft_prt1(res, pmts), ft_prt2(res - (long long)res, pmts), 3);
+	{
+		str = ft_after_dot((double)res - (long long)res, pmts);
+		if (g_sign)
+			res += 1.0;
+		str = ft_strjoin_free(ft_before_dot(res, pmts), str, 3);
+	}
 	ft_set_d_flags(&pmts, &minus, str[0], ft_strlen(str));
 	if (!ft_strcmp(str, "nan"))
 		pmts.plus = 0;
@@ -106,10 +141,7 @@ t_prts	*ft_type_f(va_list ap, t_pmts pmts)
 	else if (!pmts.prec && !pmts.prec_value && pmts.zero)
 		return (ft_handle_d_zv(pmts, &node, str, minus));
 	else if (!pmts.prec_value)
-	{
-//		ft_handle_d_v_helper(&str, &pmts);
 		return (ft_handle_d_v(pmts, &node, str, ft_strlen(str)));
-	}
 	else
 		return (ft_handle_d_p(pmts, &node, str, minus));
 }

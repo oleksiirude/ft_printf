@@ -13,7 +13,8 @@
 #include "ft_printf.h"
 #include <limits.h>
 
-#define FMT "[%f]", 0.0 / 0.0
+//#define FMT "[%L.4f]", 9.9l
+#define FMT "[%f]", 9.2
 
 int main(void)
 {
@@ -45,3 +46,5 @@ int main(void)
 //printf("before [%s]\n", str);
 //printf("middle [%s]\n", str);
 //printf("after  [%s]\n", str);
+
+//str = ft_strjoin_free(ft_before_dot(res, pmts), ft_after_dot((double) res - (long long) res, pmts), 3);

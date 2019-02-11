@@ -56,7 +56,7 @@ typedef struct		s_pmts
 }					t_pmts;
 
 int					ft_printf(const char *format, ...);
-int					ft_fprintf(int fd, const char *format, ...);
+int					ft_dprintf(int fd, const char *format, ...);
 int					ft_cprintf(const char *format, ...);
 void				ft_check_ifcolor(char **final);
 size_t				ft_check_len(char *fmt);
@@ -116,8 +116,8 @@ void				ft_nice_view(char **str);
 size_t				ft_exp(size_t nb, size_t pow);
 void				ft_max(long double *res, size_t *e);
 long double			ft_round_off(long double res, t_pmts *pmts);
-void				ft_handle_res_minus(long double *r, va_list ap, int mod);
-char				*ft_check_nan_and_inf(long double res);
+void				ft_handle_res(long double *res, va_list ap, int mod);
+char				*ft_check_nan_and_inf(long double res, t_pmts *pmts);
 
 //LOL
 t_prts				*ft_handle_d_p(t_pmts pmts, t_prts **node, char *res, int minus);

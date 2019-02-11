@@ -12,17 +12,18 @@
 
 #include "ft_printf.h"
 
-void		ft_handle_res_minus(long double *r, va_list ap, int mod)
+void		ft_handle_res(long double *res, va_list ap, int mod)
 {
 	if (mod != LBIG)
-		*r = va_arg(ap, double);
+		*res = va_arg(ap, double);
 	else
-		*r = va_arg(ap, long double);
+		*res = va_arg(ap, long double);
 }
 
 long double	ft_round_off(long double res, t_pmts *pmts)
 {
-	int 		perc;
+	long long 	tmp;
+	int 		prec;
 	int			mns;
 	long double nb;
 
@@ -34,13 +35,23 @@ long double	ft_round_off(long double res, t_pmts *pmts)
 		pmts->zero_value = 0;
 		pmts->prec_value = 0;
 	}
-	perc = pmts->prec_value ? pmts->prec_value : 6;
-	mns = res < 0.0l ? -1 : 1;
-	if (res < 0.0l)
+	prec = pmts->prec_value ? pmts->prec_value: 6;
+	if (pmts->prec && !pmts->prec_value)
+		prec = 0;
+	if (prec == 1)
+	{
+		prec += 1;
+		res += 0.01;
+	}
+	mns = res < 0.0 ? -1 : 1;
+	if (res < 0.0)
 		res *= -1;
-	nb = ft_exp(10, (size_t)perc + 1);
-	if ((long long)(res * nb) % 10 >= 5)
-		return ((res + (1.0l / (nb / 10.0l))) * mns);
+	nb = ft_exp(10, (size_t)prec + 1);
+	tmp = (long long)((double)res * nb) % 10;
+	if (tmp == 9)
+		tmp = 0;
+	if (tmp >= 5)
+		return ((res + (1.0 / (nb / 10.0))) * mns);
 	return (res * mns);
 }
 
