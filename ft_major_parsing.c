@@ -48,7 +48,7 @@ t_prts	*ft_processing(va_list ap, char **fmt)
 	result = ft_main_parse(fmt, &pmts);
 	if (pmts.type != 'f')
 		if (pmts.mod == LBIG)
-			pmts.mod = L;
+			pmts.mod = 0;
 	if (pmts.minus)
 	{
 		if (pmts.type == 's')

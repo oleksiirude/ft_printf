@@ -14,7 +14,7 @@
 #include <limits.h>
 
 //#define FMT "[%L.4f]", 9.9l
-#define FMT "[%f]", 17192864.99
+#define FMT "[%.14f]", -395185907097652.52837650923658630
 
 int main(void)
 {
@@ -33,7 +33,7 @@ int main(void)
 //printf("plus-> %3zu\n", pmts.plus);
 //printf("space-> %2zu\n", pmts.space);
 //printf("hash-> %3zu\n", pmts.hash);
-//printf("value-> %3zu\n", pmts.value);r
+//printf("value-> %3zu\n", pmts.value);
 //printf("zero-> %3zu\n", pmts.zero);
 //printf("zero_v-> %zu\n", pmts.zero_value);
 //printf("prec-> %3zu\n", pmts.prec);

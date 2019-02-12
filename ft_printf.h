@@ -95,9 +95,11 @@ void				ft_set_o_flags(t_pmts *pmts, char **str, size_t len);
 void				ft_set_d_flags(t_pmts *pmts, int *mns, char c, size_t len);
 void				ft_set_u_flags(t_pmts *pmts, char *str, size_t len);
 void				ft_set_x_flags(t_pmts *pmts, char **str, size_t len);
-void				ft_set_f_flags(t_pmts *pmts);
+void				ft_set_start_f_flags(t_pmts *p, int *mns, long double r);
+void				ft_set_f_flags(t_pmts *pmts, int *mns, char c, char *s);
 void				ft_handle_d_p_helper(int minus, char **tmp, t_pmts pmts);
 void				ft_handle_d_v_helper(char **res, t_pmts *pmts);
+t_prts				*ft_handle_f_p(t_pmts p, t_prts **n, char *r);
 void				ft_case1_p(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case2_p(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case1_o(char **s, size_t l, t_pmts *p, t_prts **n);
@@ -115,12 +117,9 @@ char				*ft_unprint_to_print(char *str, size_t start, size_t len);
 void				ft_nice_view(char **str);
 size_t				ft_exp(size_t nb, size_t pow);
 void				ft_max(long double *res, size_t *e);
-//long double			ft_round_off(long double res, t_pmts *pmts);
 void				ft_handle_res(long double *res, va_list ap, int mod);
 char				*ft_check_nan_and_inf(long double res, t_pmts *pmts);
-
-//LOL
-t_prts				*ft_handle_d_p(t_pmts pmts, t_prts **node, char *res, int minus);
-t_prts				*ft_handle_d_v(t_pmts pmts, t_prts **node, char *res, size_t len);
-t_prts				*ft_handle_d_zv(t_pmts pmts, t_prts **node, char *res, int minus);
+t_prts				*ft_handle_d_v(t_pmts p, t_prts **n, char *r, size_t l);
+t_prts				*ft_handle_d_zv(t_pmts p, t_prts **n, char *r, int mns);
+char				*ft_record_before_f(char *str, long double res, size_t e);
 #endif
