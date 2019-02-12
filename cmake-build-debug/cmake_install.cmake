@@ -1,4 +1,4 @@
-# Install script for directory: /Users/olrudenk/CLionProjects/ft_printf
+# Install script for directory: /Users/olrudenk/CLionProjects/ft_printf_git
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -40,5 +40,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/Users/olrudenk/CLionProjects/ft_printf/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/Users/olrudenk/CLionProjects/ft_printf_git/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

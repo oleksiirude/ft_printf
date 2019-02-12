@@ -14,7 +14,7 @@
 #include <limits.h>
 
 //#define FMT "[%L.4f]", 9.9l
-#define FMT "[%f]", 9.2
+#define FMT "[%f]", 17192864.99
 
 int main(void)
 {
