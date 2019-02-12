@@ -14,7 +14,7 @@
 #include <limits.h>
 
 //#define FMT "[%L.4f]", 9.9l
-#define FMT "[%.14f]", -395185907097652.52837650923658630
+#define FMT "[%lX, %lX]", 0, ULONG_MAX
 
 int main(void)
 {
