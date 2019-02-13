@@ -6,59 +6,7 @@
 #    By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/25 18:44:12 by olrudenk          #+#    #+#              #
-#    Updated: 2019/02/12 20:48:05 by olrudenk         ###   ########.fr        #
-#                                                                              #
-# **************************************************************************** #
-
-NAME = libftprintf.a
-
-FLAGS = -Wall -Wextra -Werror
-
-LIBFT_DIR = ./libft
-LIBFT_OBJ = ./libft/*.o
-
-SRC = ft_assembly.c \
-	  ft_auxiliary.c \
-	  ft_auxiliary_2.c \
-	  ft_basic_functions.c \
-	  ft_color_output.c \
-	  ft_invalid_case.c \
-	  ft_major_parsing.c \
-	  ft_minor_parsing.c \
-	  ft_printf.c \
-	  ft_type_b.c \
-	  ft_type_b_auxiliary.c \
-	  ft_type_c.c \
-	  ft_type_d.c \
-	  ft_type_d_auxiliary.c \
-	  ft_type_f.c \
-	  ft_type_o.c \
-	  ft_type_o_auxiliary.c \
-	  ft_type_p.c \
-	  ft_type_p_auxiliary.c \
-	  ft_type_s.c \
-	  ft_type_s_auxiliary.c \
-	  ft_type_u.c \
-	  ft_type_u_auxiliary.c \
-	  ft_type_x.c \
-	  ft_type_x_auxiliary.c \
-	  ft_type_r.c \
-	  ft_ty!e_r_auxiliary.c \
-	  ft_valid_case.c
-
-OBJ = $(SRC:.c=.o)
-
-all: $(NAME)
-
-# **************************************************************************** #
-#                                                                              #
-#                                                         :::      ::::::::    #
-#    Makefile                                           :+:      :+:    :+:    #
-#                                                     +:+ +:+         +:+      #
-#    By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+         #
-#                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2018/10/25 18:44:12 by olrudenk          #+#    #+#              #
-#    Updated: 2019/02/09 12:55:04 by olrudenk         ###   ########.fr        #
+#    Updated: 2019/02/13 12:03:24 by olrudenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
