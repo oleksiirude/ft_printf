@@ -6,14 +6,13 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 17:52:30 by olrudenk          #+#    #+#             */
-/*   Updated: 2019/01/08 17:52:31 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/02/13 11:32:31 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_PRINTF_H
 # define FT_PRINTF_H
 
-# include <stdio.h>
 # include <stdarg.h>
 # include <stdlib.h>
 # include <unistd.h>

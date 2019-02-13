@@ -14,6 +14,15 @@
 
 t_prts	*ft_handle_f_p(t_pmts p, t_prts **n, char *r)
 {
+	char	*tmp;
+	size_t	var;
+
+	if (p.plus || p.space)
+		var = p.value - ft_strlen(r) - 1;
+	else
+		var = p.value - ft_strlen(r);
+	tmp = ft_malloc_sz(var);
+	tmp = ft_memset(tmp, 32, var);
 	if (p.space)
 	{
 		r = ft_strjoin_free(" ", r, 2);
@@ -21,6 +30,7 @@ t_prts	*ft_handle_f_p(t_pmts p, t_prts **n, char *r)
 	}
 	if (p.plus)
 		r = ft_strjoin_free("+", r, 2);
+	r = p.minus ? ft_strjoin_free(r, tmp, 3) : ft_strjoin_free(tmp, r, 3);
 	(*n)->str = r;
 	(*n)->len = ft_strlen(r);
 	return (*n);

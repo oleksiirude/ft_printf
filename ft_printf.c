@@ -6,7 +6,7 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/09 16:02:21 by olrudenk          #+#    #+#             */
-/*   Updated: 2019/01/09 16:02:23 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/02/13 11:35:00 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,6 @@ int		ft_printf(const char *format, ...)
 	va_start(ap, format);
 	final = ft_main_funct(ap, (char*)format);
 	write(1, final->str, final->len);
-	write(1, "\n", 1);
 	result = final->len;
 	free(final->str);
 	free(final);
