@@ -6,34 +6,24 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 17:52:30 by olrudenk          #+#    #+#             */
-/*   Updated: 2019/01/14 14:52:31 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/02/13 16:56:45 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-t_prts	*ft_handle_f_p(t_pmts p, t_prts **n, char *r)
+t_prts	*ft_handle_f_p(t_pmts pmts, t_prts **node, char *res)
 {
-	char	*tmp;
-	size_t	var;
-
-	if (p.plus || p.space)
-		var = p.value - ft_strlen(r) - 1;
-	else
-		var = p.value - ft_strlen(r);
-	tmp = ft_malloc_sz(var);
-	tmp = ft_memset(tmp, 32, var);
-	if (p.space)
+	if (pmts.space)
 	{
-		r = ft_strjoin_free(" ", r, 2);
-		p.plus = 0;
+		res = ft_strjoin_free(" ", res, 2);
+		pmts.plus = 0;
 	}
-	if (p.plus)
-		r = ft_strjoin_free("+", r, 2);
-	r = p.minus ? ft_strjoin_free(r, tmp, 3) : ft_strjoin_free(tmp, r, 3);
-	(*n)->str = r;
-	(*n)->len = ft_strlen(r);
-	return (*n);
+	if (pmts.plus)
+		res = ft_strjoin_free("+", res, 2);
+	(*node)->str = res;
+	(*node)->len = ft_strlen(res);
+	return (*node);
 }
 
 void	ft_handle_res(long double *res, va_list ap, int mod)

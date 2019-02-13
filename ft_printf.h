@@ -6,7 +6,7 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 17:52:30 by olrudenk          #+#    #+#             */
-/*   Updated: 2019/02/13 11:32:31 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/02/13 16:55:27 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -98,7 +98,7 @@ void				ft_set_start_f_flags(t_pmts *p, int *mns, long double r);
 void				ft_set_f_flags(t_pmts *pmts, int *mns, char c, char *s);
 void				ft_handle_d_p_helper(int minus, char **tmp, t_pmts pmts);
 void				ft_handle_d_v_helper(char **res, t_pmts *pmts);
-t_prts				*ft_handle_f_p(t_pmts p, t_prts **n, char *r);
+t_prts				*ft_handle_f_p(t_pmts pmts, t_prts **node, char *res);
 void				ft_case1_p(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case2_p(char **s, size_t l, t_pmts *p, t_prts **n);
 void				ft_case1_o(char **s, size_t l, t_pmts *p, t_prts **n);
