@@ -17,6 +17,7 @@ Bonuses:
 3. ft_cprintf - same as ft_printf, but with color handling;
 4. ft_dprintf - same as ft_printf, but with write by fd functionality;
 5. Almost all undifined behavior is supported.
+
 In all these cases you can use formatting flags as:
 - width;
 - precision;
@@ -34,7 +35,7 @@ Example #2: ft_printf("This is %+100d, %21.2s!", 42, baby);
 Example #3: ft_printf("%s, is it %+.2f?!", "OMG", 3748932.858974928) and so on...
 
 
-Project is done in accordance with school Norme (you can see them in Norme pdf).
+Project is done in accordance with school norms (you can see them in Norme pdf).
 
 Task requirement you can read in Subject pdf.
 
