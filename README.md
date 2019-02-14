@@ -12,6 +12,7 @@ Mandatory part:
 6. %u - prints unsigned value;
 7. %x, X - converts decimal to hexademical (X means print uppercase);
 8. %f - prints value with float point;
+
 Bonuses:
 1. %b - binary conversion;
 2. %r - prints unprintable ascii symbols;
