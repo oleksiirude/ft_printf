@@ -6,7 +6,7 @@
 #    By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/25 18:44:12 by olrudenk          #+#    #+#              #
-#    Updated: 2019/02/13 16:53:35 by olrudenk         ###   ########.fr        #
+#    Updated: 2019/02/14 12:59:07 by olrudenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ FLAGS = -Wall -Wextra -Werror
 LIBFT_DIR = ./libft
 LIBFT_OBJ = ./libft/*.o
 
-SRC = ft_assembly.c \
+SRCS_PF = ft_assembly.c \
 	  ft_auxiliary.c \
 	  ft_auxiliary_2.c \
 	  ft_basic_functions.c \
@@ -48,9 +48,11 @@ SRC = ft_assembly.c \
 	  ft_type_r_auxiliary.c \
 	  ft_valid_case.c
 
+SRCS = $(addprefix ./srcs/, $(SRCS_PF))
+
 all: $(NAME)
 
-OBJ = $(SRC:.c=.o)
+OBJ = $(SRCS:.c=.o)
 
 $(NAME): $(LIBFT_OBJ) $(OBJ)
 	@echo "\033[33mCreating libftprintf.a...\033[0m"

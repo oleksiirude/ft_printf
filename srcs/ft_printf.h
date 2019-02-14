@@ -6,7 +6,7 @@
 /*   By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/01/08 17:52:30 by olrudenk          #+#    #+#             */
-/*   Updated: 2019/02/13 16:55:27 by olrudenk         ###   ########.fr       */
+/*   Updated: 2019/02/14 12:53:05 by olrudenk         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 # include <stdlib.h>
 # include <unistd.h>
 # include <string.h>
-# include "./libft/libft.h"
+# include "../libft/libft.h"
 
 # define PERC '%'
 # define HH 1
