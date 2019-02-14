@@ -6,7 +6,7 @@
 #    By: olrudenk <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/10/25 18:44:12 by olrudenk          #+#    #+#              #
-#    Updated: 2019/02/14 12:59:07 by olrudenk         ###   ########.fr        #
+#    Updated: 2019/02/14 13:06:14 by olrudenk         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -71,7 +71,7 @@ $(LIBFT_OBJ):
 clean:
 	@echo "\033[33mDeleting all object files...\033[0m"
 	@make clean -C ./libft
-	@rm -f *.o
+	@rm -f ./srcs/*.o
 	@echo "\033[32mAll object files have deleted!\033[0m"
 
 fclean: clean
