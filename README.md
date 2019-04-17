@@ -1,4 +1,4 @@
-# ft_printf
+# ft_printf [105/110]
 In this project at UNIT Factory (School 42) I must have recoded main part of libc standart function named printf.
 
 My implementation contains next functionality:
